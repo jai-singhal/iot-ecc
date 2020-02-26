@@ -4,7 +4,7 @@ from flask import request, render_template
 import requests
 import random
 import secrets, binascii
-from ecc import getCurve, encrypt_ECC
+from ecc import getCurve, encrypt_ECC, ecc_point_to_256_bit_key
 import pickle
 import base64
 
@@ -36,24 +36,16 @@ def keyExchange():
     # print(response.json())
     bG = pickle.loads(base64.b64decode(response.json()["pr"]))
     
-    secretKey = bG*privateKey
+    secretKey = ecc_point_to_256_bit_key(bG*privateKey)
     print(secretKey)
 
 
 def sendMessage():
-    msg = b"My name is Jai"
-    encryptedMsg = encrypt_ECC(msg, secretKey, curve)
-    # encryptedMsgObj = {
-    #     'ciphertext': binascii.hexlify(encryptedMsg[0]),
-    #     'nonce': binascii.hexlify(encryptedMsg[1]),
-    #     'authTag': binascii.hexlify(encryptedMsg[2]),
-    #     'ciphertextPubKey': hex(encryptedMsg[3].x) + hex(encryptedMsg[3].y % 2)[2:]
-    # }
-    print(encryptedMsg)
+    msg = "My name is Jai".encode('utf-8')
+    encryptedMsg = encrypt_ECC(msg, secretKey)
     encryptedMsgObj = base64.b64encode(pickle.dumps(encryptedMsg)).decode("utf-8")
     response = requests.post(url = "http://127.0.0.1:8000/send/msg/", data={"msg":encryptedMsgObj})
-
-    print(response)
+    print(response.status_code)
 
 
 

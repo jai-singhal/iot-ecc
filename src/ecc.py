@@ -22,17 +22,11 @@ def ecc_point_to_256_bit_key(point):
     sha.update(int.to_bytes(point.y, 32, 'big'))
     return sha.digest()
     
-def encrypt_ECC(msg, pubKey, curve):
-    ciphertextPrivKey = secrets.randbelow(curve.field.n)
-    sharedECCKey = ciphertextPrivKey * pubKey
-    secretKey = ecc_point_to_256_bit_key(sharedECCKey)
+def encrypt_ECC(msg, secretKey):
     ciphertext, nonce, authTag = encrypt_AES_GCM(msg, secretKey)
-    ciphertextPubKey = ciphertextPrivKey * curve.g
-    return (ciphertext, nonce, authTag, ciphertextPubKey)
+    return (ciphertext, nonce, authTag)
 
-def decrypt_ECC(encryptedMsg, privKey):
-    (ciphertext, nonce, authTag, ciphertextPubKey) = encryptedMsg
-    sharedECCKey = privKey * ciphertextPubKey
-    secretKey = ecc_point_to_256_bit_key(sharedECCKey)
+def decrypt_ECC(encryptedMsg, secretKey):
+    (ciphertext, nonce, authTag) = encryptedMsg
     plaintext = decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey)
     return plaintext
