@@ -11,14 +11,23 @@ app = FlaskAPI(__name__)
 secretKey = None
 curve = None
 
+data = {}
+
+@app.route('/')
+def example():
+    return {'hello': 'world'}
 
 @app.route('/globalparam/exchange/', methods=['GET'])
 def globalParamsRequest():
     global curve
+    deviceInfo = request.args.get("device-id")
+    data[deviceInfo] = dict()
     curve = getCurve('brainpoolP256r1')
+    data[deviceInfo]["curve"] = curve
     params = {
         "curve":  base64.b64encode(pickle.dumps(curve)).decode("utf-8")
     }
+    print(data)
     return params
 
 
@@ -51,12 +60,11 @@ def recieveMessage():
 def recievePlainMessage():
     global secretKey
     msg = request.data["msg"].encode('utf-8')
-    print("decrypted msg:", msg.decode("utf-8"))
+    print("PLain Text msg:", msg.decode("utf-8"))
 
     encryptedMsg = encrypt_ECC(msg, secretKey)
     encryptedMsgObj = base64.b64encode(pickle.dumps(encryptedMsg)).decode("utf-8")
     return {"msg": encryptedMsgObj}
-
 
 
 
