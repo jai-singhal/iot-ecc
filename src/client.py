@@ -23,7 +23,6 @@ def knowMyGlobalParams():
     curve = pickle.loads(base64.b64decode(response.json()["curve"]))
 
 
-@app.route('/keyexchange/', methods=['POST'])
 def keyExchange():
     global secretKey
     # generate a
@@ -33,24 +32,32 @@ def keyExchange():
         "pr":  base64.b64encode(pickle.dumps(aG))
     }
     response = requests.post(url = "http://127.0.0.1:8000/keyexchange/", data=params)
-    # print(response.json())
+
     bG = pickle.loads(base64.b64decode(response.json()["pr"]))
-    
     secretKey = ecc_point_to_256_bit_key(bG*privateKey)
-    print(secretKey)
 
 
 def sendMessage():
-    msg = "My name is Jai".encode('utf-8')
+    msg = "My name is Jai--Encryption".encode('utf-8')
     encryptedMsg = encrypt_ECC(msg, secretKey)
     encryptedMsgObj = base64.b64encode(pickle.dumps(encryptedMsg)).decode("utf-8")
     response = requests.post(url = "http://127.0.0.1:8000/send/msg/", data={"msg":encryptedMsgObj})
     print(response.status_code)
 
 
+def sendPlainMessage():
+    msg = "My name is Jai--Plain Message".encode('utf-8')
+    response = requests.post(url = "http://127.0.0.1:8000/send/plainmsg/", data={"msg":msg})
+    print("Encrypted message", response.json()["msg"])
+    return response.json()["msg"]
+
 
 if __name__ == "__main__":
     knowMyGlobalParams()
     keyExchange()
     sendMessage()
+    encrypted = sendPlainMessage()
+    response = requests.post(url = "http://127.0.0.1:8000/send/msg/", data={"msg":encrypted})
+    print("Message got is: ", response.json()["msg"])
+    
     app.run(host="0.0.0.0",port=5001,threaded=True)

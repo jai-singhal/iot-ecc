@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_api import FlaskAPI, status, exceptions
 from flask import request, render_template
-from ecc import getCurve, decrypt_ECC, ecc_point_to_256_bit_key
+from ecc import getCurve, decrypt_ECC, ecc_point_to_256_bit_key, encrypt_ECC
 import hashlib, secrets, binascii
 import pickle
 import base64, requests
@@ -40,11 +40,23 @@ def clientRequest():
 
 
 @app.route('/send/msg/', methods=['POST'])
-def getMessage():
+def recieveMessage():
     encryptedmsg = pickle.loads(base64.b64decode(request.data["msg"]))
     decryptedMsg = decrypt_ECC(encryptedmsg, secretKey)
     print("decrypted msg:", decryptedMsg.decode("utf-8"))
-    return {"success": True}
+    return {"msg": decryptedMsg.decode("utf-8")}
+
+
+@app.route('/send/plainmsg/', methods=['POST'])
+def recievePlainMessage():
+    global secretKey
+    msg = request.data["msg"].encode('utf-8')
+    print("decrypted msg:", msg.decode("utf-8"))
+
+    encryptedMsg = encrypt_ECC(msg, secretKey)
+    encryptedMsgObj = base64.b64encode(pickle.dumps(encryptedMsg)).decode("utf-8")
+    return {"msg": encryptedMsgObj}
+
 
 
 
