@@ -34,7 +34,7 @@ BASEURL_CLIENT2 = "http://127.0.0.1:8002"
 #     BASEURL_CLIENT_DYN=BASEURL_CLIENT1
 
 @app.post('/send/msg/')
-def recieveMessage(msg:str=Form(...)):
+async def recieveMessage(msg:str=Form(...)):
     encryptedmsg = pickle.loads(base64.b64decode(msg))
 
     decryptedMsg = decrypt_ECC(encryptedmsg, secretKey)
@@ -47,7 +47,7 @@ def clientRequestKeyExchange(pr:str=Form(...), clientid:str=Form(...)):
     global secretKey
     global curve
     #print("Called")
-    if(os.path.isfile("./secrets.json")):
+    if(os.path.isfile(f"./{clientid[-1]}_secrets.json")):
         with open(f"./{clientid[-1]}_secrets.json", "r") as f:
             secrets_ = json.loads(f.read())
             curve = pickle.loads(base64.b64decode(secrets_["curve"]))
@@ -56,6 +56,7 @@ def clientRequestKeyExchange(pr:str=Form(...), clientid:str=Form(...)):
     #print("Calledxx")
     
     # # Get a
+    print(curve)
     aG = pickle.loads(base64.b64decode(pr))
     # generate b
     privateKey = secrets.randbelow(curve.field.n)

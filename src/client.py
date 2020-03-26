@@ -50,6 +50,7 @@ def keyExchange():
     }
     response = requests.post(url = BASEURL_CLIENT_DYN + "/keyexchange/", data=data)
     print("---------------------")
+
     bG = pickle.loads(base64.b64decode(response.json()["pr"]))
     secretKey = ecc_point_to_256_bit_key(bG*privateKey)
 
