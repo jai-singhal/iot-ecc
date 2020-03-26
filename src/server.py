@@ -1,41 +1,37 @@
-from flask import Flask
-from flask_api import FlaskAPI, status, exceptions
-from flask import request, render_template
+from fastapi import FastAPI, Request, Response, Form
 from ecc import getCurve, decrypt_ECC, ecc_point_to_256_bit_key, encrypt_ECC
 import hashlib, secrets, binascii
 import pickle
 import base64, requests
 
 
-app = FlaskAPI(__name__)
+app = FastAPI()
 secretKey = None
 curve = None
 
 data = {}
 
-@app.route('/')
+@app.get('/')
 def example():
     return {'hello': 'world'}
 
-@app.route('/globalparam/exchange/', methods=['GET'])
-def globalParamsRequest():
+@app.get('/globalparam/exchange/')
+def globalParamsRequest(device_id, latitude, longitude):
     global curve
-    deviceInfo = request.args.get("device-id")
-    data[deviceInfo] = dict()
+    data[device_id] = dict()
     curve = getCurve('brainpoolP256r1')
-    data[deviceInfo]["curve"] = curve
+    data[device_id]["curve"] = curve
     params = {
         "curve":  base64.b64encode(pickle.dumps(curve)).decode("utf-8")
     }
-    print(data)
     return params
 
 
-@app.route('/keyexchange/', methods=['POST'])
-def clientRequest():
+@app.post('/keyexchange/')
+def clientRequest(pr):
     global secretKey
     # Get a
-    aG = pickle.loads(base64.b64decode(request.data["pr"]))
+    aG = pickle.loads(base64.b64decode(pr))
 
     # generate b
     privateKey = secrets.randbelow(curve.field.n)
@@ -48,25 +44,24 @@ def clientRequest():
     return params
 
 
-@app.route('/send/msg/', methods=['POST'])
-def recieveMessage():
-    encryptedmsg = pickle.loads(base64.b64decode(request.data["msg"]))
+@app.post('/send/msg/')
+def recieveMessage(msg):
+    encryptedmsg = pickle.loads(base64.b64decode(msg))
     decryptedMsg = decrypt_ECC(encryptedmsg, secretKey)
     print("decrypted msg:", decryptedMsg.decode("utf-8"))
     return {"msg": decryptedMsg.decode("utf-8")}
 
 
-@app.route('/send/plainmsg/', methods=['POST'])
-def recievePlainMessage():
+@app.post('/send/plainmsg/')
+def recievePlainMessage(msg):
     global secretKey
-    msg = request.data["msg"].encode('utf-8')
+    msg = msg.encode('utf-8')
     print("PLain Text msg:", msg.decode("utf-8"))
-
     encryptedMsg = encrypt_ECC(msg, secretKey)
     encryptedMsgObj = base64.b64encode(pickle.dumps(encryptedMsg)).decode("utf-8")
     return {"msg": encryptedMsgObj}
 
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=8000,threaded=True)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0",port=8000,threaded=True)
