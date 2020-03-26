@@ -28,15 +28,14 @@ def globalParamsRequest(device_id, latitude, longitude):
 
 
 @app.post('/keyexchange/')
-def clientRequest(pr):
+def clientRequest(pr:str=Form(...)):
     global secretKey
     # Get a
+    print(pr)
     aG = pickle.loads(base64.b64decode(pr))
-
     # generate b
     privateKey = secrets.randbelow(curve.field.n)
     bG = privateKey*curve.g
-
     params = {
         "pr":  base64.b64encode(pickle.dumps(bG)).decode("utf-8")
     }
@@ -45,7 +44,7 @@ def clientRequest(pr):
 
 
 @app.post('/send/msg/')
-def recieveMessage(msg):
+def recieveMessage(msg:str=Form(...)):
     encryptedmsg = pickle.loads(base64.b64decode(msg))
     decryptedMsg = decrypt_ECC(encryptedmsg, secretKey)
     print("decrypted msg:", decryptedMsg.decode("utf-8"))
@@ -53,7 +52,7 @@ def recieveMessage(msg):
 
 
 @app.post('/send/plainmsg/')
-def recievePlainMessage(msg):
+def recievePlainMessage(msg:str=Form(...)):
     global secretKey
     msg = msg.encode('utf-8')
     print("PLain Text msg:", msg.decode("utf-8"))
