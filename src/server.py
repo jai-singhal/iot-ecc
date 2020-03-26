@@ -31,7 +31,6 @@ def globalParamsRequest(device_id, latitude, longitude):
 def clientRequest(pr:str=Form(...)):
     global secretKey
     # Get a
-    print(pr)
     aG = pickle.loads(base64.b64decode(pr))
     # generate b
     privateKey = secrets.randbelow(curve.field.n)
