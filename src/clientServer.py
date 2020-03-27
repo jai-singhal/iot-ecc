@@ -27,6 +27,7 @@ BASEURL_CLIENT_DYN = None
 config = None
 with open("./config.json", "r") as f:
     config = json.loads(f.read())
+    print(config)
 
 BASEURL_SERVER= config["server"]["BASEURL_SERVER"]
 BASEURL_CLIENT1 = config["client"]["BASEURL_CLIENT1"]
