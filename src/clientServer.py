@@ -24,9 +24,13 @@ secretKey = None
 curve = None
 BASEURL_CLIENT_DYN = None
 
-BASEURL_SERVER= "http://023b8bc8.ngrok.io"
-BASEURL_CLIENT1 = "http://127.0.0.1:8001"
-BASEURL_CLIENT2 = "http://127.0.0.1:8002"
+config = None
+with open("./config.json", "r") as f:
+    config = json.loads(f.read())
+
+BASEURL_SERVER= config["server"]["BASEURL_SERVER"]
+BASEURL_CLIENT1 = config["client"]["BASEURL_CLIENT1"]
+BASEURL_CLIENT2 = config["client"]["BASEURL_CLIENT2"]
 
 # if(len(sys.argv)>2 and str(sys.argv[2])=="2"):
 #     BASEURL_CLIENT_DYN=BASEURL_CLIENT2
@@ -43,7 +47,7 @@ async def recieveMessage(msg:str=Form(...)):
 
 
 @app.post('/keyexchange/')
-def clientRequestKeyExchange(pr:str=Form(...), clientid:str=Form(...)):
+async def clientRequestKeyExchange(pr:str=Form(...), clientid:str=Form(...)):
     global secretKey
     global curve
     #print("Called")

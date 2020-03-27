@@ -16,11 +16,14 @@ curve = None
 secretKey = None
 BASEURL_CLIENT_DYN = None
 
-BASEURL_SERVER= "http://023b8bc8.ngrok.io"
-BASEURL_CLIENT1 = "http://127.0.0.1:8001"
-BASEURL_CLIENT2 = "http://127.0.0.1:8002"
+config = None
+with open("./config.json", "r") as f:
+    config = json.loads(f.read())
 
-SECRET_FILE = "./secrets.json"
+BASEURL_SERVER= config["server"]["BASEURL_SERVER"]
+BASEURL_CLIENT1 = config["client"]["BASEURL_CLIENT1"]
+BASEURL_CLIENT2 = config["client"]["BASEURL_CLIENT2"]
+
 
 def knowMyGlobaldata():
     global curve
