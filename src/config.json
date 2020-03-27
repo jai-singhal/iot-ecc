@@ -1,0 +1,9 @@
+{
+    "server":{
+        "BASEURL_SERVER": "http://023b8bc8.ngrok.io"
+    },
+    "client":{
+        "BASEURL_CLIENT1": "http://127.0.0.1:8001",
+        "BASEURL_CLIENT2": "http://127.0.0.1:8002"
+    }
+}
