@@ -26,7 +26,7 @@ for sent in conll2002.sents():
 
 total_len = len(data)
 
-filesizes = [1, 2, 5, 10, 20, 50, 100]
+filesizes = [200, 400, 500]
 pvsdataptr = 0
 for filesize in filesizes:
     filename = "../data/conll_{}kB.txt".format(filesize)

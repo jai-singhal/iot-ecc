@@ -5,7 +5,7 @@ import pickle, time, json
 import random
 import uuid
 import sys, os
-
+from timeit import default_timer as timer
 
 class ClientECC():
     def __init__(self, CURR_CLIENT_BASEURL, BASEURL_SERVER):
@@ -44,15 +44,15 @@ class ClientECC():
             print("Curve not found")
             return False
 
-        tick = time.process_time_ns()
+        tick = timer()
         privateKey = secrets.randbelow(curve.field.n)
         clientPublicKey = privateKey*curve.g # privKey*curve
-        tock = time.process_time_ns()
+        tock = timer()
 
         data = {
             "device_id": self.clientData["device_id"],
             "clipubKey": binascii.hexlify(pickle.dumps(clientPublicKey)),
-            "clikeygentime": tock-tick
+            "clikeygentime": (tock-tick)*(10**9)
         }
 
         response = requests.post(
@@ -71,9 +71,11 @@ class ClientECC():
 
 
     def sendMessage(self, msg):
-        tick = time.process_time_ns()
+        
+
+        tick = timer()
         ct, nonce, tag = ecc.encrypt_AES_GCM(
-            msg.encode('utf-8'), 
+            msg, 
             self.clientData["secretKey"]
         )
         ct = binascii.hexlify(ct).decode("utf-8")
@@ -81,14 +83,14 @@ class ClientECC():
         nonce = binascii.hexlify(nonce).decode("utf-8")
 
         cryptogram = tag + nonce + ct
-        tock = time.process_time_ns()
-
+        tock = timer()
+        print("encr time: {}, msglen={}KB".format((tock-tick)*(10**9), len(ct)/1000))
         response = requests.post(
             url = self.BASEURL_SERVER + "/ecc/send/msg/", 
             data={
                 "encryptedMsg":cryptogram,
                 "device_id": self.clientData["device_id"],
-                "encr_time": tock-tick,
+                "encr_time": (tock-tick)*(10**9),
                 "keysize": 256
             }
         )

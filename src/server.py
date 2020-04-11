@@ -11,6 +11,7 @@ from tinydb.middlewares import CachingMiddleware
 from pydantic import BaseModel
 import rsa
 import time
+from timeit import default_timer as timer
 
 app = FastAPI()
 # https://pypi.org/project/tinydb/
@@ -76,16 +77,16 @@ def ecc_clientRequest(
         curve = ecc.getCurve(curve_name)
         clientPubKey = pickle.loads(binascii.unhexlify(clipubKey))
 
-        tick = time.process_time_ns()
+        tick = timer()
         # generate private key for server
         privateKey = secrets.randbelow(curve.field.n)
         serverPubKey = privateKey*curve.g
-        tock = time.process_time_ns()
-        total_time += tock-tick
-        tick = time.process_time_ns()
+        tock = timer()
+        total_time += (tock-tick)*(10**9)
+        tick = timer()
         secretKey = ecc.ecc_point_to_256_bit_key(privateKey*clientPubKey)
-        tock = time.process_time_ns()
-        total_time += 2*(tock-tick) # 2time key gen
+        tock = timer()
+        total_time += 2*(tock-tick)*(10**9) # 2time key gen
         total_time += clikeygentime
 
         dbECC.update({
@@ -113,22 +114,26 @@ def ecc_recieveMessage(
     ClientQ = Query()
     secretKey = dbECC.get(ClientQ.deviceid == device_id)["secretKey"]
 
-    tick = time.process_time_ns()
+    tick = timer()
     tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
     ct = binascii.unhexlify(ct)
     tag = binascii.unhexlify(tag)
     nonce = binascii.unhexlify(nonce)
     decryptedMsg = ecc.decrypt_AES_GCM(ct, nonce, tag, binascii.unhexlify(secretKey.encode("utf-8")))
-    tock = time.process_time_ns()
+    tock = timer()
     decryptedMsg = decryptedMsg.decode("utf-8")
-    print("decrypted msg:", decryptedMsg)
-    
+    # print("decrypted msg:", decryptedMsg)
+    decr_time = (tock-tick)*(10**9)
+    print("Encrypt time", encr_time)
+    print("Decrypt time", decr_time)
+
     dbECCData.insert({
         "transaction_id": len(dbECCData),
         "encrypt_time": encr_time,
-        "decrypt_time": tock-tick,
+        "decrypt_time": decr_time,
+        "total_time": encr_time+decr_time,
         "message": decryptedMsg,
-        "msg_len": len(decryptedMsg),
+        "msg_len": f"{len(decryptedMsg)/1000}KB",
         "keysize": f"{keysize}bits"
     })
     return {"msg": decryptedMsg}
@@ -147,9 +152,9 @@ def ecc_recieveMessage(
 def globalParamsRequestRSA(device_id:str,key_size:int=None,transaction_id:str=None):
     if key_size is None:
         key_size = 2048
-    start=time.process_time_ns()
+    start=timer()*(10**9)
     (pu,pi)=rsa.newkeys(key_size) # 256/8 - 11 plain text message length
-    end=time.process_time_ns()
+    end=timer()*(10**9)
     dbRSA.remove(Query().deviceid==device_id)
     dbRSA.insert(
         {
@@ -182,11 +187,11 @@ def globalParamsRequestRSA(device_id:str,key_size:int=None,transaction_id:str=No
 def recieveMessageRSA(device_id:str,transaction_id:str,msg:str=Form(...)):
     pub_pri_pair=dbRSA.search(Query().deviceid==device_id)
     priv_key=(rsa.PrivateKey).load_pkcs1(pub_pri_pair[0]['private'])
-    start=time.process_time_ns()
+    start=timer()*(10**9)
     bytemsg=msg.encode('utf-8')
     bytemsg=binascii.unhexlify(bytemsg)
     plain_text_msg=rsa.decrypt(bytemsg,priv_key).decode('utf-8')
-    end=time.process_time_ns()
+    end=timer()*(10**9)
     print(end-start)
     print("message sent by client "+str(device_id)+": "+msg)
     print("decrypted message from client "+str(device_id)+": "+plain_text_msg)
@@ -206,11 +211,11 @@ def recieveMessageRSA(device_id:str,transaction_id:str,msg:str=Form(...)):
 def recieveMessageStepwiseRSA(device_id:str,transaction_id:str,msg:str=Form(...)):
     pub_pri_pair=dbRSA.search(Query().deviceid==device_id)
     priv_key=(rsa.PrivateKey).load_pkcs1(pub_pri_pair[0]['private'])
-    start=float(time.process_time_ns())
+    start=timer()*(10**9)
     bytemsg=msg.encode('utf-8')
     bytemsg=binascii.unhexlify(bytemsg)
     plain_text_msg=rsa.decrypt(bytemsg,priv_key).decode('utf-8')
-    end=float(time.process_time_ns())
+    end=timer()*(10**9)
     #print(end-start)
     #print("message sent by client "+str(device_id)+": "+msg)
     #print("decrypted message from client "+str(device_id)+": "+plain_text_msg)
@@ -234,14 +239,14 @@ def recieveMessageBigRSA(device_id:str,transaction_id:str,msg:str=Form(...)):
     partial_data=dbRSATime.search(Query().transaction_id==transaction_id)
     byte_max_msg_size=partial_data[0]['key_size']//4
     complete_plain_text=[]
-    start=float(time.process_time_ns())
+    start=timer()*(10**9)
     for msg_ind in range(0,len(msg),byte_max_msg_size):
         mod_msg=msg[msg_ind:msg_ind+byte_max_msg_size]
         bytemsg=mod_msg.encode('utf-8')
         bytemsg=binascii.unhexlify(bytemsg)
         plain_text_msg=rsa.decrypt(bytemsg,priv_key).decode('utf-8')
         complete_plain_text.append(plain_text_msg)
-    end=float(time.process_time_ns())
+    end=timer()*(10**9)
     complete_plain_text=''.join(complete_plain_text)
     msg_len=len(complete_plain_text)
     if(len(complete_plain_text)>MAX_RSA_DB_ENTRY_LENGTH):
