@@ -1,73 +1,82 @@
 
-from fastapi import FastAPI, Request, Response, Form
-
-from ecc import getCurve, encrypt_ECC, ecc_point_to_256_bit_key
-from ecc import  decrypt_ECC, encrypt_ECC
+from fastapi import FastAPI, Request, Response, Form, status
+from fastapi.responses import JSONResponse
+from utils.ecc import *
+import hashlib, secrets, binascii
 import pickle
-import base64
-import time
-import random
-import uuid
-import json
-import secrets
-import os
+import base64, requests
+import datetime, json
+from tinydb import TinyDB, Query
+from tinydb.storages import JSONStorage
+from tinydb.middlewares import CachingMiddleware
+from pydantic import BaseModel
 
 portNo = 8000
-# if len(sys.argv) == 2:
-#     portNo = sys.argv[1]
-
 app = FastAPI()
-
-## Server Code
-
-secretKey = None
-curve = None
 BASEURL_CLIENT_DYN = None
 
 config = None
+db = TinyDB('db/serverdb.json')#, storage=CachingMiddleware(JSONStorage))
+
 with open("./config.json", "r") as f:
     config = json.loads(f.read())
     print(config)
 
-BASEURL_SERVER= config["server"]["BASEURL_SERVER"]
-BASEURL_CLIENT1 = config["client"]["BASEURL_CLIENT1"]
-BASEURL_CLIENT2 = config["client"]["BASEURL_CLIENT2"]
-
-# if(len(sys.argv)>2 and str(sys.argv[2])=="2"):
-#     BASEURL_CLIENT_DYN=BASEURL_CLIENT2
-# else:
-#     BASEURL_CLIENT_DYN=BASEURL_CLIENT1
-
-@app.post('/send/msg/')
-async def recieveMessage(msg:str=Form(...)):
-    encryptedmsg = pickle.loads(base64.b64decode(msg))
-
-    decryptedMsg = decrypt_ECC(encryptedmsg, secretKey)
-    print("decrypted msg:", decryptedMsg.decode("utf-8"))
-    return {"msg": decryptedMsg.decode("utf-8")}
+BASEURL_SERVER= config["local"]["server"]["BASEURL_SERVER"]
+BASEURL_CLIENT1 = config["local"]["client"]["BASEURL_CLIENT1"]
+BASEURL_CLIENT2 = config["local"]["client"]["BASEURL_CLIENT2"]
 
 
-@app.post('/keyexchange/')
-async def clientRequestKeyExchange(pr:str=Form(...), clientid:str=Form(...)):
-    global secretKey
-    global curve
-    #print("Called")
-    if(os.path.isfile(f"./{clientid[-1]}_secrets.json")):
-        with open(f"./{clientid[-1]}_secrets.json", "r") as f:
-            secrets_ = json.loads(f.read())
-            curve = pickle.loads(base64.b64decode(secrets_["curve"]))
-    else:
-        print("./secrets.json file does not exist")
-    #print("Calledxx")
+
+@app.post('/ecc/post/client/register/')
+def getClientGlobalParams(cli:ClientParams):
+    try:
+        ClientQ = Query()
+        print(db.get(ClientQ.deviceid == cli.device_id))
+
+        if db.get(ClientQ.deviceid == cli.device_id) is not None:
+            return {"status": True, "message": "Client already registred"}
+
+        print("Register")
+        
+        db.insert(
+            {'deviceid': cli.device_id, 'curve_name': cli.curve_name,
+            "latitude": cli.latitude, "longitude": cli.longitude,
+            "created_at": str(datetime.datetime.now())
+        })
+        return {"status": True, "message": "Client registred successfully"}
+    except Exception as e:
+        return {"status": False, "error": str(e)}
+
+
+
+@app.get('/ecc/post/keyexchange/')
+def clientRequest(device_id:str, clipubKey:str):
+
+    ClientQ = Query()
+
+    if db.get(ClientQ.deviceid == device_id) is None:
+        return {"status": False, "error": "Client not registred"}
+    try:
+        # Get a
+        curve_name = db.get(ClientQ.deviceid == device_id)["curve_name"]
+        curve = getCurve(curve_name)
+        clientPubKey = pickle.loads(binascii.unhexlify(clipubKey))
     
-    # # Get a
-    print(curve)
-    aG = pickle.loads(base64.b64decode(pr))
-    # generate b
-    privateKey = secrets.randbelow(curve.field.n)
-    bG = privateKey*curve.g
-    params = {
-        "pr":  base64.b64encode(pickle.dumps(bG)).decode("utf-8")
-    }
-    secretKey = ecc_point_to_256_bit_key(aG*privateKey)
-    return params
+        # generate private key for server
+        privateKey = secrets.randbelow(curve.field.n)
+        serverPubKey = privateKey*curve.g
+        params = {
+            "pubKey":  binascii.hexlify(pickle.dumps(serverPubKey)),
+            "status": True
+        }
+
+        secretKey = ecc_point_to_256_bit_key(privateKey*clientPubKey)
+        db.update(
+            {'secretKey': binascii.hexlify(secretKey).decode("utf-8")}, 
+            ClientQ.deviceid == device_id
+        )
+        return params
+    except Exception as e:
+        return {"status": False, "error": str(e)}
+

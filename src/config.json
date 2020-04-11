@@ -1,9 +1,21 @@
 {
-    "server":{
-        "BASEURL_SERVER": "http://023b8bc8.ngrok.io"
+    "local": {
+        "server":{
+            "BASEURL_SERVER": "http://127.0.0.1:8080",
+            "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io"
+        },
+        "client":{
+            "BASEURL_CLIENT1": "http://127.0.0.1:8001",
+            "BASEURL_CLIENT2": "http://127.0.0.1:8002"
+        }
     },
-    "client":{
-        "BASEURL_CLIENT1": "http://127.0.0.1:8001",
-        "BASEURL_CLIENT2": "http://127.0.0.1:8002"
+    "development":{
+        "server":{
+            "BASEURL_SERVER": "http://023b8bc8.ngrok.io"
+        },
+        "client":{
+            "BASEURL_CLIENT1": "http://192.168.0.14:8001",
+            "BASEURL_CLIENT2": "http://192.168.0.15:8002"
+        }
     }
 }

@@ -31,7 +31,6 @@ get-pip.py
 include/
 temp/
 Databases/
-*.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

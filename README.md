@@ -1,6 +1,8 @@
 # ECC IOT Project
 https://demo.codimd.org/BZ5z32LXS4q31BTO_vwRSA
 
+uvicorn serverRSA:app --reload
+
 ## TODOS
 we need to make sure we include:
 ~~1> what is DH~~
