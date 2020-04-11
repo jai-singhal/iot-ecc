@@ -63,6 +63,3 @@ def recieveMessageRSA(device_id:str,msg:str=Form(...)):
         "secret_encrypted_message": encrypted_text_msg
     }
     return params
-
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0",port=8000,threaded=True)
