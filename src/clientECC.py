@@ -7,9 +7,7 @@ import uuid
 import sys, os
 
 
-
-
-class Client():
+class ClientECC():
     def __init__(self, CURR_CLIENT_BASEURL, BASEURL_SERVER):
         self.clientData = {}
         self.CURR_CLIENT_BASEURL = CURR_CLIENT_BASEURL
@@ -46,11 +44,15 @@ class Client():
             print("Curve not found")
             return False
 
+        tick = time.process_time_ns()
         privateKey = secrets.randbelow(curve.field.n)
         clientPublicKey = privateKey*curve.g # privKey*curve
+        tock = time.process_time_ns()
+
         data = {
             "device_id": self.clientData["device_id"],
             "clipubKey": binascii.hexlify(pickle.dumps(clientPublicKey)),
+            "clikeygentime": tock-tick
         }
 
         response = requests.post(
@@ -64,10 +66,12 @@ class Client():
 
         serverPubKey = pickle.loads(binascii.unhexlify(response["pubKey"]))
         self.clientData["secretKey"] = ecc.ecc_point_to_256_bit_key(serverPubKey*privateKey)
+        
         return True
 
 
     def sendMessage(self, msg):
+        tick = time.process_time_ns()
         ct, nonce, tag = ecc.encrypt_AES_GCM(
             msg.encode('utf-8'), 
             self.clientData["secretKey"]
@@ -77,12 +81,15 @@ class Client():
         nonce = binascii.hexlify(nonce).decode("utf-8")
 
         cryptogram = tag + nonce + ct
+        tock = time.process_time_ns()
 
         response = requests.post(
             url = self.BASEURL_SERVER + "/ecc/send/msg/", 
             data={
                 "encryptedMsg":cryptogram,
-                "device_id": self.clientData["device_id"]
+                "device_id": self.clientData["device_id"],
+                "encr_time": tock-tick,
+                "keysize": 256
             }
         )
         if response.status_code == 200:
@@ -111,16 +118,14 @@ if __name__ == "__main__":
             CURR_CLIENT_BASEURL=BASEURL_CLIENT1
         else:
             CURR_CLIENT_BASEURL=BASEURL_CLIENT2
-
     else:
-        print("Please tell me which client")
+        print("Please choose the client(1/2)")
         sys.exit(1)
 
-    client = Client(CURR_CLIENT_BASEURL, BASEURL_SERVER)
-
+    client = ClientECC(CURR_CLIENT_BASEURL, BASEURL_SERVER)
     print("I am new here. Let me send my public parameters")
     if client.clientRegistration():
-        print("Got the public public data. Let's initiate key exchange protocol")
+        print("Send the public public data. Let's initiate key exchange protocol")
     else:
         sys.exit(-1)
 
@@ -130,11 +135,11 @@ if __name__ == "__main__":
         sys.exit(-1)
 
     print("Let's send the message")
-    
-    while True:
-        msg = input("Enter the message to send: ")
-        if(msg == "exit"):
-            break
-        res = client.sendMessage(msg)
-        if res:
-            print("Message sent successfully")
+    path = "./data/"
+    for dirpath, subdirs, files in os.walk(path):
+        for x in files:
+            filepath = os.path.join(dirpath, x)
+            with open(filepath, "rb") as fin:
+                res = client.sendMessage(fin.read())
+                if res:
+                    print(f"File={filepath} sent successfully")

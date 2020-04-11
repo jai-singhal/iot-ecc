@@ -40,11 +40,11 @@ def decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey):
     plaintext = aesCipher.decrypt_and_verify(ciphertext, authTag)
     return plaintext
 
-def ecc_point_to_256_bit_key(point, keysize=256, iters=10000):
-    sha = hashlib.sha256(int.to_bytes(point.x, 32, byteorder= 'big'))
-    sha.update(int.to_bytes(point.y, 32, byteorder='big'))
+def ecc_point_to_256_bit_key(point, keysize=32, iters=10000):
+    sha = hashlib.sha256(str(point.x).encode("utf-8"))
+    sha.update(str(point.y).encode("utf-8"))
     salt = b'7G\xf6\xc3n\x01\xf7\xf3\xb46\xce\xfd.\x7f\xdfX'
-    kdfKey = PBKDF2(sha.digest(), salt, 32, iters, hmac_hash_module=SHA256)
+    kdfKey = PBKDF2(sha.digest(), salt, keysize, iters, hmac_hash_module=SHA256)
     return kdfKey
     
 def encrypt_ECC(msg, secretKey):
