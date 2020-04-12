@@ -6,6 +6,10 @@ import random
 import uuid
 import sys, os
 from timeit import default_timer as timer
+from tqdm import tqdm
+
+DATAPATH = "../data/"
+CONFIGPATH = "../config/config.json"
 
 class ClientECC():
     def __init__(self, CURR_CLIENT_BASEURL, BASEURL_SERVER):
@@ -29,7 +33,6 @@ class ClientECC():
         response = response.json()
 
         if response["status"]:
-            print(response["message"])
             self.clientData["curve"] = ecc.getCurve(self.clientData["curve_name"])
             return True
         else:
@@ -41,7 +44,6 @@ class ClientECC():
         # generate a
         curve = self.clientData["curve"]
         if curve == None:
-            print("Curve not found")
             return False
 
         tick = timer()
@@ -70,9 +72,7 @@ class ClientECC():
         return True
 
 
-    def sendMessage(self, msg):
-        
-
+    def sendMessage(self, msg, filepath):
         tick = timer()
         ct, nonce, tag = ecc.encrypt_AES_GCM(
             msg, 
@@ -84,11 +84,11 @@ class ClientECC():
 
         cryptogram = tag + nonce + ct
         tock = timer()
-        print("encr time: {}, msglen={}KB".format((tock-tick)*(10**9), len(ct)/1000))
         response = requests.post(
             url = self.BASEURL_SERVER + "/ecc/send/msg/", 
             data={
                 "encryptedMsg":cryptogram,
+                "filepath": filepath,
                 "device_id": self.clientData["device_id"],
                 "encr_time": (tock-tick)*(10**9),
                 "keysize": 256
@@ -100,9 +100,28 @@ class ClientECC():
             return False
 
 
+def iter(CURR_CLIENT_BASEURL):
+    client = ClientECC(CURR_CLIENT_BASEURL, BASEURL_SERVER)
+    if not client.clientRegistration():
+        sys.exit(-1)
+
+    if not client.keyExchange():
+        sys.exit(-1)
+
+    print("\nSending files!!")
+    for dirpath, subdirs, files in os.walk(DATAPATH):
+        for x in tqdm(files):
+            filepath = os.path.join(dirpath, x)
+            with open(filepath, "rb") as fin:
+                res = client.sendMessage(fin.read(), x)
+                if not res:
+                    sys.exit(-1)
+                    # print(f"File={filepath} sent successfully")
+
+
 if __name__ == "__main__":
 
-    with open("./config.json", "r") as f:
+    with open(CONFIGPATH, "r") as f:
         config = json.loads(f.read())
 
     if config["production"] == True:
@@ -114,34 +133,7 @@ if __name__ == "__main__":
     BASEURL_CLIENT1 = config[pd]["client"]["BASEURL_CLIENT1"]
     BASEURL_CLIENT2 = config[pd]["client"]["BASEURL_CLIENT2"]
 
+    for i in range(10):
+        print("-"*10 + "ITERATION: " + str(i+1) + "-"*10)
+        iter(BASEURL_CLIENT1)
 
-    if len(sys.argv) == 2: 
-        if str(sys.argv[1])=="1":
-            CURR_CLIENT_BASEURL=BASEURL_CLIENT1
-        else:
-            CURR_CLIENT_BASEURL=BASEURL_CLIENT2
-    else:
-        print("Please choose the client(1/2)")
-        sys.exit(1)
-
-    client = ClientECC(CURR_CLIENT_BASEURL, BASEURL_SERVER)
-    print("I am new here. Let me send my public parameters")
-    if client.clientRegistration():
-        print("Send the public public data. Let's initiate key exchange protocol")
-    else:
-        sys.exit(-1)
-
-    if client.keyExchange():
-        print("Done!!")
-    else:
-        sys.exit(-1)
-
-    print("Let's send the message")
-    path = "./data/"
-    for dirpath, subdirs, files in os.walk(path):
-        for x in files:
-            filepath = os.path.join(dirpath, x)
-            with open(filepath, "rb") as fin:
-                res = client.sendMessage(fin.read())
-                if res:
-                    print(f"File={filepath} sent successfully")

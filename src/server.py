@@ -15,12 +15,26 @@ from timeit import default_timer as timer
 
 app = FastAPI()
 # https://pypi.org/project/tinydb/
-dbECC = TinyDB('db/serverdbECC.json', indent=4, separators=(',', ': '), default_table="device_info")
-dbECCData = TinyDB('db/serverdbECC.json', indent=4, separators=(',', ': '), default_table="data")
-#, storage=CachingMiddleware(JSONStorage))
-
-dbRSA = TinyDB('db/serverdbRSA.json', indent=4, separators=(',', ': '), default_table="device_pub_priv")
-dbRSATime = TinyDB('db/serverdbRSA.json', indent=4, separators=(',', ': '), default_table="timing")
+dbECC = TinyDB('../db/serverdbECC.json', 
+    indent=4, separators=(',', ': '), 
+    default_table="device_info",
+    # storage=CachingMiddleware(JSONStorage)
+)
+dbECCData = TinyDB('../db/serverdbECC.json', 
+    indent=4, separators=(',', ': '), 
+    default_table="data",
+    # storage=CachingMiddleware(JSONStorage)
+)
+dbRSA = TinyDB('../db/serverdbRSA.json', 
+    indent=4, separators=(',', ': '),
+    default_table="device_pub_priv",
+    # storage=CachingMiddleware(JSONStorage)
+)
+dbRSATime = TinyDB('../db/serverdbRSA.json', 
+    indent=4, separators=(',', ': '),
+    default_table="timing",
+    # storage=CachingMiddleware(JSONStorage)
+)
 MAX_RSA_DB_ENTRY_LENGTH=2048
 
 @app.get('/')
@@ -107,6 +121,7 @@ def ecc_clientRequest(
 @app.post('/ecc/send/msg/')
 def ecc_recieveMessage(
     encryptedMsg:str=Form(...), 
+    filepath:str=Form(...), 
     device_id:str=Form(...),
     encr_time:float=Form(...),
     keysize:int=Form(...),
@@ -127,14 +142,17 @@ def ecc_recieveMessage(
     print("Encrypt time", encr_time)
     print("Decrypt time", decr_time)
 
+    msg_len = len(decryptedMsg)/1000
+
     dbECCData.insert({
         "transaction_id": len(dbECCData),
         "encrypt_time": encr_time,
         "decrypt_time": decr_time,
         "total_time": encr_time+decr_time,
-        "message": decryptedMsg,
-        "msg_len": f"{len(decryptedMsg)/1000}KB",
-        "keysize": f"{keysize}bits"
+        # "message": decryptedMsg,
+        "filepath": filepath,
+        "msg_len": msg_len,
+        "keysize": keysize
     })
     return {"msg": decryptedMsg}
 
@@ -147,7 +165,31 @@ def ecc_recieveMessage(
 /rsa/send/time/encrypt
 /rsa/debug/encrypt/msg
 /rsa/performance
+/rsa/prebuiltkeys/timer
 """
+@app.get('/rsa/prebuiltkeys/timer')
+def usePreviousKeysRequestRSA(device_id:str,transaction_id:int=None):
+    init_data=dbRSATime.search(Query().device_id==device_id)[0]
+    if transaction_id is None:
+        transaction_id=str(len(dbRSATime))
+    dbRSATime.remove(Query().transaction_id==transaction_id)
+    dbRSATime.insert(
+        {
+            'device_id': device_id,
+            'transaction_id': transaction_id,
+            'key_gen_time': init_data['key_gen_time'],
+            'key_size': init_data['key_size'],
+            'decrypt_msg': 0.0,
+            'encrypt_msg': 0.0,
+            'msg_length': 0,
+            'plain_text_msg':""
+        }
+    )
+    params = {
+        "transaction_id": transaction_id
+    }
+    return params
+
 @app.get('/rsa/get/keyexchange')
 def globalParamsRequestRSA(device_id:str,key_size:int=None,transaction_id:str=None):
     if key_size is None:
@@ -168,6 +210,7 @@ def globalParamsRequestRSA(device_id:str,key_size:int=None,transaction_id:str=No
     dbRSATime.remove(Query().transaction_id==transaction_id)
     dbRSATime.insert(
         {
+            'device_id': device_id,
             'transaction_id': transaction_id,
             'key_gen_time': end-start,
             'key_size': key_size,
