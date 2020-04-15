@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request, Response, Form, status
 from fastapi.responses import JSONResponse
-from src.utils import ecc
+from utils import ecc
 import hashlib, secrets, binascii
 import pickle
 import base64, requests
@@ -8,6 +8,7 @@ import datetime
 import time, json
 from timeit import default_timer as timer
 import os, sys
+import math
 import logging
 
 logging.basicConfig(
@@ -58,7 +59,7 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
 
         with open(filepath, "r") as fin:
             fcontent = fin.read()
-            NUM_OF_BLOCKS = len(fcontent)/BLOCK_SIZE
+            NUM_OF_BLOCKS = math.ceil(len(fcontent)/BLOCK_SIZE)
             memoryBlocks = [
                 fcontent[i:i+BLOCK_SIZE] 
                 for i in range(0, len(fcontent), BLOCK_SIZE)

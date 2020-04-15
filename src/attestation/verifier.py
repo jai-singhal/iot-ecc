@@ -1,4 +1,4 @@
-from src.utils import ecc
+from utils import ecc
 import pickle, time, json
 import random
 import uuid
