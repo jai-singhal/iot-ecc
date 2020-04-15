@@ -117,20 +117,15 @@ def ecc_recieveMessage(
     global proverParams
     
     def decryption():
-        tick = timer()
         tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
         ct = binascii.unhexlify(ct)
         tag = binascii.unhexlify(tag)
         nonce = binascii.unhexlify(nonce)
         decryptedMsg = ecc.decrypt_AES_GCM(ct, nonce, tag, proverParams["secretKey"])
-        tock = timer()
         decryptedMsg = decryptedMsg.decode("utf-8")
-        decr_time = (tock-tick)*(10**3)
-        logging.info("Decryption time: {} ms".format(decr_time))
         return decryptedMsg
 
     def encryption(sigma):
-        tick = timer()
         ct, nonce, tag = ecc.encrypt_AES_GCM(
             sigma.encode('utf-8'), 
             proverParams["secretKey"]
@@ -139,22 +134,16 @@ def ecc_recieveMessage(
         tag = binascii.hexlify(tag).decode("utf-8")
         nonce = binascii.hexlify(nonce).decode("utf-8")
         cryptogram = tag + nonce + ct
-        tock = timer()
-        encr_time = (tock-tick)*(10**3)
-        logging.info("Encryption time: {} ms".format(encr_time))
         return cryptogram
 
     def sigmaGeneration():
         sib, siw = int(tmp[0]), int(tmp[1])
         memoryBlocks = proverParams["memoryBlocks"]
         boi=memoryBlocks[sib]
-        tick = timer()
         sigma=ecc.create_sha256_hash(str(boi))
-        tock = timer()
-
-        logging.info("Time to create SHA256 is: {} ms".format((tock-tick)*(10**3)))
         return sigma
-
+    
+    attest_timer_start=timer()
     try:
         decryptedMsg = decryption()
     except Exception as e:
@@ -171,11 +160,14 @@ def ecc_recieveMessage(
     except Exception as e:
         logging.error(e)
         return {"status": False, "error": "Sigma generation problem"}
-
+    
     try:
         cryptogram = encryption(sigma)
     except Exception as e:
         logging.error(e)
         return {"status": False, "error": "Encryption problem"}
-
-    return {"msg": cryptogram, "status": True}
+    
+    attest_timer_end=timer()
+    return {"msg": cryptogram,
+            "status": True,
+            "enc-time": attest_timer_end-attest_timer_start}
