@@ -170,4 +170,4 @@ def ecc_recieveMessage(
     attest_timer_end=timer()
     return {"msg": cryptogram,
             "status": True,
-            "enc-time": attest_timer_end-attest_timer_start}
+            "prover-time": attest_timer_end-attest_timer_start}
