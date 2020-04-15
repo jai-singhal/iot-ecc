@@ -8,8 +8,8 @@
         "client":{
             "BASEURL_CLIENT1": "http://127.0.0.1:8080",
             "BASEURL_CLIENT2": "http://127.0.0.1:8080",
-            "MSG_FOLDER_CLIENT1": "../data",
-            "MSG_FOLDER_CLIENT2": "../data",
+            "MSG_FOLDER_CLIENT1": "../tmp_data",
+            "MSG_FOLDER_CLIENT2": "../tmp_data",
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
