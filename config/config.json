@@ -2,14 +2,14 @@
     "production": true,
     "local": {
         "server":{
-            "BASEURL_SERVER": "http://127.0.0.1:8080",
+            "BASEURL_SERVER": "http://192.168.0.15:8080",
             "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io"
         },
         "client":{
-            "BASEURL_CLIENT1": "http://127.0.0.1:8080",
-            "BASEURL_CLIENT2": "http://127.0.0.1:8080",
-            "MSG_FOLDER_CLIENT1": "../tmp_data",
-            "MSG_FOLDER_CLIENT2": "../tmp_data",
+            "BASEURL_CLIENT1": "http://192.168.0.14:8001",
+            "BASEURL_CLIENT2": "http://192.168.0.14:8001",
+            "MSG_FOLDER_CLIENT1": "../data",
+            "MSG_FOLDER_CLIENT2": "../data",
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
