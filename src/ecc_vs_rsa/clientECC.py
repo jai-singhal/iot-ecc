@@ -27,7 +27,7 @@ class ClientECC():
 
     def fillClientData(self):
         self.clientData["device_id"] = str(uuid.uuid4())
-        self.clientData["curve_name"] = ecc.get_curve_name(3) # random curve
+        self.clientData["curve_name"] = ecc.get_curve_name(9) # secp256r1
         self.clientData["latitude"] = random.uniform(-180,180)
         self.clientData["longitude"] = random.uniform(-90, 90)
 
