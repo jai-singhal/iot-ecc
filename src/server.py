@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Response, Form, status
+from fastapi import FastAPI, Request, Response, Form, status, File, UploadFile
 from fastapi.responses import JSONResponse
 from utils import ecc
 import hashlib, secrets, binascii
@@ -308,8 +308,8 @@ def recieveMessageBigRSA(device_id:str,transaction_id:str,msg:str=Form(...)):
     return params
 
 @app.post('/rsa/post/big/msg/file')
-def recieveMessageBigRSA(device_id:str,transaction_id:str,file:tmp_file=File(...)):
-    print(file.file.read()[:20])
+def recieveMessageBigFileRSA(device_id:str,transaction_id:str,tmp_file:UploadFile=File(...)):
+    msg=tmp_file.file.read().decode('utf-8')
     pub_pri_pair=dbRSA.search(Query().deviceid==device_id)
     priv_key=(rsa.PrivateKey).load_pkcs1(pub_pri_pair[0]['private'])
     partial_data=dbRSATime.search(Query().transaction_id==transaction_id)
