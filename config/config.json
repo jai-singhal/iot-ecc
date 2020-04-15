@@ -1,5 +1,5 @@
 {
-    "production": true,
+    "production": false,
     "local": {
         "server":{
             "BASEURL_SERVER": "http://localhost:8080",
@@ -15,6 +15,8 @@
             "MSG_FOLDER_CLIENT2": "../../data",
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
+            "ECC_ITERATIONS_PER_FILE_CLIENT1":1,
+            "ECC_ITERATIONS_PER_FILE_CLIENT2":1,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
             "RSA_ITERATIONS_PER_FILE_CLIENT2":10,
             "MEMORY_FILEPATH": "../../memory/memoryFile_verifier.txt"
@@ -35,8 +37,10 @@
             "MSG_FOLDER_CLIENT2": "../../data",
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
-            "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
-            "RSA_ITERATIONS_PER_FILE_CLIENT2":10,
+            "ECC_ITERATIONS_PER_FILE_CLIENT1":1,
+            "ECC_ITERATIONS_PER_FILE_CLIENT2":1,
+            "RSA_ITERATIONS_PER_FILE_CLIENT1":1,
+            "RSA_ITERATIONS_PER_FILE_CLIENT2":1,
             "MEMORY_FILEPATH": "../../memory/memoryFile_verifier.txt"
         }
     }

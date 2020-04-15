@@ -21,10 +21,15 @@ clearDB()
 with open("../../config/config.json", "r") as f:
     config = json.loads(f.read())
 
-BASEURL_SERVER = config["local"]["server"]["BASEURL_SERVER"]
-MSG_FOLDER = config["local"]["client"]["MSG_FOLDER_CLIENT1"]
-KEY_SIZE = config["local"]["client"]["RSA_KEY_SIZE_CLIENT1"]
-ITERATIONS_PER_FILE = config["local"]["client"]["RSA_ITERATIONS_PER_FILE_CLIENT1"]
+if config["production"] == True:
+    pd = "local"
+else:
+    pd = "development"
+
+BASEURL_SERVER = config[pd]["server"]["BASEURL_SERVER"]
+MSG_FOLDER = config[pd]["client"]["MSG_FOLDER_CLIENT1"]
+KEY_SIZE = config[pd]["client"]["RSA_KEY_SIZE_CLIENT1"]
+ITERATIONS_PER_FILE = config[pd]["client"]["RSA_ITERATIONS_PER_FILE_CLIENT1"]
 
 """
 /rsa/get/keyexchange
