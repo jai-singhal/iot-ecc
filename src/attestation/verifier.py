@@ -181,7 +181,7 @@ def main():
     BASEURL_CLIENT2 = config[pd]["client"]["BASEURL_CLIENT2"]
 
     verifier = Verifier(
-        url=BASEURL_CLIENT1,
+        url=BASEURL_SERVER,
         block_size=BLOCK_SIZE,
         word_size=WORD_SIZE,
         memory_filepath=MEMORY_FILEPATH
