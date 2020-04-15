@@ -81,12 +81,24 @@ def ecc_clientRequest(
 
         tick = timer()
         # generate private key for server
+        private_key_timer_start = timer()
         privateKey = secrets.randbelow(curve.field.n)
+        private_key_timer_end = timer()
+        private_key_gen_time = private_key_timer_end - private_key_timer_start
+        print("private key gen time : "+str(private_key_gen_time*(10**3)))
+        public_key_timer_start = timer()
         serverPubKey = privateKey*curve.g
-
+        public_key_timer_end = timer()
+        public_key_gen_time = public_key_timer_end - public_key_timer_start
+        print("public key gen time : "+str(public_key_gen_time*(10**3)))
+        secret_key_timer_start = timer()
         proverParams["secretKey"] = ecc.ecc_point_to_256_bit_key(privateKey*clientPubKey)
+        secret_key_timer_end = timer()
+        secret_key_gen_time = secret_key_timer_end - secret_key_timer_start
+        print("secret key gen time : "+str(secret_key_gen_time*(10**3)))
         tock = timer()
-        total_time += (tock-tick)*(10**3) 
+        #total_time += (tock-tick)*(10**3)
+        total_time += (private_key_gen_time+public_key_gen_time+secret_key_gen_time)*(10**3)
 
         return {
             "pubKey":  binascii.hexlify(pickle.dumps(serverPubKey)),
