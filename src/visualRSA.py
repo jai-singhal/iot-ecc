@@ -5,12 +5,12 @@ from PIL import _imaging
 import pandas as pd
 import matplotlib.pyplot as plt
 
-dbRSA = TinyDB('db/serverdbRSA.json', 
+dbRSA = TinyDB('../db/serverdbRSA.json', 
     indent=4, separators=(',', ': '),
     default_table="device_pub_priv",
     # storage=CachingMiddleware(JSONStorage)
 )
-dbRSATime = TinyDB('db/serverdbRSA.json', 
+dbRSATime = TinyDB('../db/serverdbRSA.json', 
     indent=4, separators=(',', ': '),
     default_table="timing",
     # storage=CachingMiddleware(JSONStorage)
