@@ -165,7 +165,7 @@ class ClientRSA():
         else:
             return False
 
-def sendMessageFile(self,msg):
+    def sendMessageFile(self,msg):
         prm = {
             "device_id": self.clientData["device_id"],
             "transaction_id": self.clientData["transaction_id"]
@@ -188,14 +188,20 @@ def sendMessageFile(self,msg):
         tmp_file=open("tmp_file_uniq.txt","w")
         tmp_file.write(complete_msg_encrypted)
         tmp_file.close()
-        tmp_file=open("tmp_file_uniq.txt","r")
+        tmp_file=open("tmp_file_uniq.txt","rb")
         
         response = requests.post(
-            url = self.BASEURL_SERVER + "/rsa/post/big/msg/file", 
+            url = self.BASEURL_SERVER + "/rsa/post/big/msg/file",#\
+                #+"?device_id="+\
+                #str(self.clientData["device_id"]) + "&transaction_id="+\
+                #str(self.clientData["transaction_id"]),
             files = {"tmp_file":tmp_file},
             params = prm
         )
+        print("waiting for response from server")
+        #print(response.encoding)
         if response.status_code == 200:
+            #print("success reponse received")
             data = {
                 "transaction_id": self.clientData["transaction_id"],
                 "encrypt_time":total_time
@@ -212,7 +218,8 @@ def sendMessageFile(self,msg):
 
 def iter_inner(cli,key_size,msg):
     cli.clientData["key_size"]=key_size
-    res = cli.sendMessage(msg)
+    #res = cli.sendMessage(msg)
+    res = cli.sendMessageFile(msg)
 
 def iter(key_size,msg_folder,iterations_per_file):
     global BASEURL_SERVER
