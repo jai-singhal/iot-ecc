@@ -114,15 +114,21 @@ class Verifier():
             response=response.json()
             if(response["status"]):
                 encryptedMsg=response['msg']
+                verifier_timer_start=timer()
                 tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
                 ct = binascii.unhexlify(ct)
                 tag = binascii.unhexlify(tag)
                 nonce = binascii.unhexlify(nonce)
                 decryptedMsg = ecc.decrypt_AES_GCM(ct, nonce, tag, self.secretKey)
                 decryptedMsg = decryptedMsg.decode("utf-8")
-                
+                verifier_timer_end = timer()
+                verifier_time=(verifier_timer_end-verifier_timer_start)
                 prover_sigma=decryptedMsg
                 verifier_sigma=self.generateSigma()
+                total_time=float(verifier_time)+float(response["prover-time"])
+                logging.info("Verifier time taken is: {} ms".format(float(verifier_time)*(10**3)))
+                logging.info("Prover time taken is: {} ms".format(float(response["prover-time"])*(10**3)))
+                logging.info("Total time taken is: {} ms".format(total_time*(10**3)))
                 if(prover_sigma!=verifier_sigma):
                     return False
                 return True
@@ -141,12 +147,7 @@ class Verifier():
     
     def generateSigma(self):
         boi=self.memoryBlocks[self.SiB]
-        tick = timer()
         sigma=ecc.create_sha256_hash(str(boi))
-        tock = timer()
-        sha_time=(tock-tick)*(10**3)
-        self.total_hash_time += sha_time
-        logging.info("Time to create SHA256 is: {} ms".format(sha_time))
         return str(sigma)
 
     def readMemory(self, filepath):
