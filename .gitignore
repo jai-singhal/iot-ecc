@@ -130,7 +130,7 @@ ENV/
 
 *.jar
 
-logs/*
+
 
 .zip
 .sql
