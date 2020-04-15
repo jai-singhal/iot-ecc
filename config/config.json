@@ -1,5 +1,5 @@
 {
-    "production": true,
+    "production": false,
     "local": {
         "server":{
             "BASEURL_SERVER": "http://localhost:8080",
@@ -24,7 +24,7 @@
         "server":{
             "BASEURL_SERVER": "http://192.168.0.15:8080",
             "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io",
-            "BLOCK_SIZE": 200,
+            "BLOCK_SIZE": 102400,
             "WORD_SIZE": 32,
             "MEMORY_FILEPATH": "../../memory/memoryFile_prover.txt"
         },
