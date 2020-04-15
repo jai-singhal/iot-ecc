@@ -162,6 +162,7 @@ def ecc_recieveMessage(
 /rsa/post/msg
 /rsa/post/stepwise/msg
 /rsa/post/big/msg
+/rsa/post/big/msg/file
 /rsa/send/time/encrypt
 /rsa/debug/encrypt/msg
 /rsa/performance
@@ -277,6 +278,38 @@ def recieveMessageStepwiseRSA(device_id:str,transaction_id:str,msg:str=Form(...)
 
 @app.post('/rsa/post/big/msg')
 def recieveMessageBigRSA(device_id:str,transaction_id:str,msg:str=Form(...)):
+    pub_pri_pair=dbRSA.search(Query().deviceid==device_id)
+    priv_key=(rsa.PrivateKey).load_pkcs1(pub_pri_pair[0]['private'])
+    partial_data=dbRSATime.search(Query().transaction_id==transaction_id)
+    byte_max_msg_size=partial_data[0]['key_size']//4
+    complete_plain_text=[]
+    start=timer()*(10**9)
+    for msg_ind in range(0,len(msg),byte_max_msg_size):
+        mod_msg=msg[msg_ind:msg_ind+byte_max_msg_size]
+        bytemsg=mod_msg.encode('utf-8')
+        bytemsg=binascii.unhexlify(bytemsg)
+        plain_text_msg=rsa.decrypt(bytemsg,priv_key).decode('utf-8')
+        complete_plain_text.append(plain_text_msg)
+    end=timer()*(10**9)
+    complete_plain_text=''.join(complete_plain_text)
+    msg_len=len(complete_plain_text)
+    if(len(complete_plain_text)>MAX_RSA_DB_ENTRY_LENGTH):
+        complete_plain_text="very big message!!"
+    dbRSATime.update(
+        {
+            'decrypt_msg': end-start,
+            'msg_length': msg_len,
+            'plain_text_msg': complete_plain_text
+        }
+    ,Query().transaction_id==transaction_id)
+    params = {
+        "secret_message": complete_plain_text
+    }
+    return params
+
+@app.post('/rsa/post/big/msg/file')
+def recieveMessageBigRSA(device_id:str,transaction_id:str,file:tmp_file=File(...)):
+    print(file.file.read()[:20])
     pub_pri_pair=dbRSA.search(Query().deviceid==device_id)
     priv_key=(rsa.PrivateKey).load_pkcs1(pub_pri_pair[0]['private'])
     partial_data=dbRSATime.search(Query().transaction_id==transaction_id)

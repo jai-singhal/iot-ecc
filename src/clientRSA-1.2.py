@@ -192,7 +192,7 @@ def sendMessageFile(self,msg):
         
         response = requests.post(
             url = self.BASEURL_SERVER + "/rsa/post/big/msg/file", 
-            files = {"tmp_file_uniq.txt":tmp_file},
+            files = {"tmp_file":tmp_file},
             params = prm
         )
         if response.status_code == 200:
