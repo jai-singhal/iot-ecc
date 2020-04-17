@@ -5,6 +5,17 @@ import random
 from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Hash import SHA256
 from Crypto.Random import get_random_bytes
+from Crypto.Hash import HMAC, SHA256
+
+def createHMAC(msg:list):
+    secret = msg[0]
+    assert isinstance(secret, bytes)
+
+    h = HMAC.new(secret, digestmod=SHA256)
+    for m in msg[1:]:
+        assert isinstance(m, bytes)
+        h.update(m)
+    return h.hexdigest()
 
 def get_curve_name(index = None):
     EC_CURVE_REGISTRY = [

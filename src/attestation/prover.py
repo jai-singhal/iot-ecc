@@ -14,17 +14,6 @@ import time
 from timeit import default_timer as timer
 
 app = FastAPI()
-# https://pypi.org/project/tinydb/
-dbECC = TinyDB('../db/serverdbECC.json', 
-    indent=4, separators=(',', ': '), 
-    default_table="device_info",
-    # storage=CachingMiddleware(JSONStorage)
-)
-dbECCData = TinyDB('../db/serverdbECC.json', 
-    indent=4, separators=(',', ': '), 
-    default_table="data",
-    # storage=CachingMiddleware(JSONStorage)
-)
 
 
 @app.get('/')

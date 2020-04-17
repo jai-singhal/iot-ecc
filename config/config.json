@@ -3,7 +3,10 @@
     "local": {
         "server":{
             "BASEURL_SERVER": "http://192.168.0.15:8080",
-            "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io"
+            "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io",
+            "BLOCK_SIZE": 1000,
+            "WORD_SIZE": 32,
+            "MEMORY_FILEPATH": ""
         },
         "client":{
             "BASEURL_CLIENT1": "http://192.168.0.14:8001",
@@ -13,12 +16,16 @@
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
-            "RSA_ITERATIONS_PER_FILE_CLIENT2":10
+            "RSA_ITERATIONS_PER_FILE_CLIENT2":10,
+            "MEMORY_FILEPATH": ""
         }
     },
     "development":{
         "server":{
-            "BASEURL_SERVER": "http://023b8bc8.ngrok.io"
+            "BASEURL_SERVER": "http://023b8bc8.ngrok.io",
+            "BLOCK_SIZE": 1000,
+            "WORD_SIZE": 32,
+            "MEMORY_FILEPATH": ""
         },
         "client":{
             "BASEURL_CLIENT1": "http://192.168.0.14:8001",
@@ -28,7 +35,8 @@
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
-            "RSA_ITERATIONS_PER_FILE_CLIENT2":10
+            "RSA_ITERATIONS_PER_FILE_CLIENT2":10,
+            "MEMORY_FILEPATH": ""
         }
     }
 }
