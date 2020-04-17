@@ -17,6 +17,11 @@ def createHMAC(msg:list):
         h.update(m)
     return h.hexdigest()
 
+def create_sha256_hash(msg:str):
+    h = SHA256.new()
+    h.update(msg.encode("utf-8"))
+    return h.hexdigest()
+
 def get_curve_name(index = None):
     EC_CURVE_REGISTRY = [
         "brainpoolP192r1",

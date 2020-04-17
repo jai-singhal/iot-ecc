@@ -1,4 +1,4 @@
-from ..utils import ecc
+from src.utils import ecc
 import pickle, time, json
 import random
 import uuid
@@ -9,10 +9,10 @@ import requests
 import secrets, binascii
 from itertools import islice
 
-CONFIGPATH = "../config/config.json"
-if not os.path(CONFIGPATH).exists():
+CONFIGPATH = "../../config/config.json"
+if not os.path.exists(CONFIGPATH):
     print("CONFIG FILE NOT FOUND!!")
-    raise FileNotFoundError
+    sys.exit(-1)
 # https://pypi.org/project/tinydb/
 # dbECC = TinyDB('../db/serverdbECC.json', 
 #     indent=4, separators=(',', ': '), 
@@ -43,7 +43,10 @@ class Verifier():
     def newIOTDeviceRegistration(self):
         response = requests.post(
             url = self.CURR_IOT_DEVICE_BASEURL + "/ecc/attestation/client/register/", 
-            data = json.dumps(self.verifierData)
+            data = {
+                "device_id": self.verifierData["device_id"],
+                "curve_name": self.verifierData["curve_name"]
+            }
         )
         response = response.json()
 
@@ -61,8 +64,8 @@ class Verifier():
             return False
 
         tick = timer()
-        privateKey = secrets.randbelow(curve.field.n)
-        clientPublicKey = privateKey*curve.g # privKey*curve
+        privateKey = secrets.randbelow(self.curve.field.n)
+        clientPublicKey = privateKey*(self.curve).g # privKey*curve
         tock = timer()
 
         data = {
@@ -84,10 +87,10 @@ class Verifier():
         self.secretKey = ecc.ecc_point_to_256_bit_key(serverPubKey*privateKey)
         return True
 
-    def sendVerificationMessage(self, msg):
+    def sendVerificationMessage(self, msg:str):
         tick = timer()
         ct, nonce, tag = ecc.encrypt_AES_GCM(
-            msg, 
+            msg.encode("utf-8"), 
             self.secretKey
         )
         ct = binascii.hexlify(ct).decode("utf-8")
@@ -106,20 +109,42 @@ class Verifier():
             }
         )
         if response.status_code == 200:
+            ############################verifying sigma###############################
+            response=response.json()
+            if(response["msg"]):
+                encryptedMsg=response['msg']
+                tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
+                ct = binascii.unhexlify(ct)
+                tag = binascii.unhexlify(tag)
+                nonce = binascii.unhexlify(nonce)
+                decryptedMsg = ecc.decrypt_AES_GCM(ct, nonce, tag, self.secretKey)
+                decryptedMsg = decryptedMsg.decode("utf-8")
+                
+                prover_sigma=decryptedMsg
+                verifier_sigma=self.generateSigma()
+                if(prover_sigma!=verifier_sigma):
+                    return False
+            ##########################################################################
             return True
         else:
+            print("error:response status : "+str(response.status))
             return False
 
 
     def generateSiBSiW(self):
-        self.SiB = random.randint()%self.NUM_OF_BLOCKS
-        self.SiW = random.randint()%self.BLOCK_SIZE
+        self.SiB = random.randint(0, self.NUM_OF_BLOCKS-1)
+        self.SiW = random.randint(0, self.BLOCK_SIZE-1)
         return (self.SiB, self.SiW)
     
+    def generateSigma(self):
+        boi=self.memoryBlocks[self.SiB]
+        sigma=ecc.create_sha256_hash(str(boi))
+        return str(sigma)
 
     def readMemory(self, filepath):
-        if not os.path(filepath).exists():
-            raise FileNotFoundError
+        if not os.path.exists(filepath):
+            print("file not found")
+            sys.exit(-1)
         
         with open(filepath, "r") as fin:
             fcontent = fin.read()
@@ -146,10 +171,20 @@ def main():
     BASEURL_CLIENT2 = config[pd]["client"]["BASEURL_CLIENT2"]
 
     verifier = Verifier(url=BASEURL_CLIENT1,block_size=BLOCK_SIZE,word_size=WORD_SIZE,memory_filepath=MEMORY_FILEPATH)
+    verifier.readMemory(MEMORY_FILEPATH)
     verifier.newIOTDeviceRegistration()
     verifier.keyExchange()
-    verifier.sendVerificationMessage("sb[i],sw[i]")
-    verifier.checkSigma()
+    iteration=1
+    while(True):
+        (sib,siw)=verifier.generateSiBSiW()
+        stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))
+        if stat:
+            print("iter["+str(iteration)+"] : "+"verification successful")
+            iteration+=1
+            continue
+        else:
+            print("iter["+str(iteration)+"] : "+"verification failed!!!!!")
+            break
     
 
 if __name__ == "__main__":
