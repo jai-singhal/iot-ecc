@@ -47,11 +47,11 @@ def ecc_point_to_256_bit_key(point, keysize=32, iters=10000):
     kdfKey = PBKDF2(sha.digest(), salt, keysize, iters, hmac_hash_module=SHA256)
     return kdfKey
     
-def encrypt_ECC(msg, secretKey):
-    ciphertext, nonce, authTag = encrypt_AES_GCM(msg, secretKey)
-    return (ciphertext, nonce, authTag)
+# def encrypt_ECC(msg, secretKey):
+#     ciphertext, nonce, authTag = encrypt_AES_GCM(msg, secretKey)
+#     return (ciphertext, nonce, authTag)
 
-def decrypt_ECC(encryptedMsg, secretKey):
-    (ciphertext, nonce, authTag) = encryptedMsg
-    plaintext = decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey)
-    return plaintext
+# def decrypt_ECC(encryptedMsg, secretKey):
+#     (ciphertext, nonce, authTag) = encryptedMsg
+#     plaintext = decrypt_AES_GCM(ciphertext, nonce, authTag, secretKey)
+#     return plaintext
