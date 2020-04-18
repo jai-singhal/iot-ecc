@@ -8,11 +8,19 @@ import datetime
 import time, json
 from timeit import default_timer as timer
 import os, sys
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s - %(message)s', 
+    datefmt='%d-%b-%y %H:%M:%S', 
+    level=logging.INFO,
+    filename="prover.log"
+)
 
 CONFIGPATH = "../../config/config.json"
 
 if not os.path.exists(CONFIGPATH):
-    print("CONFIG FILE NOT FOUND!!")
+    logging.error("CONFIG FILE NOT FOUND!!")
     sys.exit(-1)
 
 with open(CONFIGPATH, "r") as f:
@@ -45,7 +53,7 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
 
     def readMemory(filepath):
         if not os.path.exists(filepath):
-            print("No file found")
+            logging.error("No file found")
             return {"status": False, "message": "Memory file not found!!"}
 
         with open(filepath, "r") as fin:
@@ -82,11 +90,11 @@ def ecc_clientRequest(
         privateKey = secrets.randbelow(curve.field.n)
         serverPubKey = privateKey*curve.g
         tock = timer()
-        total_time += (tock-tick)*(10**9)
+        total_time += (tock-tick)*(10**3)
         tick = timer()
         proverParams["secretKey"] = ecc.ecc_point_to_256_bit_key(privateKey*clientPubKey)
         tock = timer()
-        total_time += 2*(tock-tick)*(10**9) # 2time key gen
+        total_time += 2*(tock-tick)*(10**3) # 2time key gen
         total_time += clikeygentime
 
         return {
@@ -94,7 +102,7 @@ def ecc_clientRequest(
             "status": True
         }
     except Exception as e:
-        print(e)
+        logging.error(e)
         return {"status": False, "error": str(e)}
 
 
@@ -117,7 +125,7 @@ def ecc_recieveMessage(
         tock = timer()
         decryptedMsg = decryptedMsg.decode("utf-8")
         decr_time = (tock-tick)*(10**3)
-        print("Decryption time: {} ms".format(decr_time))
+        logging.info("Decryption time: {} ms".format(decr_time))
         return decryptedMsg
 
     def encryption(sigma):
@@ -132,7 +140,7 @@ def ecc_recieveMessage(
         cryptogram = tag + nonce + ct
         tock = timer()
         encr_time = (tock-tick)*(10**3)
-        print("Encryption time: {} ms".format(encr_time))
+        logging.info("Encryption time: {} ms".format(encr_time))
         return cryptogram
 
     def sigmaGeneration():
@@ -142,27 +150,31 @@ def ecc_recieveMessage(
         tick = timer()
         sigma=ecc.create_sha256_hash(str(boi))
         tock = timer()
-        print("Time to create SHA256 is: {} ms".format((tock-tick)*10^3))
+
+        logging.info("Time to create SHA256 is: {} ms".format((tock-tick)*(10**3)))
         return sigma
 
     try:
         decryptedMsg = decryption()
     except Exception as e:
+        logging.error(e)
         return {"status": False, "error": "Decryption problem"}
 
     tmp = decryptedMsg.split(",")
     if(len(tmp)!=2):
-        print("unexpected message sent, send sib and siw")
+        logging.error("unexpected message sent, send sib and siw")
         return {"status": False, "error": "Invalid sigma"}
 
     try:
         sigma = sigmaGeneration()
     except Exception as e:
+        logging.error(e)
         return {"status": False, "error": "Sigma generation problem"}
 
     try:
         cryptogram = encryption(sigma)
     except Exception as e:
+        logging.error(e)
         return {"status": False, "error": "Encryption problem"}
 
     return {"msg": cryptogram, "status": True}

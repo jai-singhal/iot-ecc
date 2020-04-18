@@ -8,10 +8,21 @@ from tqdm import tqdm
 import requests
 import secrets, binascii
 from itertools import islice
+import math
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s - %(message)s', 
+    datefmt='%d-%b-%y %H:%M:%S', 
+    level=logging.INFO,
+    filename="verifer.log",
+    filemode='w'
+)
+
 
 CONFIGPATH = "../../config/config.json"
 if not os.path.exists(CONFIGPATH):
-    print("CONFIG FILE NOT FOUND!!")
+    logging.error("CONFIG FILE NOT FOUND!!")
     sys.exit(-1)
 
 class Verifier():
@@ -22,6 +33,7 @@ class Verifier():
         self.WORD_SIZE=word_size
         self.NUM_OF_BLOCKS=0
         self.MEMEMORY_FILEPATH = memory_filepath
+        self.total_hash_time=0
 
     def fillverifierData(self, CURR_IOT_DEVICE_BASEURL):
         self.verifierData["device_id"] = str(uuid.uuid4())
@@ -43,7 +55,7 @@ class Verifier():
             self.curve = ecc.getCurve(self.verifierData["curve_name"])
             return True
         else:
-            print("error:", response["error"])
+            logging.error("error:", response["error"])
             return False
 
     
@@ -60,7 +72,7 @@ class Verifier():
         data = {
             "device_id": self.verifierData["device_id"],
             "clipubKey": binascii.hexlify(pickle.dumps(clientPublicKey)),
-            "clikeygentime": (tock-tick)*(10**9)
+            "clikeygentime": (tock-tick)*(10**3)
         }
 
         response = requests.post(
@@ -69,7 +81,7 @@ class Verifier():
         )
         response = response.json()
         if not response["status"]:
-            print("error", response["error"])
+            logging.error("error", response["error"])
             return False
 
         serverPubKey = pickle.loads(binascii.unhexlify(response["pubKey"]))
@@ -93,7 +105,7 @@ class Verifier():
             data = {
                 "encryptedMsg":cryptogram,
                 "device_id": self.verifierData["device_id"],
-                "encr_time": (tock-tick)*(10**9),
+                "encr_time": (tock-tick)*(10**3),
                 "keysize": 256
             }
         )
@@ -115,10 +127,10 @@ class Verifier():
                     return False
                 return True
             else:
-                print(response["error"])
+                logging.error(response["error"])
                 return False
         else:
-            print("error:response status : "+str(response.status))
+            logging.error("error:response status : "+str(response.status))
             return False
 
 
@@ -132,23 +144,27 @@ class Verifier():
         tick = timer()
         sigma=ecc.create_sha256_hash(str(boi))
         tock = timer()
-        print("Time to create SHA256 is: {} ms".format((tock-tick)*10^3))
+        sha_time=(tock-tick)*(10**3)
+        self.total_hash_time += sha_time
+        logging.info("Time to create SHA256 is: {} ms".format(sha_time))
         return str(sigma)
 
     def readMemory(self, filepath):
         if not os.path.exists(filepath):
-            print("file not found")
+            logging.error("file not found")
             sys.exit(-1)
         
         with open(filepath, "r") as fin:
             fcontent = fin.read()
-            self.NUM_OF_BLOCKS = len(fcontent)/self.BLOCK_SIZE
+            self.NUM_OF_BLOCKS = math.ceil(len(fcontent)/self.BLOCK_SIZE)
             self.memoryBlocks = [
                 fcontent[i:i+self.BLOCK_SIZE] 
                 for i in range(0, len(fcontent), self.BLOCK_SIZE)
             ]
 
 def main():
+    print("-----------Verification starts------------")
+    print("Watch verififer.log")
     with open(CONFIGPATH, "r") as f:
         config = json.loads(f.read())
 
@@ -178,11 +194,11 @@ def main():
         (sib,siw)=verifier.generateSiBSiW()
         stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))
         if stat:
-            print("iter["+str(iteration)+"] : "+"verification successful")
+            logging.info("iter["+str(iteration)+"] : "+"verification successful")
             iteration+=1
             continue
         else:
-            print("iter["+str(iteration)+"] : "+"verification failed!!!!!")
+            logging.info("iter["+str(iteration)+"] : "+"verification failed!!!!!")
             break
     
 

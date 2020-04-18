@@ -55,12 +55,12 @@ def encrypt_AES_GCM(msg, setKey):
     ciphertext, authTag = aesCipher.encrypt_and_digest(msg)
     return (ciphertext, aesCipher.nonce, authTag)
 
-def dypt_AES_GCM(ciphertext, nonce, authTag, setKey):
+def decrypt_AES_GCM(ciphertext, nonce, authTag, setKey):
     aesCipher = AES.new(setKey, AES.MODE_GCM, nonce)
-    plaintext = aesCipher.dypt_and_verify(ciphertext, authTag)
+    plaintext = aesCipher.decrypt_and_verify(ciphertext, authTag)
     return plaintext
 
-def _point_to_256_bit_key(point, keysize=32, iters=10000):
+def ecc_point_to_256_bit_key(point, keysize=32, iters=10000):
     sha = hashlib.sha256(str(point.x).encode("utf-8"))
     sha.update(str(point.y).encode("utf-8"))
     salt = b'7G\xf6\xc3n\x01\xf7\xf3\xb46\xce\xfd.\x7f\xdfX'
