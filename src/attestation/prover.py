@@ -1,17 +1,10 @@
-from fastapi import FastAPI, Request, Response, Form, status, File, UploadFile
+from fastapi import FastAPI, Request, Response, Form, status
 from fastapi.responses import JSONResponse
 from src.utils import ecc
 import hashlib, secrets, binascii
 import pickle
 import base64, requests
 import datetime
-from pydantic import BaseModel
-
-from tinydb import TinyDB, Query
-from tinydb.storages import JSONStorage
-from tinydb.middlewares import CachingMiddleware
-
-import rsa
 import time, json
 from timeit import default_timer as timer
 import os, sys
@@ -45,11 +38,6 @@ proverParams = {
     "secretKey":None,
     "curve": None
 }
-
-@app.get('/')
-def example():
-    return {'hello': 'world'}
-
 
 @app.post('/ecc/attestation/client/register/')
 def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...)):
@@ -119,43 +107,62 @@ def ecc_recieveMessage(
 ):
     global proverParams
     
-    tick = timer()
-    tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
-    ct = binascii.unhexlify(ct)
-    tag = binascii.unhexlify(tag)
-    nonce = binascii.unhexlify(nonce)
-    decryptedMsg = ecc.decrypt_AES_GCM(ct, nonce, tag, proverParams["secretKey"])
-    tock = timer()
-    decryptedMsg = decryptedMsg.decode("utf-8")
-    decr_time = (tock-tick)*(10**9)
-    print("Decryption time: ", decr_time)
-    ######################## sigma genration #########################    
-    tmp=decryptedMsg.split(",")
+    def decryption():
+        tick = timer()
+        tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
+        ct = binascii.unhexlify(ct)
+        tag = binascii.unhexlify(tag)
+        nonce = binascii.unhexlify(nonce)
+        decryptedMsg = ecc.decrypt_AES_GCM(ct, nonce, tag, proverParams["secretKey"])
+        tock = timer()
+        decryptedMsg = decryptedMsg.decode("utf-8")
+        decr_time = (tock-tick)*(10**3)
+        print("Decryption time: {} ms".format(decr_time))
+        return decryptedMsg
 
+    def encryption(sigma):
+        tick = timer()
+        ct, nonce, tag = ecc.encrypt_AES_GCM(
+            sigma.encode('utf-8'), 
+            proverParams["secretKey"]
+        )
+        ct = binascii.hexlify(ct).decode("utf-8")
+        tag = binascii.hexlify(tag).decode("utf-8")
+        nonce = binascii.hexlify(nonce).decode("utf-8")
+        cryptogram = tag + nonce + ct
+        tock = timer()
+        encr_time = (tock-tick)*(10**3)
+        print("Encryption time: {} ms".format(encr_time))
+        return cryptogram
+
+    def sigmaGeneration():
+        sib, siw = int(tmp[0]), int(tmp[1])
+        memoryBlocks = proverParams["memoryBlocks"]
+        boi=memoryBlocks[sib]
+        tick = timer()
+        sigma=ecc.create_sha256_hash(str(boi))
+        tock = timer()
+        print("Time to create SHA256 is: {} ms".format((tock-tick)*10^3))
+        return sigma
+
+    try:
+        decryptedMsg = decryption()
+    except Exception as e:
+        return {"status": False, "error": "Decryption problem"}
+
+    tmp = decryptedMsg.split(",")
     if(len(tmp)!=2):
         print("unexpected message sent, send sib and siw")
+        return {"status": False, "error": "Invalid sigma"}
 
-    sib=int(tmp[0])
-    siw=int(tmp[1])
-    memoryBlocks = proverParams["memoryBlocks"]
-    print( len(memoryBlocks), sib)
-    boi=memoryBlocks[sib]
-    sigma=ecc.create_sha256_hash(str(boi))
+    try:
+        sigma = sigmaGeneration()
+    except Exception as e:
+        return {"status": False, "error": "Sigma generation problem"}
 
-    tick = timer()
-    ct, nonce, tag = ecc.encrypt_AES_GCM(
-        sigma.encode('utf-8'), 
-        proverParams["secretKey"]
-    )
-    ct = binascii.hexlify(ct).decode("utf-8")
-    tag = binascii.hexlify(tag).decode("utf-8")
-    nonce = binascii.hexlify(nonce).decode("utf-8")
-    cryptogram = tag + nonce + ct
-    tock = timer()
-    encr_time = (tock-tick)*(10**9)
-    ###################################################################
-    print("Encrypt time", encr_time)
+    try:
+        cryptogram = encryption(sigma)
+    except Exception as e:
+        return {"status": False, "error": "Encryption problem"}
 
-    msg_len = len(decryptedMsg)/1000
-
-    return {"msg": cryptogram}
+    return {"msg": cryptogram, "status": True}

@@ -13,17 +13,6 @@ CONFIGPATH = "../../config/config.json"
 if not os.path.exists(CONFIGPATH):
     print("CONFIG FILE NOT FOUND!!")
     sys.exit(-1)
-# https://pypi.org/project/tinydb/
-# dbECC = TinyDB('../db/serverdbECC.json', 
-#     indent=4, separators=(',', ': '), 
-#     default_table="device_info",
-#     # storage=CachingMiddleware(JSONStorage)
-# )
-# dbECCData = TinyDB('../db/serverdbECC.json', 
-#     indent=4, separators=(',', ': '), 
-#     default_table="data",
-#     # storage=CachingMiddleware(JSONStorage)
-# )
 
 class Verifier():
     def __init__(self, url="",block_size=1000,word_size=32,memory_filepath=""):
@@ -111,7 +100,7 @@ class Verifier():
         if response.status_code == 200:
             ############################verifying sigma###############################
             response=response.json()
-            if(response["msg"]):
+            if(response["status"]):
                 encryptedMsg=response['msg']
                 tag, nonce, ct = encryptedMsg[0:32], encryptedMsg[32:64], encryptedMsg[64:]
                 ct = binascii.unhexlify(ct)
@@ -124,8 +113,10 @@ class Verifier():
                 verifier_sigma=self.generateSigma()
                 if(prover_sigma!=verifier_sigma):
                     return False
-            ##########################################################################
-            return True
+                return True
+            else:
+                print(response["error"])
+                return False
         else:
             print("error:response status : "+str(response.status))
             return False
@@ -138,7 +129,10 @@ class Verifier():
     
     def generateSigma(self):
         boi=self.memoryBlocks[self.SiB]
+        tick = timer()
         sigma=ecc.create_sha256_hash(str(boi))
+        tock = timer()
+        print("Time to create SHA256 is: {} ms".format((tock-tick)*10^3))
         return str(sigma)
 
     def readMemory(self, filepath):
@@ -170,7 +164,12 @@ def main():
     BASEURL_CLIENT1 = config[pd]["client"]["BASEURL_CLIENT1"]
     BASEURL_CLIENT2 = config[pd]["client"]["BASEURL_CLIENT2"]
 
-    verifier = Verifier(url=BASEURL_CLIENT1,block_size=BLOCK_SIZE,word_size=WORD_SIZE,memory_filepath=MEMORY_FILEPATH)
+    verifier = Verifier(
+        url=BASEURL_CLIENT1,
+        block_size=BLOCK_SIZE,
+        word_size=WORD_SIZE,
+        memory_filepath=MEMORY_FILEPATH
+    )
     verifier.readMemory(MEMORY_FILEPATH)
     verifier.newIOTDeviceRegistration()
     verifier.keyExchange()
@@ -189,3 +188,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
