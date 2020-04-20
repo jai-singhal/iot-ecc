@@ -60,7 +60,7 @@ def visualize_ecc():
 
     ax = meandf.plot(rot=0,  use_index=True, kind='bar', title='Time vs message size')
     print("Avg Key-generation time: " + avg_keygentime)
-    plt.text(0, 30, "Avg Key-generation time: " + avg_keygentime)
+    plt.text(-0.25, 26.5, "Avg Key-generation time: " + avg_keygentime)
 
     plt.xlabel("Message Length (in KB)")
     plt.ylabel("Time required (in ms)")

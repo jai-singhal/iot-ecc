@@ -5,8 +5,8 @@
 We had a general idea about how cryptography works and why it is used. We also knew some of its applications and the kind of techniques/ algorithms used in the same applications. When we were learning about cryptography we were told that the different methods and techniques used to handle different scenarios were well tested and known to not have security threats that would lead to compromise of information within a reasonable time using a reasonably large number of resources. That’s one of the main reasons why different organizations using these different techniques try not to use another alternative from what they are currently using unless the ones that they are using have some reported security threats i.e. they abide by the saying “if it ain’t broke, dont fix it”. This made us think about the existence of a fairly new technique, elliptic curve cryptography and it’s gaining popularity. So we wanted to explore/ experiment and know for ourselves, the advantages of using it.
 
 In the first project **ecc vs rsa**, we have tried to compare RSA with ECIES - to see if there were any performance benefits.
-In the second project **attestation**, we have built any application to mimic attestation functionality - to check the feasibility of ECC in a slightly more realistic scenario.
 
+In the second project **attestation**, we have built any application to mimic attestation functionality - to check the feasibility of ECC in a slightly more realistic scenario.
 
 ## How to run the program
 
@@ -115,6 +115,14 @@ Let the server run on Terminal A.
     ```shell
     python verifer.py
     ```
+
+## Exploring ECC VS RSA
+
+### ECC
+[!ECC](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/ECC.png)
+
+### RSA
+[!RSA](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/RSA.png)
 
 
 ## Directory Structure
