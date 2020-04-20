@@ -16,7 +16,8 @@ In the second project **attestation**, we have built any application to mimic at
 
 2. Install python > 3.5. 
 
-> For windiws, you can get python from [here](https://www.python.org/downloads/windows/)
+> For Windows, you can get python from [here](https://www.python.org/downloads/windows/)
+
 > Also note that if you are working on LINUX/MAC, use python3 instead of python.
 
 3. Set up the python on your system

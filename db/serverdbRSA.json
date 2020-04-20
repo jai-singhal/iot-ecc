@@ -24,6 +24,11 @@
             "deviceid": "5",
             "public": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAgsBQ8F8wepyHNlT+EUs6ttkrNyN0kIAwAYaVF9UXHHuhbLC/XrGl\nt+GY7PKza1U7bHzxuqWrh/zfWcVX0IffOQSzc5WCgOYcz4AT9fkQb5n3zLdopghN\nEjr5UaVcjMN7T4R+vEoyK2o6xSsNZoN7pNYYpw4ysWQeRvzqcrmgj6TbmxDu47mN\n9uMFAQQq0tg87dg3yVclC9oPQ3uxIx/Nhq9IlW2saT0XR06GmknorgM8STpnt4Ss\n+1ATbAqruiLRqIWa5Z8n66AYEoCrhPpdPuCl5ecloQFC4wf3X54yWBBwNz41G80i\ng5Dxh+whGqVlFdehTDzp/BwGkZvWLg2EdwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
             "private": "-----BEGIN RSA PRIVATE KEY-----\nMIIEqAIBAAKCAQEAgsBQ8F8wepyHNlT+EUs6ttkrNyN0kIAwAYaVF9UXHHuhbLC/\nXrGlt+GY7PKza1U7bHzxuqWrh/zfWcVX0IffOQSzc5WCgOYcz4AT9fkQb5n3zLdo\npghNEjr5UaVcjMN7T4R+vEoyK2o6xSsNZoN7pNYYpw4ysWQeRvzqcrmgj6TbmxDu\n47mN9uMFAQQq0tg87dg3yVclC9oPQ3uxIx/Nhq9IlW2saT0XR06GmknorgM8STpn\nt4Ss+1ATbAqruiLRqIWa5Z8n66AYEoCrhPpdPuCl5ecloQFC4wf3X54yWBBwNz41\nG80ig5Dxh+whGqVlFdehTDzp/BwGkZvWLg2EdwIDAQABAoIBADE26kBP1BOSr2JI\nA4nG40bH33hVpB5v4aHxYlUiJBzYfB5JOP8PpuzbwZAOmnIgFsnzDZnPmg0JpZhI\nq5EWU3NGzbUH5aNW+ikwcFL5eLJJJfisYHt+TGQ8RnPw5jEls1hu6rU8yD2HMq/c\nUKLxgqy82XKn6XTT1kAwTEsjRFzNAkZwNaYId5fjv1Kev3hcMHRTSV8KEn50EBja\nTkXWyh+Zai/E1kRjFTVAYtGgZvdc34fYFcEzPkEGhsTf4g7R4MMQIvIy2zOIKkvU\no7/XV7psZavKHYEP8Fiuw94TWCHANFQhl+3sVC1We7yKfN/3iN31pAS4Lx3i9lKm\neY149gECgYkArfNyPMPYGjxiMOVjDmr/kvi4D3Vi1m7jpL9bCgr8LBD01bXAqSvG\nDa69ePB7xGu6DMXUi6qaDYMVitPaIWjViiHkfzVNVkpjuB/V1RK6gm2o2pw65RLX\nJFqtFWCcvtPySgouWIb+oeu7JNQ3prW8L05tlRjVj0DyObHL51TVH34f5i0XOaqB\nwQJ5AMBsglPa4gON/9+5pWZ2PuchhIm3MHeezEdNNKihlVHzFLNeTtkq7gD46Gn7\nXs4t/YWbsN0Z061tmOHovXc9+vMcXKQPcRbPRQeRstjhL78hGi8DDT4TPQKQP3mu\nQkdoDilD8sLCSGORetHAsnKQldwqcNoXikykNwKBiATQljrkWNjxDu63irRdddGF\nnOKgpym0TAzFVynCABTgK0a3DywfkA3U5l2wmlxndvDfkPCEulrhY/lBv+no0vBN\n29tBiHB5AqWYC/0n1Y3Cp0fVxzOL//R7pgrPb8dAapZuDbZZlja5JabxUNEGerz8\neMAFvfOHIq1CJJi0mmmSviNK4DeyZoECeDEuColAEi/yZQlbO2jao+0S5fsEtQB9\nt5wpoWHQGofdZtcJLYHXtQjOlSgxNOPhYUB6sFNyPGXA8ygaAgKt9quX/h14TOEV\njIEIvfssYrWo0jZdw06wQBGdqHuDDDGP6L6nPS6F1VaNYiSl6XXaelLRDhLPnWtF\nNQKBiHvCI3dISeae3dLch6UgBiqPl729uhqY9Nh0nbNd1vi5SqKq5yH5PLzQB2To\nyPFzmXM9Ojw2WHZXv87554jDQEuRymFWNZlfUp5a9Yi637TuZBV7Roiwuiq5GNPR\nx+WBigPty5It3QV8F0H0ZsjI/4DfHaMMF3UXke7JjuNET0ktYoH3Ee8h7uU=\n-----END RSA PRIVATE KEY-----\n"
+        },
+        "26": {
+            "deviceid": "6",
+            "public": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAvskLXT/1fWLD0FzMTj/PO89xG12NmDyiBk5jYuE4Q1QX4DQLwdn7\nqTOmjfBd0C+RiAG0haXgnITtDfBvwqc9dR2QxseNhQbSeyztdnaJCSW/wYixTTIy\nRJVrMKUuKOBqMUCuRrO9xLICWx+x6Zmd6oLE4xF1wg02tKaiCuhmV3CC/fo8oXhq\nwevQZ25AHbRLnsc5qVwFD9QaGtdAfb9rXAoBx5EBNE/NMNxQ7yImCPD/Wc4JCiZR\nFjYPXTF3Xl0GnTfMvZZ23Pil/59QLHTTLwIsrEpq+SALLICOHBlbIqSrkh1WJRfP\nYqyifMKDDqJZvhwfSF9/HiOCT5B1fyKh2QIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+            "private": "-----BEGIN RSA PRIVATE KEY-----\nMIIEqQIBAAKCAQEAvskLXT/1fWLD0FzMTj/PO89xG12NmDyiBk5jYuE4Q1QX4DQL\nwdn7qTOmjfBd0C+RiAG0haXgnITtDfBvwqc9dR2QxseNhQbSeyztdnaJCSW/wYix\nTTIyRJVrMKUuKOBqMUCuRrO9xLICWx+x6Zmd6oLE4xF1wg02tKaiCuhmV3CC/fo8\noXhqwevQZ25AHbRLnsc5qVwFD9QaGtdAfb9rXAoBx5EBNE/NMNxQ7yImCPD/Wc4J\nCiZRFjYPXTF3Xl0GnTfMvZZ23Pil/59QLHTTLwIsrEpq+SALLICOHBlbIqSrkh1W\nJRfPYqyifMKDDqJZvhwfSF9/HiOCT5B1fyKh2QIDAQABAoIBAEGmvRphoAB9tBRH\nWqaynoVeZPWdw9PXSYoR/3FPPyUsEus7/a+/azJWa8H8LMwvEk1TCOPUqO4zb7+U\nNWEuW5+phOBiWvij2Fo6o5xYPd+/9bSLbTe7RkEDidc7gB7g2qoIL/B0eaDuAJGK\n3pYcHpNMXKQmpfcYxKUaanjgS0X9MjKt6Gt+s+bsct+q/hIfe41yyZMn5HAj1BLe\nSd+aap8EahX0YkzDA8yFD/yhXBERsdajA1j9vlJ6dZCxHreCIFbz8VXii4OAFDfo\nGIBTKV/d5wybqx+7OW1bKxkWfyJJ8eOo+oK8+JE3MS/Evt7RejqRJXnlLAltefER\nAQp25AECgYkA4Mve8Ljy2QX8l1u77wi5g/OmSCTKST50hbssWASyc1Bp/oKLoh5r\nabRhAK0kIwTs/BQX3xbrnEq3gOsAKihNMaBiQc7VLk7jK4ZE31KUK/4x3Xv1YLw0\nIH+XFRVfoH4aaDWYPcPmyTA6f+LIKxbtRAoVu5fYLzqSkOw1zS6n7mNvjcWtJzmO\naQJ5ANlEl7p03R2BlmMPs8PZGqZUliyaulfHoG7FQa+NgL/tMpfEzbxN6+ctsILX\nhLak/dJWniuEZOYASZi8VkZpkeE2BJM7GPX9vVUCQ7hFbXKF9wE3NH8ihMKVbF9x\n9tS2AWVn5YPcUy/qo2LytaTU119pItZKtebp8QKBiHPjZkl/b2LGnVOCbT5rpwgJ\ngf3LSaW81uFifxfZRA4CtMIKluW6/PD/lsp8eBa9oVbLHQtbi5eFRVjmzazuHe2p\nmz4F3Q0EikST8cmXjt+nKhnen7+BBvaCEGdEH4pjuEVk69lbtwydGmt3hG4CYcsj\nz9RoEYE3lvuzaoEevmA9TvMtp3iDSZECeQDUEdjL3b/qSg/hd3UvCB20FsJSnWCf\nx7G4DYA0+7idHciRTT7Hu4M0rmso+3aF1HwQMA3JSjw2KDeuBr9rkSYcHl7O2xNd\nIKQKcuBo4BOZglt760ephKbzS2hxrUqRi2nHcmcbkxX7olqCfYeBcWMbtQKVCm2N\nC/ECgYgruLvGoF0Xo6DJdN/Jw3p2lyC5J1BJZWLZlomUmndzJlc88LLhwxe0ZDEx\ntiTGS2bj/2QXCbD+ZnUTRDn5ABnWmdzNBHRKyuq89Py+phAFhiW+aLuX//+QYtP/\nSHV4vtX31qwZ+Z6a+B4ZGlxiSOsMI+ttPE4AmUALKjEV8IrsMvxMiZtgS5NX\n-----END RSA PRIVATE KEY-----\n"
         }
     },
     "timing": {
@@ -461,6 +466,96 @@
             "device_id": "5",
             "transaction_id": "43",
             "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 67674.68949999986,
+            "encrypt_msg": 637.4535000002943,
+            "msg_length": 200000,
+            "plain_text_msg": "very big message!!"
+        },
+        "245": {
+            "device_id": "5",
+            "transaction_id": "44",
+            "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 3326.9583999998868,
+            "encrypt_msg": 36.06779999984428,
+            "msg_length": 10000,
+            "plain_text_msg": "very big message!!"
+        },
+        "246": {
+            "device_id": "5",
+            "transaction_id": "45",
+            "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 716.3442000001669,
+            "encrypt_msg": 26.792100000660866,
+            "msg_length": 2000,
+            "plain_text_msg": "Confidence in the pound is widely expected to take another sharp dive if trade figures for September , due for release tomorrow , fail to show a substantial improvement from July and August 's near-record deficits . \nChancellor of the Exchequer Nigel Lawson 's restated commitment to a firm monetary policy has helped to prevent a freefall in sterling over the past week . \nBut analysts reckon underlying support for sterling has been eroded by the chancellor 's failure to announce any new policy measures in his Mansion House speech last Thursday . \nThis has increased the risk of the government being forced to increase base rates to 16 % from their current 15 % level to defend the pound , economists and foreign exchange market analysts say . \n`` The risks for sterling of a bad trade figure are very heavily on the down side , '' said Chris Dillow , senior U.K. economist at Nomura Research Institute . \n`` If there is another bad trade number , there could be an awful lot of pressure , '' noted Simon Briscoe , U.K. economist for Midland Montagu , a unit of Midland Bank PLC . \nForecasts for the trade figures range widely , but few economists expect the data to show a very marked improvement from the # 2 billion -LRB- $ 3.2 billion -RRB- deficit in the current account reported for August . \nThe August deficit and the # 2.2 billion gap registered in July are topped only by the # 2.3 billion deficit of October 1988 . \nSanjay Joshi , European economist at Baring Brothers & Co. , said there is no sign that Britain 's manufacturing industry is transforming itself to boost exports . \nAt the same time , he remains fairly pessimistic about the outlook for imports , given continued high consumer and capital goods inflows . \nHe reckons the current account deficit will narrow to only # 1.8 billion in September . \nHowever , Mr. Dillow said he believes that a reduction in raw material stockbuilding by industry could lead to a sharp drop in imports . \nCombined with at least some rebound i"
+        },
+        "247": {
+            "device_id": "5",
+            "transaction_id": "46",
+            "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 130480.99409999978,
+            "encrypt_msg": 1262.3185000000522,
+            "msg_length": 400000,
+            "plain_text_msg": "very big message!!"
+        },
+        "248": {
+            "device_id": "5",
+            "transaction_id": "47",
+            "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 168383.5534000001,
+            "encrypt_msg": 1559.0882999999449,
+            "msg_length": 500000,
+            "plain_text_msg": "very big message!!"
+        },
+        "249": {
+            "device_id": "5",
+            "transaction_id": "48",
+            "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 17400.288199999835,
+            "encrypt_msg": 159.51839999994263,
+            "msg_length": 50000,
+            "plain_text_msg": "very big message!!"
+        },
+        "250": {
+            "device_id": "5",
+            "transaction_id": "49",
+            "key_gen_time": 11768.062800000422,
+            "key_size": 2048,
+            "decrypt_msg": 1737.621199999936,
+            "encrypt_msg": 24.91069999989122,
+            "msg_length": 5000,
+            "plain_text_msg": "very big message!!"
+        },
+        "251": {
+            "device_id": "6",
+            "transaction_id": "50",
+            "key_gen_time": 18352.8228000002,
+            "key_size": 2048,
+            "decrypt_msg": 33590.156299999915,
+            "encrypt_msg": 324.1497000004165,
+            "msg_length": 100000,
+            "plain_text_msg": "very big message!!"
+        },
+        "252": {
+            "device_id": "6",
+            "transaction_id": "51",
+            "key_gen_time": 18352.8228000002,
+            "key_size": 2048,
+            "decrypt_msg": 3875.13450000016,
+            "encrypt_msg": 51.717699999921024,
+            "msg_length": 10000,
+            "plain_text_msg": "very big message!!"
+        },
+        "253": {
+            "device_id": "6",
+            "transaction_id": "52",
+            "key_gen_time": 18352.8228000002,
             "key_size": 2048,
             "decrypt_msg": 0.0,
             "encrypt_msg": 0.0,
