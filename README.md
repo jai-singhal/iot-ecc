@@ -134,7 +134,7 @@ Key generation time was ~10.5ms for a key size of 2048bits. (we have compared 20
 
 ## Exploring Attesation
 
-![attestation](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/attestation.png?raw=true)
+![attestation](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/attestation.PNG?raw=true)
 
 ## Directory Structure
 ```shell
