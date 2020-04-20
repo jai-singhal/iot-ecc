@@ -193,6 +193,7 @@ Key generation time was ~10.5ms for a key size of 2048bits. (we have compared 20
 │   │   │   └── graph.py
 │   │   ├── verifer.log
 │   │   └── verifier.py
+│   │   └── visualize.py
 │   └── ecc_vs_rsa
 │	  ├── README.md
 │	  ├── __init__.py

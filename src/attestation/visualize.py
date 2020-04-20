@@ -19,10 +19,10 @@ def getData(logName):
     return verifier, prover, total
 
 
-verifer0_5, prover0_5, total0_5 = getData("verifer-0.5KB.log")
-verifer1, prover1, total1 = getData("verifer-1KB.log")
-verifer32, prover32, total32 = getData("verifer-32KB.log")
-verifer100, prover100, total100 = getData("verifer-100KB.log")
+verifer0_5, prover0_5, total0_5 = getData("../../logs/verifer-0.5KB.log")
+verifer1, prover1, total1 = getData("../../logs/verifer-1KB.log")
+verifer32, prover32, total32 = getData("../../logs/verifer-32KB.log")
+verifer100, prover100, total100 = getData("../../logs/verifer-100KB.log")
 
 total_dp = 120
 seek = 200
