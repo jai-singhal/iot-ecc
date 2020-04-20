@@ -4,24 +4,15 @@ from utils import ecc
 import hashlib, secrets, binascii
 import pickle
 import base64, requests
-import datetime
-import time, json
+import json
 from timeit import default_timer as timer
 import os, sys
 import math
-import logging
-
-logging.basicConfig(
-    format='%(asctime)s - %(message)s', 
-    datefmt='%d-%b-%y %H:%M:%S', 
-    level=logging.INFO,
-    filename="prover.log"
-)
 
 CONFIGPATH = "../../config/config.json"
 
 if not os.path.exists(CONFIGPATH):
-    logging.error("CONFIG FILE NOT FOUND!!")
+    print("CONFIG FILE NOT FOUND!!")
     sys.exit(-1)
 
 with open(CONFIGPATH, "r") as f:
@@ -54,7 +45,7 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
 
     def readMemory(filepath):
         if not os.path.exists(filepath):
-            logging.error("No file found")
+            print("No file found")
             return {"status": False, "message": "Memory file not found!!"}
 
         with open(filepath, "r") as fin:
@@ -65,11 +56,13 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
                 for i in range(0, len(fcontent), BLOCK_SIZE)
             ]
             return memoryBlocks
-
-    proverParams["curve"] = ecc.getCurve(curve_name)
-    proverParams["device_id"] = device_id
-    proverParams["memoryBlocks"] = readMemory(MEMORY_FILEPATH)
-    return {"status": True, "message": "Client registred successfully"}
+    try:
+        proverParams["curve"] = ecc.getCurve(curve_name)
+        proverParams["device_id"] = device_id
+        proverParams["memoryBlocks"] = readMemory(MEMORY_FILEPATH)
+        return {"status": True, "message": "Client registred successfully"}
+    except Exception as e:
+        return {"status": False, "error": str(e)}
 
 
 @app.post('/ecc/attestation/keyexchange/')
@@ -81,7 +74,7 @@ def ecc_clientRequest(
     global proverParams
 
     try:
-        total_time = 0
+        total_time = clikeygentime
         # Get a
         curve = proverParams["curve"]
         clientPubKey = pickle.loads(binascii.unhexlify(clipubKey))
@@ -90,20 +83,18 @@ def ecc_clientRequest(
         # generate private key for server
         privateKey = secrets.randbelow(curve.field.n)
         serverPubKey = privateKey*curve.g
-        tock = timer()
-        total_time += (tock-tick)*(10**3)
-        tick = timer()
+
         proverParams["secretKey"] = ecc.ecc_point_to_256_bit_key(privateKey*clientPubKey)
         tock = timer()
-        total_time += 2*(tock-tick)*(10**3) # 2time key gen
-        total_time += clikeygentime
+        total_time += (tock-tick)*(10**3) 
 
         return {
             "pubKey":  binascii.hexlify(pickle.dumps(serverPubKey)),
+            "keygentime": total_time,
             "status": True
         }
     except Exception as e:
-        logging.error(e)
+        print(e)
         return {"status": False, "error": str(e)}
 
 
@@ -147,27 +138,29 @@ def ecc_recieveMessage(
     try:
         decryptedMsg = decryption()
     except Exception as e:
-        logging.error(e)
+        print(e)
         return {"status": False, "error": "Decryption problem"}
 
     tmp = decryptedMsg.split(",")
     if(len(tmp)!=2):
-        logging.error("unexpected message sent, send sib and siw")
+        print("unexpected message sent, send sib and siw")
         return {"status": False, "error": "Invalid sigma"}
 
     try:
         sigma = sigmaGeneration()
     except Exception as e:
-        logging.error(e)
+        print(e)
         return {"status": False, "error": "Sigma generation problem"}
     
     try:
         cryptogram = encryption(sigma)
     except Exception as e:
-        logging.error(e)
+        print(e)
         return {"status": False, "error": "Encryption problem"}
     
     attest_timer_end=timer()
-    return {"msg": cryptogram,
-            "status": True,
-            "prover-time": attest_timer_end-attest_timer_start}
+    return {
+        "msg": cryptogram,
+        "status": True,
+        "prover-time": attest_timer_end-attest_timer_start
+    }

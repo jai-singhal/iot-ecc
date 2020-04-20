@@ -8,8 +8,8 @@ import sys, os
 from timeit import default_timer as timer
 from tqdm import tqdm
 
-DATAPATH = "../data/"
-CONFIGPATH = "../config/config.json"
+DATAPATH = "../../data/"
+CONFIGPATH = "../../config/config.json"
 
 class ClientECC():
     def __init__(self, CURR_CLIENT_BASEURL, BASEURL_SERVER):
@@ -54,7 +54,7 @@ class ClientECC():
         data = {
             "device_id": self.clientData["device_id"],
             "clipubKey": binascii.hexlify(pickle.dumps(clientPublicKey)),
-            "clikeygentime": (tock-tick)*(10**9)
+            "clikeygentime": (tock-tick)*(10**3)
         }
 
         response = requests.post(
@@ -90,7 +90,7 @@ class ClientECC():
                 "encryptedMsg":cryptogram,
                 "filepath": filepath,
                 "device_id": self.clientData["device_id"],
-                "encr_time": (tock-tick)*(10**9),
+                "encr_time": (tock-tick)*(10**3),
                 "keysize": 256
             }
         )

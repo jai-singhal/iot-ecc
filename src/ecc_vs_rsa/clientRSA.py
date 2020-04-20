@@ -9,15 +9,13 @@ import os
 from timeit import default_timer as timer
 from tqdm import tqdm
 
-with open("../config/config.json", "r") as f:
+with open("../../config/config.json", "r") as f:
     config = json.loads(f.read())
 
 BASEURL_SERVER = config["local"]["server"]["BASEURL_SERVER"]
 MSG_FOLDER = config["local"]["client"]["MSG_FOLDER_CLIENT1"]
 KEY_SIZE = config["local"]["client"]["RSA_KEY_SIZE_CLIENT1"]
 ITERATIONS_PER_FILE = config["local"]["client"]["RSA_ITERATIONS_PER_FILE_CLIENT1"]
-#MSG_FOLDER = "../data"
-#MSG_FOLDER = "../tmp_data"
 
 """
 /rsa/get/keyexchange
@@ -88,13 +86,13 @@ class ClientRSA():
 
         for msg_ind in tqdm(range(0,len(msg),max_bytes_msg),desc="encrypting msg ["+str(self.clientData["transaction_id"])+"]"):
             mod_msg=msg[msg_ind:msg_ind+max_bytes_msg]
-            start=timer()*(10**9)
+            start=timer()*(10**3)
             bytemsg=rsa.encrypt(mod_msg.encode('utf-8'),self.clientData["server_public"])
             rtnmsg=binascii.hexlify(bytemsg)
             encryptedMsgObj=rtnmsg.decode('utf-8')
             #complete_msg_encrypted.append(encryptedMsgObj)
         #complete_msg_encrypted=''.join(complete_msg_encrypted)
-            start_sub=timer()*(10**9)
+            start_sub=timer()*(10**3)
             response = requests.post(
                     url = self.BASEURL_SERVER + "/rsa/post/stepwise/msg", 
                     params = data,
@@ -102,8 +100,8 @@ class ClientRSA():
                         "msg":encryptedMsgObj
                     }
                 )
-            end_sub=timer()*(10**9)
-            end=timer()*(10**9)
+            end_sub=timer()*(10**3)
+            end=timer()*(10**3)
             total_time+=end-start
             total_subtract+=end_sub-start_sub
         if response.status_code == 200:
@@ -130,14 +128,14 @@ class ClientRSA():
         complete_msg_encrypted=[]
         max_bytes_msg=self.clientData["key_size"]//8-11
 
-        start=timer()*(10**9)
+        start=timer()*(10**3)
         for msg_ind in tqdm(range(0,len(msg),max_bytes_msg),desc="encrypting msg ["+str(self.clientData["transaction_id"])+"]"):
             mod_msg=msg[msg_ind:msg_ind+max_bytes_msg]
             bytemsg=rsa.encrypt(mod_msg.encode('utf-8'),self.clientData["server_public"])
             rtnmsg=binascii.hexlify(bytemsg)
             encryptedMsgObj=rtnmsg.decode('utf-8')
             complete_msg_encrypted.append(encryptedMsgObj)
-        end=timer()*(10**9)
+        end=timer()*(10**3)
         complete_msg_encrypted=''.join(complete_msg_encrypted)
         print("done encrypting sending msg to server")
         

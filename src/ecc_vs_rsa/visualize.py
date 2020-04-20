@@ -6,22 +6,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # https://pypi.org/project/tinydb/
-dbECC = TinyDB('../db/serverdbECC.json', 
+dbECC = TinyDB('../../db/serverdbECC.json', 
     indent=4, separators=(',', ': '), 
     default_table="device_info",
     # storage=CachingMiddleware(JSONStorage)
 )
-dbECCData = TinyDB('../db/serverdbECC.json', 
+dbECCData = TinyDB('../../db/serverdbECC.json', 
     indent=4, separators=(',', ': '), 
     default_table="data",
     # storage=CachingMiddleware(JSONStorage)
 )
-dbRSA = TinyDB('../db/serverdbRSA.json', 
+dbRSA = TinyDB('../../db/serverdbRSA.json', 
     indent=4, separators=(',', ': '),
     default_table="device_pub_priv",
     # storage=CachingMiddleware(JSONStorage)
 )
-dbRSATime = TinyDB('../db/serverdbRSA.json', 
+dbRSATime = TinyDB('../../db/serverdbRSA.json', 
     indent=4, separators=(',', ': '),
     default_table="timing",
     # storage=CachingMiddleware(JSONStorage)
@@ -41,7 +41,7 @@ def visualize_ecc():
     del kdf["secretKey"]
 
     avg_keygentime = kdf["keygen_time"].mean()
-    avg_keygentime = '%.3f' %(avg_keygentime/10**6) + "ms"
+    avg_keygentime = '%.3f' %(avg_keygentime) + "ms"
 
     data = []
     for row in dbECCData:
@@ -54,9 +54,9 @@ def visualize_ecc():
 
     meandf = df.groupby(["msg_len"]).mean()
     meandf.sort_values("msg_len")
-    meandf["encrypt_time"] = meandf["encrypt_time"]/10**6
-    meandf["decrypt_time"] = meandf["decrypt_time"]/10**6
-    meandf["total_time"] = meandf["total_time"]/10**6
+    meandf["encrypt_time"] = meandf["encrypt_time"]
+    meandf["decrypt_time"] = meandf["decrypt_time"]
+    meandf["total_time"] = meandf["total_time"]
 
     ax = meandf.plot(rot=0,  use_index=True, kind='bar', title='Time vs message size')
     print("Avg Key-generation time: " + avg_keygentime)
@@ -90,15 +90,15 @@ def visualize_rsa():
 
     meandf = df.groupby(["msg_length"]).mean()
     meandf.sort_values("msg_length")
-    meandf["key_gen_time"] = meandf["key_gen_time"]/10**6
-    meandf["encrypt_msg"] = meandf["encrypt_msg"]/10**6
-    meandf["decrypt_msg"] = meandf["decrypt_msg"]/10**6
-    meandf["total_time"] = meandf["total_time"]/10**6
+    meandf["key_gen_time"] = meandf["key_gen_time"]
+    meandf["encrypt_msg"] = meandf["encrypt_msg"]
+    meandf["decrypt_msg"] = meandf["decrypt_msg"]
+    meandf["total_time"] = meandf["total_time"]
 
     ax = meandf.plot(rot=0,  use_index=True, kind='bar', title='Time vs message size')
     plt.xlabel("Message Length (in KB)")
     plt.ylabel("Time required (in ms)")
-    plt.legend(['keygen time','Encryption time', 'Decryption time', 'Total time'])
+    plt.legend(['keygen time','Encryption time', 'Decryption time', 'Total time(ms)'])
     # ax.show()
     plt.show()
 

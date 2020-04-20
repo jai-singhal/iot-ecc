@@ -1,5 +1,5 @@
 {
-    "production": false,
+    "production": true,
     "local": {
         "server":{
             "BASEURL_SERVER": "http://localhost:8080",
@@ -11,8 +11,8 @@
         "client":{
             "BASEURL_CLIENT1": "http://localhost:8080",
             "BASEURL_CLIENT2": "http://localhost:8080",
-            "MSG_FOLDER_CLIENT1": "../data",
-            "MSG_FOLDER_CLIENT2": "../data",
+            "MSG_FOLDER_CLIENT1": "../../data",
+            "MSG_FOLDER_CLIENT2": "../../data",
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
@@ -31,8 +31,8 @@
         "client":{
             "BASEURL_CLIENT1": "http://192.168.0.14:8001",
             "BASEURL_CLIENT2": "http://192.168.0.14:8002",
-            "MSG_FOLDER_CLIENT1": "../data",
-            "MSG_FOLDER_CLIENT2": "../data",
+            "MSG_FOLDER_CLIENT1": "../../data",
+            "MSG_FOLDER_CLIENT2": "../../data",
             "RSA_KEY_SIZE_CLIENT1":2048,
             "RSA_KEY_SIZE_CLIENT2":2048,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,

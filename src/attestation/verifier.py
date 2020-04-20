@@ -7,7 +7,6 @@ from timeit import default_timer as timer
 from tqdm import tqdm
 import requests
 import secrets, binascii
-from itertools import islice
 import math
 import logging
 
@@ -60,8 +59,9 @@ class Verifier():
 
     
     def keyExchange(self):
-        # generate a
+
         if self.curve == None:
+            print("No curve generated")
             return False
 
         tick = timer()
@@ -72,7 +72,7 @@ class Verifier():
         data = {
             "device_id": self.verifierData["device_id"],
             "clipubKey": binascii.hexlify(pickle.dumps(clientPublicKey)),
-            "clikeygentime": (tock-tick)*(10**3)
+            "clikeygentime": (tock-tick)*(10**3) #ms
         }
 
         response = requests.post(
@@ -83,9 +83,12 @@ class Verifier():
         if not response["status"]:
             logging.error("error", response["error"])
             return False
-
         serverPubKey = pickle.loads(binascii.unhexlify(response["pubKey"]))
+        tick = timer()
         self.secretKey = ecc.ecc_point_to_256_bit_key(serverPubKey*privateKey)
+        tock = timer()
+        total_Keygentime = response["keygentime"] + (tock-tick)*(10**3)
+        logging.info("Key exchange time: {} ms.".format(total_Keygentime))
         return True
 
     def sendVerificationMessage(self, msg:str):
@@ -188,18 +191,23 @@ def main():
         memory_filepath=MEMORY_FILEPATH
     )
     verifier.readMemory(MEMORY_FILEPATH)
+    print("Memory read!!")
     verifier.newIOTDeviceRegistration()
+    print("Hand shake Done!!")
     verifier.keyExchange()
+    print("Key exchange Done!!")
     iteration=1
+    print("Memory blocks sending starts!!")
     while(True):
+        print("Memory Block #{} sent for verification".format(iteration))
         (sib,siw)=verifier.generateSiBSiW()
         stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))
         if stat:
-            logging.info("iter["+str(iteration)+"] : "+"verification successful")
+            print("iter["+str(iteration)+"] : "+"verification successful")
             iteration+=1
             continue
         else:
-            logging.info("iter["+str(iteration)+"] : "+"verification failed!!!!!")
+            print("iter["+str(iteration)+"] : "+"verification failed!!!!!")
             break
     
 
