@@ -118,6 +118,10 @@ Let the server run on Terminal A.
 
 ## Exploring ECIES VS RSA
 
+### High level design
+
+![High level design](https://i.imgur.com/FF9SPpL.jpg)
+
 ### ECIES
 
 Key generation time was ~555ms for key size 256 bits of curve brainpoolP256r1.
@@ -133,6 +137,10 @@ Key generation time was ~10.5ms for a key size of 2048bits. (we have compared 20
 
 
 ## Exploring Attesation
+
+### High level design
+
+![High level design](https://i.imgur.com/97FchIJ.jpg)
 
 ![attestation](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/attestation.PNG?raw=true)
 
