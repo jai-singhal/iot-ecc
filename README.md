@@ -119,10 +119,10 @@ Let the server run on Terminal A.
 ## Exploring ECC VS RSA
 
 ### ECC
-[!ECC](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/ECC.png)
+[!ECC](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/ECC.png?raw=true)
 
 ### RSA
-[!RSA](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/RSA.png)
+[!RSA](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/RSA.png?raw=true)
 
 
 ## Directory Structure
