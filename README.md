@@ -116,14 +116,25 @@ Let the server run on Terminal A.
     python verifer.py
     ```
 
-## Exploring ECC VS RSA
+## Exploring ECIES VS RSA
 
-### ECC
+### ECIES
+
+Key generation time was ~555ms for key size 256 bits of curve brainpoolP256r1.
+And the encryption and decryption time taken is with respect to AES256.
+
 ![ECC](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/ECC.png?raw=true)
 
 ### RSA
+
+Key generation time was ~10.5ms for a key size of 2048bits. (we have compared 2048bits of RSA to 256 bits of ECC since the research paper was summarizing that these configurations of bits provide equivalent security). The massive difference in encryption and decryption times of ECIES and RSA are present because we have tested native RSA algorithm against ECIES, a hybrid approach in which the key exchange is done natively and then a symmetric encryption algorithm is used (AES). If we were to use a similar approach for RSA the difference in time between the algorithms would be seen in the key generation time i.e. (~555 ms vs ~ 10.5 s), while the difference in key storage space is apparent, 256 bits vs 2048 bits.
+
 ![RSA](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/RSA.png?raw=true)
 
+
+## Exploring Attesation
+
+![attestation](https://github.com/jai-singhal/iot-ecc/blob/master/graphs/attestation.png?raw=true)
 
 ## Directory Structure
 ```shell
