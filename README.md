@@ -31,17 +31,17 @@ In the second project **attestation**, we have built any application to mimic at
 
 6. Create Virtualenv in project directory
 
-For windows
+    For Windows:
 
-    ```shell
-    virtualenv .
-    ```
+        ```shell
+        virtualenv .
+        ```
 
-For linux/mac:
+    For linux/mac:
 
-    ```shell
-    virtualenv -p python3 .
-    ```
+        ```shell
+        virtualenv -p python3 .
+        ```
 
 7. Activate the virtualenv
 
@@ -49,11 +49,11 @@ For linux/mac:
     .\Scripts\activate
     ```
 
-For linux/mac:
+    For linux/mac:
 
-    ```shell
-    source bin/activate
-    ```
+        ```shell
+        source bin/activate
+        ```
 
 8. Install python dependencies
 
@@ -78,7 +78,8 @@ There are two mini-projects **attestation**, and **ecc vs rsa**, you can find th
     ```shell
     uvicorn server:app --reload --port 8080
     ```
-Let the server run on Terminal A.
+    
+    Let the server run on Terminal A.
 
 3. Run the client on other terminal
     1. To run the clientECC
