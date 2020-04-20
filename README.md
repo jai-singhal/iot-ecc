@@ -14,17 +14,18 @@ In the second project **attestation**, we have built any application to mimic at
 
 1. Clone the repository from [here](https://github.com/jai-singhal/iot-ecc)
 
-2. Install python>3.5. 
+2. Install python > 3.5. 
 
 > For windiws, you can get python from [here](https://www.python.org/downloads/windows/)
+> Also note that if you are working on LINUX/MAC, use python3 instead of python.
 
 3. Set up the python on your system
 
 4. Install virtualenv
 
-```shell
-pip install virtualenv
-```
+    ```shell
+    pip install virtualenv
+    ```
 
 5. Change the directory to the `iot-ecc-master`
 
@@ -32,33 +33,33 @@ pip install virtualenv
 
 For windows
 
-```shell
-virtualenv .
-```
+    ```shell
+    virtualenv .
+    ```
 
 For linux/mac:
 
-```shell
-virtualenv -p python3 .
-```
+    ```shell
+    virtualenv -p python3 .
+    ```
 
 7. Activate the virtualenv
 
-```shell
-.\Scripts\activate
-```
+    ```shell
+    .\Scripts\activate
+    ```
 
 For linux/mac:
 
-```shell
-source bin/activate
-```
+    ```shell
+    source bin/activate
+    ```
 
 8. Install python dependencies
 
-```shell
-pip install -r requirements.txt
-```
+    ```shell
+    pip install -r requirements.txt
+    ```
 
 ### Running the projects
 
@@ -68,54 +69,55 @@ There are two mini-projects **attestation**, and **ecc vs rsa**, you can find th
 
 1. Change the directory to the project
 
-```shell
-cd src/ecc_vs_rsa
-```
+    ```shell
+    cd src/ecc_vs_rsa
+    ```
 
 2. Run the server on port *8080* on terminal A
 
-```shell
-uvicorn server:app --reload --port 8080
-```
+    ```shell
+    uvicorn server:app --reload --port 8080
+    ```
 Let the server run on Terminal A.
 
 3. Run the client on other terminal
     1. To run the clientECC
 
-    ```shell
-    python clientECC.py
-    ```
+        ```shell
+        python clientECC.py
+        ```
 
     2. To run the clientRSA
 
-    ```shell
-    python clientRSA.py
-    ```
+        ```shell
+        python clientRSA.py
+        ```
 
 #### Running Attestation
 
 1. Change the directory to the project
 
-```shell
-cd src/attestation
-```
+    ```shell
+    cd src/attestation
+    ```
 
 2. Run the prover server on port *8080* on terminal A
 
-```shell
-uvicorn prover:app --reload --port 8080
-```
+    ```shell
+    uvicorn prover:app --reload --port 8080
+    ```
 Let the server run on Terminal A.
 
 3. Run the verifier client on other terminal
 
-```shell
-python prover.py
-```
+    ```shell
+    python verifer.py
+    ```
 
 
 ## Directory Structure
 ```shell
+
 ├── config
 │   └── config.json
 ├── data
@@ -149,32 +151,32 @@ python prover.py
 │   └── memoryFile_verifier.txt
 │── src
 │   ├── __init__.py
-│	├── attestation
-│	│   ├── README.md
-│	│   ├── __init__.py
-│	│   ├── prover.py
-│	│   ├── test.py
-│	│   ├── utils
-│	│   │   ├── __init__.py
-│	│   │   ├── curve_registry.py
-│	│   │   ├── ecc.py
-│	│   │   ├── generatefiles.py
-│	│   │   └── graph.py
-│	│   ├── verifer.log
-│	│   └── verifier.py
-│	└── ecc_vs_rsa
-│	    ├── README.md
-│	    ├── __init__.py
-│	    ├── clientECC.py
-│	    ├── clientRSA.py
-│	    ├── server.py
-│	    ├── utils
-│	    │   ├── __init__.py
-│	    │   ├── curve_registry.py
-│	    │   ├── ecc.py
-│	    │   ├── generatefiles.py
-│	    │   └── graph.py
-│	    └── visualize.py
+│   ├── attestation
+│   │   ├── README.md
+│   │   ├── __init__.py
+│   │   ├── prover.py
+│   │   ├── test.py
+│   │   ├── utils
+│   │   │   ├── __init__.py
+│   │   │   ├── curve_registry.py
+│   │   │   ├── ecc.py
+│   │   │   ├── generatefiles.py
+│   │   │   └── graph.py
+│   │   ├── verifer.log
+│   │   └── verifier.py
+│   └── ecc_vs_rsa
+│	  ├── README.md
+│	  ├── __init__.py
+│	  ├── clientECC.py
+│	  ├── clientRSA.py
+│	  ├── server.py
+│	  ├── utils
+│	  │   ├── __init__.py
+│	  │   ├── curve_registry.py
+│	  │   ├── ecc.py
+│	  │   ├── generatefiles.py
+│	  │   └── graph.py
+│	  └── visualize.py
 ├── LICENSE.md
 ├── requirements.txt
 ├── README.md
