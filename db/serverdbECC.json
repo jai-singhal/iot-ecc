@@ -1,1983 +1,993 @@
 {
     "device_info": {
-        "41": {
-            "deviceid": "315157d8-f1d8-4d97-a2b0-7a9bbbd32b8a",
-            "curve_name": "secp192r1",
-            "latitude": "-65.09025314541535",
-            "longitude": "-32.97916817008638",
-            "created_at": "2020-04-15 23:30:54.295312",
-            "secretKey": "877d234e3bbf2fc57cee17ad763b45adf3710432cc8d8b9195f9aef379841a61",
-            "keygen_time": 149784134.99920863
+        "1": {
+            "deviceid": "f2b917ce-c4be-4c8f-86e3-9e43f6e5a819",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-37.7748793362432",
+            "longitude": "-20.23264234945654",
+            "created_at": "2020-04-20 23:30:24.095904",
+            "secretKey": "3f0201734d43a430243de56b7b3df40f625452e2f1e628553b49bdf1e08eee79",
+            "keygen_time": 452.4305999999982
         },
-        "42": {
-            "deviceid": "9346013a-5f33-458c-95eb-2357791ddc17",
-            "curve_name": "secp192r1",
-            "latitude": "-145.38734959200556",
-            "longitude": "38.85081243203865",
-            "created_at": "2020-04-15 23:30:54.701689",
-            "secretKey": "c40f0019ad0bc29b0c5c47ee4d789847875451a9997ff4c29499620b96fbeb9a",
-            "keygen_time": 169738647.99911097
+        "2": {
+            "deviceid": "aa2304f2-45c8-4406-8965-d422e557ed80",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "68.93137465840121",
+            "longitude": "64.30660890027067",
+            "created_at": "2020-04-20 23:30:49.256711",
+            "secretKey": "44eef898f885cf4c8e7ca350346070c3dc837ab17c8091dbb683297cbce698f5",
+            "keygen_time": 465.6137000000093
         },
-        "43": {
-            "deviceid": "817fcbd2-1492-4088-8045-975dae80ec60",
-            "curve_name": "secp192r1",
-            "latitude": "169.4409119379797",
-            "longitude": "-41.66829196597623",
-            "created_at": "2020-04-15 23:30:55.133849",
-            "secretKey": "f67fd312f97ca8c77dda723480e15a5ccb225fadad1881fd5422ac18a38451dc",
-            "keygen_time": 152188656.00218123
+        "3": {
+            "deviceid": "4b1ddc09-8c85-448e-9757-b6587560301a",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-118.83739467407418",
+            "longitude": "-77.47860038347997",
+            "created_at": "2020-04-20 23:31:14.452824",
+            "secretKey": "7d804286d96295827f20a23f6158f4499187148db6b47c79fc3c98409f1d99bb",
+            "keygen_time": 647.5982000000045
         },
-        "44": {
-            "deviceid": "564e3f47-af33-4af3-a47a-da3d3dae92e9",
-            "curve_name": "secp192r1",
-            "latitude": "26.22945143635738",
-            "longitude": "31.856370944018465",
-            "created_at": "2020-04-15 23:30:55.554238",
-            "secretKey": "459f304ffeeeee500f860f3f2e5e0f4b98d5aa4108db3eb28fbf2d1d4222623d",
-            "keygen_time": 152756049.00307372
+        "4": {
+            "deviceid": "f52eb60f-42b1-4ce1-b97a-d2e8a392b69d",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-51.351250606038036",
+            "longitude": "-23.352027295821784",
+            "created_at": "2020-04-20 23:31:40.281248",
+            "secretKey": "de985765968ffc3a9a0eee5803fe3b8e165d23dea3295af8ab838f7e2e078816",
+            "keygen_time": 563.0917999999667
         },
-        "45": {
-            "deviceid": "d7f40dbc-30c0-45c0-a7b6-87f437508ee8",
-            "curve_name": "secp192r1",
-            "latitude": "-159.0170890138456",
-            "longitude": "-64.07174058466163",
-            "created_at": "2020-04-15 23:30:55.947396",
-            "secretKey": "93c0c83406ad12eb3980d3e14a68caf5c2b53a5319e630d0e8c1f774505a9337",
-            "keygen_time": 150380371.9970165
+        "5": {
+            "deviceid": "3ec6a38f-a0d9-4770-b7a3-fe762bd64c58",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-158.2504696929377",
+            "longitude": "-50.38685387825915",
+            "created_at": "2020-04-20 23:32:06.000978",
+            "secretKey": "fccce9e2b5c5a10c20f0fe61b7eecb7ba7717bb22625d956255523981aa901bd",
+            "keygen_time": 625.137599999988
         },
-        "46": {
-            "deviceid": "d2f96e2d-e895-4e94-99fb-110ee8fa2163",
-            "curve_name": "secp192r1",
-            "latitude": "-148.07503008146466",
-            "longitude": "-89.63651740028267",
-            "created_at": "2020-04-15 23:30:56.370103",
-            "secretKey": "9a8aca70a06f3663aad14c16540db58ad4cf94593b11de41b3835c9ea0924279",
-            "keygen_time": 155580944.00330448
+        "6": {
+            "deviceid": "7e29502b-8c35-4988-bd4e-b716359c3d58",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-149.0596518245946",
+            "longitude": "-3.6961102331097777",
+            "created_at": "2020-04-20 23:32:31.639560",
+            "secretKey": "aa9e2df31d6e7f74c3ff2ea76a5cb87db80b0785a4734bd6318567319900cbbd",
+            "keygen_time": 555.4147
         },
-        "47": {
-            "deviceid": "b0becd10-79c0-46b6-b25c-29396d505f1b",
-            "curve_name": "secp192r1",
-            "latitude": "-130.64837622726282",
-            "longitude": "34.20189517601557",
-            "created_at": "2020-04-15 23:30:56.813282",
-            "secretKey": "2adfca6d63bcd8bc9c11bdac6f514f2860fbfa8a1ecb7dc8ef6be1de4f2b0c50",
-            "keygen_time": 153069822.00672793
+        "7": {
+            "deviceid": "6fd495f4-5166-42af-b32e-9eaeafef34d6",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "24.892899202839516",
+            "longitude": "-67.71026419683804",
+            "created_at": "2020-04-20 23:32:57.162570",
+            "secretKey": "830d3394713a1dc9c5a1acd12cc62d2cf67c80d9ce4ef6c691780799f927055a",
+            "keygen_time": 661.8829999999889
         },
-        "48": {
-            "deviceid": "043de8d8-2000-4c02-bfe2-13235e0385f8",
-            "curve_name": "secp192r1",
-            "latitude": "61.08783916413756",
-            "longitude": "32.983216305049226",
-            "created_at": "2020-04-15 23:30:57.258357",
-            "secretKey": "afc68ce0b9a9707d4657df076465090790c58b59ed8de0019eb52ac570182632",
-            "keygen_time": 150987225.9994154
+        "8": {
+            "deviceid": "612528a1-606d-40f5-ba47-8a8e1e1edf2c",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-32.07215423153147",
+            "longitude": "52.80367888496184",
+            "created_at": "2020-04-20 23:33:25.293313",
+            "secretKey": "cc619785ec76fa6e21c3eae593c34c73198ecea132b43db01666905f7c4c9813",
+            "keygen_time": 569.7107999999922
         },
-        "49": {
-            "deviceid": "f7cf5b34-5c40-4a85-bdb7-2c0f29601bf3",
-            "curve_name": "secp192r1",
-            "latitude": "-160.63766431372866",
-            "longitude": "56.68753110170883",
-            "created_at": "2020-04-15 23:30:57.714071",
-            "secretKey": "9acb9bd991eab991e35ed4286faba4ea330e1f58b219e6d3e01be7a2b40998b4",
-            "keygen_time": 149529629.00133568
+        "9": {
+            "deviceid": "97c06fe4-6b62-44ac-9918-ea41680ea9dc",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "-17.944474130533735",
+            "longitude": "-56.67238721964094",
+            "created_at": "2020-04-20 23:33:52.268107",
+            "secretKey": "fbb82f62ce3bc5a5a063797845b858661fd5f24318054c7dcc2f64ad29afc4f8",
+            "keygen_time": 496.7322999999979
         },
-        "50": {
-            "deviceid": "37e4e2ad-8418-442a-a959-f255cb42ecb7",
-            "curve_name": "secp192r1",
-            "latitude": "-16.75002017253655",
-            "longitude": "44.41938420867422",
-            "created_at": "2020-04-15 23:30:58.166435",
-            "secretKey": "7da374b19a27fcb1fd13741b1303a40d0d9c0835e45bd6b9a841b9b8c851c92c",
-            "keygen_time": 153809665.9969597
-        },
-        "51": {
-            "deviceid": "c3d7a3d4-89d0-44ed-8e43-e3297aa74afb",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "84.59174634681716",
-            "longitude": "-41.96398669292575",
-            "created_at": "2020-04-20 20:38:02.143827",
-            "secretKey": "e80bd75bde458efed3c3dbeea1be16e42db011d40c1056c67c1a1d687681a4b9",
-            "keygen_time": 1665017199.9999971
-        },
-        "52": {
-            "deviceid": "fa9d02b9-1898-4491-9648-1ba34d9e9960",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "120.8969523701225",
-            "longitude": "-84.96244575254079",
-            "created_at": "2020-04-20 20:38:28.732437",
-            "secretKey": "ba6ffc2808a37f97dfb99d2e546084e47a7309595812891bc01709069c3cbf03",
-            "keygen_time": 1791035999.9999912
-        },
-        "53": {
-            "deviceid": "80ee3ad1-6358-46ca-bae1-0a2eeaa8da05",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "21.84490372068376",
-            "longitude": "49.636965864389055",
-            "created_at": "2020-04-20 20:38:55.276897",
-            "secretKey": "ed6e3fc7a62b1c60e9f2a1a32c2e8184c063f2d2249373bcee58b801f903846d",
-            "keygen_time": 1761819599.9999886
-        },
-        "54": {
-            "deviceid": "b2f4c2eb-152a-41a1-9fb2-f9d412c0cb69",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "-137.96018988976255",
-            "longitude": "-73.00398868774124",
-            "created_at": "2020-04-20 20:39:23.309113",
-            "secretKey": "ef8f6154d33b15d8fc311fc7c69264a5d336f835ed28a9a99465762a4102685d",
-            "keygen_time": 451640044.0240955
-        },
-        "55": {
-            "deviceid": "71251399-6d38-44ce-a0b0-9127a6865afb",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "20.031106676386287",
-            "longitude": "59.485887218193824",
-            "created_at": "2020-04-20 20:39:49.990020",
-            "secretKey": "fada5a033f9e5d60e9cd3eda5a159ff7414ac8841e8ddccef868f072fb7287db",
-            "keygen_time": 539257174.6181006
-        },
-        "56": {
-            "deviceid": "b5f41851-17e9-4f15-ade0-2219e8737467",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "-98.54198341415155",
-            "longitude": "-37.54566312166874",
-            "created_at": "2020-04-20 20:40:16.807494",
-            "secretKey": "e03ca83c33a038b05b25e2f5953d05798432a3b7712f851d3dabddf0680cb40a",
-            "keygen_time": 500979480.56162006
-        },
-        "57": {
-            "deviceid": "54447a98-d5de-422c-bf0e-1050653bd0c0",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "164.6269688933537",
-            "longitude": "-14.176715779236687",
-            "created_at": "2020-04-20 20:40:43.945597",
-            "secretKey": "fa058f2b1ce3ca62399ac9265c30d1e0a96902d5ae0f376a558a27b9de820d35",
-            "keygen_time": 415428816.9146046
-        },
-        "58": {
-            "deviceid": "122ed880-de8b-4a9c-a0f5-a303fe5db139",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "157.42441503984213",
-            "longitude": "-0.6302147176440513",
-            "created_at": "2020-04-20 20:41:10.852638",
-            "secretKey": "bf6d4afbdd9d3046aaaa3f6b2c95b217e0a7f77dc9e44a6b34bb76c623ba9d05",
-            "keygen_time": 471093170.5901894
-        },
-        "59": {
-            "deviceid": "41d3cb0b-4476-47c6-8c5f-fd8c3d54bd8b",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "80.55859797167227",
-            "longitude": "-29.930484594322323",
-            "created_at": "2020-04-20 20:41:38.282412",
-            "secretKey": "c1761f3b57ceb2d8ff79f10e9ad7bfafa9ce6ecc93eb932023939e06788b1aff",
-            "keygen_time": 413466454.7421022
-        },
-        "60": {
-            "deviceid": "7ce64f09-8bf9-47be-8ab9-019e5cc87b35",
-            "curve_name": "brainpoolP512r1",
-            "latitude": "150.55120132031448",
-            "longitude": "45.26456474140636",
-            "created_at": "2020-04-20 20:42:05.072942",
-            "secretKey": "d13ec43a2a52e90ccd9c303c72cd493b0039bfe48f2fb30c1cef099f51e01d0e",
-            "keygen_time": 436971936.7821951
+        "10": {
+            "deviceid": "7624043a-8248-4bef-8865-bc53617be320",
+            "curve_name": "brainpoolP256r1",
+            "latitude": "38.62131288789877",
+            "longitude": "-87.44684004820205",
+            "created_at": "2020-04-20 23:34:17.689059",
+            "secretKey": "be0ccc1ed7bda8f090d9927ee68da2016bdcab3e02f7c25df2d98a0a56a5cc8c",
+            "keygen_time": 500.16680000001656
         }
     },
     "data": {
-        "401": {
+        "1": {
             "transaction_id": 0,
-            "encrypt_time": 395564.00042783935,
-            "decrypt_time": 407675.0010426622,
-            "total_time": 803239.0014705015,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 5.353899999999356,
+            "decrypt_time": 5.359399999999681,
+            "total_time": 10.713299999999037,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "402": {
+        "2": {
             "transaction_id": 1,
-            "encrypt_time": 3270224.000516464,
-            "decrypt_time": 4738227.999041555,
-            "total_time": 8008451.999558019,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.2842000000006237,
+            "decrypt_time": 1.3319999999996668,
+            "total_time": 2.6162000000002905,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "403": {
+        "3": {
             "transaction_id": 2,
-            "encrypt_time": 443065.9992067376,
-            "decrypt_time": 848960.000439547,
-            "total_time": 1292025.9996462846,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 1.0540999999992806,
+            "decrypt_time": 1.945900000000833,
+            "total_time": 3.0000000000001137,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "404": {
+        "4": {
             "transaction_id": 3,
-            "encrypt_time": 907102.9999176972,
-            "decrypt_time": 1597897.0004653092,
-            "total_time": 2505000.0003830064,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 6.349900000000019,
+            "decrypt_time": 14.331300000000269,
+            "total_time": 20.68120000000029,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "405": {
+        "5": {
             "transaction_id": 4,
-            "encrypt_time": 253184.00003015995,
-            "decrypt_time": 280052.0014716312,
-            "total_time": 533236.0015017912,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 2.2783999999997917,
+            "decrypt_time": 0.7856999999980019,
+            "total_time": 3.0640999999977936,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "406": {
+        "6": {
             "transaction_id": 5,
-            "encrypt_time": 4028056.000606739,
-            "decrypt_time": 5538787.00156929,
-            "total_time": 9566843.002176028,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.7988000000000994,
+            "decrypt_time": 0.6096000000006541,
+            "total_time": 1.4084000000007535,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "407": {
+        "7": {
             "transaction_id": 6,
-            "encrypt_time": 271511.99901709333,
-            "decrypt_time": 282390.0031216908,
-            "total_time": 553902.0021387842,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 8.421999999999485,
+            "decrypt_time": 30.836799999999442,
+            "total_time": 39.25879999999893,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "408": {
+        "8": {
             "transaction_id": 7,
-            "encrypt_time": 242480.9990770882,
-            "decrypt_time": 379053.9994952269,
-            "total_time": 621534.9985723151,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 9.374900000000963,
+            "decrypt_time": 21.320199999998124,
+            "total_time": 30.695099999999087,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "409": {
+        "9": {
             "transaction_id": 8,
-            "encrypt_time": 1543759.9995493656,
-            "decrypt_time": 2266915.9989163745,
-            "total_time": 3810675.99846574,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 5.992200000001446,
+            "decrypt_time": 2.9564999999998065,
+            "total_time": 8.948700000001253,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "410": {
+        "10": {
             "transaction_id": 9,
-            "encrypt_time": 327698.0005466612,
-            "decrypt_time": 363756.00029714406,
-            "total_time": 691454.0008438053,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 0.8965999999972496,
+            "decrypt_time": 1.6561999999993304,
+            "total_time": 2.55279999999658,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "411": {
+        "11": {
             "transaction_id": 10,
-            "encrypt_time": 397782.99833415076,
-            "decrypt_time": 441067.00079282746,
-            "total_time": 838849.9991269782,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 3.5842999999999847,
+            "decrypt_time": 3.6529999999999063,
+            "total_time": 7.237299999999891,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "412": {
+        "12": {
             "transaction_id": 11,
-            "encrypt_time": 2384257.9994379776,
-            "decrypt_time": 4490480.998356361,
-            "total_time": 6874738.9977943385,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 0.8029000000036035,
+            "decrypt_time": 1.7634000000015249,
+            "total_time": 2.5663000000051284,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "413": {
+        "13": {
             "transaction_id": 12,
-            "encrypt_time": 383840.0007225573,
-            "decrypt_time": 824949.9987869058,
-            "total_time": 1208789.999509463,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 1.7487000000002695,
+            "decrypt_time": 1.1900000000011346,
+            "total_time": 2.938700000001404,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "414": {
+        "14": {
             "transaction_id": 13,
-            "encrypt_time": 696232.998961932,
-            "decrypt_time": 1424153.997504618,
-            "total_time": 2120386.99646655,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 4.240799999998046,
+            "decrypt_time": 8.430900000000463,
+            "total_time": 12.67169999999851,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "415": {
+        "15": {
             "transaction_id": 14,
-            "encrypt_time": 236441.0011068685,
-            "decrypt_time": 277140.99996956065,
-            "total_time": 513582.00107642915,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 0.8797999999998751,
+            "decrypt_time": 0.8581999999961454,
+            "total_time": 1.7379999999960205,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "416": {
+        "16": {
             "transaction_id": 15,
-            "encrypt_time": 3764589.000638807,
-            "decrypt_time": 5677173.001458868,
-            "total_time": 9441762.002097676,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.9234000000049036,
+            "decrypt_time": 1.293100000005154,
+            "total_time": 2.2165000000100576,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "417": {
+        "17": {
             "transaction_id": 16,
-            "encrypt_time": 219576.99937047437,
-            "decrypt_time": 277217.0009848196,
-            "total_time": 496794.000355294,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 9.157500000000596,
+            "decrypt_time": 35.63789999999756,
+            "total_time": 44.79539999999815,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "418": {
+        "18": {
             "transaction_id": 17,
-            "encrypt_time": 231617.99981608056,
-            "decrypt_time": 316980.99701316096,
-            "total_time": 548598.9968292415,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 12.027099999997404,
+            "decrypt_time": 24.20529999999843,
+            "total_time": 36.232399999995835,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "419": {
+        "19": {
             "transaction_id": 18,
-            "encrypt_time": 1939261.999723385,
-            "decrypt_time": 2272770.001582103,
-            "total_time": 4212032.001305488,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 1.797199999998611,
+            "decrypt_time": 5.256400000000383,
+            "total_time": 7.053599999998994,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "420": {
+        "20": {
             "transaction_id": 19,
-            "encrypt_time": 231429.99998526648,
-            "decrypt_time": 362953.0001489911,
-            "total_time": 594383.0001342576,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.1079999999997767,
+            "decrypt_time": 1.5898999999990338,
+            "total_time": 3.6978999999988105,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "421": {
+        "21": {
             "transaction_id": 20,
-            "encrypt_time": 224454.99962486792,
-            "decrypt_time": 371558.9991770685,
-            "total_time": 596013.9988019364,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.6173999999983266,
+            "decrypt_time": 4.906099999999469,
+            "total_time": 7.523499999997796,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "422": {
+        "22": {
             "transaction_id": 21,
-            "encrypt_time": 2492727.000571904,
-            "decrypt_time": 4561663.001368288,
-            "total_time": 7054390.001940192,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.0481999999996106,
+            "decrypt_time": 1.0840999999999212,
+            "total_time": 2.132299999999532,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "423": {
+        "23": {
             "transaction_id": 22,
-            "encrypt_time": 686305.0002721138,
-            "decrypt_time": 734355.9991568327,
-            "total_time": 1420660.9994289465,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 1.260700000003112,
+            "decrypt_time": 2.9138000000017428,
+            "total_time": 4.174500000004855,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "424": {
+        "24": {
             "transaction_id": 23,
-            "encrypt_time": 596159.999986412,
-            "decrypt_time": 1386891.9995729811,
-            "total_time": 1983051.9995593932,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 10.353199999997287,
+            "decrypt_time": 18.662899999995375,
+            "total_time": 29.01609999999266,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "425": {
+        "25": {
             "transaction_id": 24,
-            "encrypt_time": 233645.0015718583,
-            "decrypt_time": 294209.999992745,
-            "total_time": 527855.0015646033,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 1.1214999999964448,
+            "decrypt_time": 2.5726000000076965,
+            "total_time": 3.6941000000041413,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "426": {
+        "26": {
             "transaction_id": 25,
-            "encrypt_time": 3258871.00007094,
-            "decrypt_time": 5470133.00092658,
-            "total_time": 8729004.000997521,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 1.8603000000041447,
+            "decrypt_time": 1.7138000000045395,
+            "total_time": 3.574100000008684,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "427": {
+        "27": {
             "transaction_id": 26,
-            "encrypt_time": 245290.9993735375,
-            "decrypt_time": 422053.99950034916,
-            "total_time": 667344.9988738867,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 16.578899999998953,
+            "decrypt_time": 17.49700000000587,
+            "total_time": 34.07590000000482,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "428": {
+        "28": {
             "transaction_id": 27,
-            "encrypt_time": 356921.0002751788,
-            "decrypt_time": 317074.9987475574,
-            "total_time": 673995.9990227362,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 12.307300000003352,
+            "decrypt_time": 19.687399999995137,
+            "total_time": 31.99469999999849,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "429": {
+        "29": {
             "transaction_id": 28,
-            "encrypt_time": 1315057.9998182366,
-            "decrypt_time": 2298739.000252681,
-            "total_time": 3613797.0000709174,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 2.0604000000048472,
+            "decrypt_time": 4.7280000000000655,
+            "total_time": 6.788400000004913,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "430": {
+        "30": {
             "transaction_id": 29,
-            "encrypt_time": 259314.99840226024,
-            "decrypt_time": 418197.99662334844,
-            "total_time": 677512.9950256087,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 1.7259999999907905,
+            "decrypt_time": 1.5923999999927219,
+            "total_time": 3.3183999999835123,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "431": {
+        "31": {
             "transaction_id": 30,
-            "encrypt_time": 518795.9995964775,
-            "decrypt_time": 370407.0004459936,
-            "total_time": 889203.0000424711,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 5.362500000003934,
+            "decrypt_time": 3.8324000000073966,
+            "total_time": 9.19490000001133,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "432": {
+        "32": {
             "transaction_id": 31,
-            "encrypt_time": 2661021.0006765556,
-            "decrypt_time": 4459443.000087049,
-            "total_time": 7120464.000763604,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.1760999999950172,
+            "decrypt_time": 0.8379000000076076,
+            "total_time": 2.014000000002625,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "433": {
+        "33": {
             "transaction_id": 32,
-            "encrypt_time": 454506.00009644404,
-            "decrypt_time": 823591.0026996862,
-            "total_time": 1278097.0027961303,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 0.8174000000025217,
+            "decrypt_time": 0.847999999990634,
+            "total_time": 1.6653999999931557,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "434": {
+        "34": {
             "transaction_id": 33,
-            "encrypt_time": 834391.9998878846,
-            "decrypt_time": 1390733.9998695534,
-            "total_time": 2225125.999757438,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 4.799399999996012,
+            "decrypt_time": 6.98920000000669,
+            "total_time": 11.788600000002702,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "435": {
+        "35": {
             "transaction_id": 34,
-            "encrypt_time": 208946.00129395258,
-            "decrypt_time": 287910.9997593332,
-            "total_time": 496857.0010532858,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 0.9158000000013544,
+            "decrypt_time": 1.6351000000014437,
+            "total_time": 2.550900000002798,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "436": {
+        "36": {
             "transaction_id": 35,
-            "encrypt_time": 3022138.000233099,
-            "decrypt_time": 5456875.998788746,
-            "total_time": 8479013.999021845,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.7753000000008115,
+            "decrypt_time": 0.8747000000113303,
+            "total_time": 1.6500000000121418,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "437": {
+        "37": {
             "transaction_id": 36,
-            "encrypt_time": 205403.001018567,
-            "decrypt_time": 292687.00018292293,
-            "total_time": 498090.00120148994,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 7.688400000006368,
+            "decrypt_time": 16.564900000005878,
+            "total_time": 24.253300000012246,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "438": {
+        "38": {
             "transaction_id": 37,
-            "encrypt_time": 322096.99929808266,
-            "decrypt_time": 327816.9970144518,
-            "total_time": 649913.9963125344,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 11.68739999999957,
+            "decrypt_time": 20.274700000001644,
+            "total_time": 31.962100000001215,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "439": {
+        "39": {
             "transaction_id": 38,
-            "encrypt_time": 1380191.9994875789,
-            "decrypt_time": 2144385.001884075,
-            "total_time": 3524577.0013716538,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 1.717600000006314,
+            "decrypt_time": 2.3546999999979334,
+            "total_time": 4.0723000000042475,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "440": {
+        "40": {
             "transaction_id": 39,
-            "encrypt_time": 225846.00083064288,
-            "decrypt_time": 361083.00264459103,
-            "total_time": 586929.0034752339,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 1.1361999999905947,
+            "decrypt_time": 1.1482000000029302,
+            "total_time": 2.284399999993525,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "441": {
+        "41": {
             "transaction_id": 40,
-            "encrypt_time": 482790.99974024575,
-            "decrypt_time": 418543.0007055402,
-            "total_time": 901334.0004457859,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.5098999999926264,
+            "decrypt_time": 4.363900000001308,
+            "total_time": 6.873799999993935,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "442": {
+        "42": {
             "transaction_id": 41,
-            "encrypt_time": 2600623.998660012,
-            "decrypt_time": 4161926.0009611025,
-            "total_time": 6762549.999621115,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.3450000000005957,
+            "decrypt_time": 0.9371000000015783,
+            "total_time": 2.282100000002174,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "443": {
+        "43": {
             "transaction_id": 42,
-            "encrypt_time": 446217.998614884,
-            "decrypt_time": 816455.0017681904,
-            "total_time": 1262673.0003830744,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 0.8342999999939593,
+            "decrypt_time": 0.9395999999952664,
+            "total_time": 1.7738999999892258,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "444": {
+        "44": {
             "transaction_id": 43,
-            "encrypt_time": 1051378.998454311,
-            "decrypt_time": 1321038.9988671523,
-            "total_time": 2372417.997321463,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 6.186700000000656,
+            "decrypt_time": 7.2345000000098025,
+            "total_time": 13.421200000010458,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "445": {
+        "45": {
             "transaction_id": 44,
-            "encrypt_time": 233442.00053543318,
-            "decrypt_time": 355786.0000000801,
-            "total_time": 589228.0005355133,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 0.9310000000084528,
+            "decrypt_time": 0.9467999999941412,
+            "total_time": 1.877800000002594,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "446": {
+        "46": {
             "transaction_id": 45,
-            "encrypt_time": 3349742.9994895356,
-            "decrypt_time": 5307694.9989190325,
-            "total_time": 8657437.998408567,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.8413000000047077,
+            "decrypt_time": 0.9302999999931671,
+            "total_time": 1.7715999999978749,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "447": {
+        "47": {
             "transaction_id": 46,
-            "encrypt_time": 240848.0013400549,
-            "decrypt_time": 357315.00247493386,
-            "total_time": 598163.0038149888,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 7.200499999996168,
+            "decrypt_time": 17.066299999996204,
+            "total_time": 24.266799999992372,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "448": {
+        "48": {
             "transaction_id": 47,
-            "encrypt_time": 402477.00053441804,
-            "decrypt_time": 318438.0002494436,
-            "total_time": 720915.0007838616,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 12.304799999995453,
+            "decrypt_time": 18.92920000000231,
+            "total_time": 31.233999999997764,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "449": {
+        "49": {
             "transaction_id": 48,
-            "encrypt_time": 1309932.000367553,
-            "decrypt_time": 2159667.001251364,
-            "total_time": 3469599.001618917,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 2.1262000000064063,
+            "decrypt_time": 2.8103000000214706,
+            "total_time": 4.936500000027877,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "450": {
+        "50": {
             "transaction_id": 49,
-            "encrypt_time": 259980.00091931317,
-            "decrypt_time": 495924.9999956228,
-            "total_time": 755905.000914936,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 0.896499999996081,
+            "decrypt_time": 1.1687999999878684,
+            "total_time": 2.0652999999839494,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "451": {
+        "51": {
             "transaction_id": 50,
-            "encrypt_time": 535911.0000426881,
-            "decrypt_time": 399847.9987785686,
-            "total_time": 935758.9988212567,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.49840000000745,
+            "decrypt_time": 4.079899999993586,
+            "total_time": 6.578300000001036,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "452": {
+        "52": {
             "transaction_id": 51,
-            "encrypt_time": 2724292.000493733,
-            "decrypt_time": 4570158.002024982,
-            "total_time": 7294450.002518715,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.0809999999992215,
+            "decrypt_time": 1.0479000000032102,
+            "total_time": 2.1289000000024316,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "453": {
+        "53": {
             "transaction_id": 52,
-            "encrypt_time": 398842.9998571519,
-            "decrypt_time": 772302.9993940145,
-            "total_time": 1171145.9992511664,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 1.0431000000039603,
+            "decrypt_time": 0.6319999999959691,
+            "total_time": 1.6750999999999294,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "454": {
+        "54": {
             "transaction_id": 53,
-            "encrypt_time": 679926.9995099166,
-            "decrypt_time": 1223151.0008859914,
-            "total_time": 1903078.000395908,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 6.796100000002525,
+            "decrypt_time": 7.636599999983673,
+            "total_time": 14.432699999986198,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "455": {
+        "55": {
             "transaction_id": 54,
-            "encrypt_time": 208591.9986711815,
-            "decrypt_time": 286161.00098588504,
-            "total_time": 494752.99965706654,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 0.9555999999975029,
+            "decrypt_time": 0.7791000000167969,
+            "total_time": 1.7347000000142998,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "456": {
+        "56": {
             "transaction_id": 55,
-            "encrypt_time": 3177802.9988345224,
-            "decrypt_time": 5685516.000085045,
-            "total_time": 8863318.998919567,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.9507000000041899,
+            "decrypt_time": 0.8878000000152042,
+            "total_time": 1.838500000019394,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "457": {
+        "57": {
             "transaction_id": 56,
-            "encrypt_time": 317992.00041859876,
-            "decrypt_time": 282375.0000970904,
-            "total_time": 600367.0005156891,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 9.440399999988358,
+            "decrypt_time": 18.363200000010238,
+            "total_time": 27.803599999998596,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "458": {
+        "58": {
             "transaction_id": 57,
-            "encrypt_time": 474577.9988297727,
-            "decrypt_time": 324659.0022172313,
-            "total_time": 799237.001047004,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 11.53879999998253,
+            "decrypt_time": 21.628299999974843,
+            "total_time": 33.16709999995737,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "459": {
+        "59": {
             "transaction_id": 58,
-            "encrypt_time": 1295155.001571402,
-            "decrypt_time": 2241383.00109189,
-            "total_time": 3536538.002663292,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 1.7833999999936623,
+            "decrypt_time": 2.8809000000080687,
+            "total_time": 4.664300000001731,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "460": {
+        "60": {
             "transaction_id": 59,
-            "encrypt_time": 226722.0006615389,
-            "decrypt_time": 468588.00124027766,
-            "total_time": 695310.0019018166,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 1.192600000024413,
+            "decrypt_time": 1.0178999999936877,
+            "total_time": 2.2105000000181008,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "461": {
+        "61": {
             "transaction_id": 60,
-            "encrypt_time": 224658.9992864756,
-            "decrypt_time": 480806.0002687853,
-            "total_time": 705464.9995552609,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.611800000011044,
+            "decrypt_time": 3.5924999999963347,
+            "total_time": 6.204300000007379,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "462": {
+        "62": {
             "transaction_id": 61,
-            "encrypt_time": 2506425.000319723,
-            "decrypt_time": 4815170.9997910075,
-            "total_time": 7321596.0001107305,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.159700000016528,
+            "decrypt_time": 2.1700000000000053,
+            "total_time": 3.3297000000165333,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "463": {
+        "63": {
             "transaction_id": 62,
-            "encrypt_time": 360837.0006986661,
-            "decrypt_time": 790333.0006229226,
-            "total_time": 1151170.0013215886,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 1.090500000003658,
+            "decrypt_time": 1.1017000000004273,
+            "total_time": 2.1922000000040853,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "464": {
+        "64": {
             "transaction_id": 63,
-            "encrypt_time": 676217.0014553703,
-            "decrypt_time": 1262709.00000236,
-            "total_time": 1938926.0014577303,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 4.317100000008622,
+            "decrypt_time": 9.470099999999704,
+            "total_time": 13.787200000008326,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "465": {
+        "65": {
             "transaction_id": 64,
-            "encrypt_time": 220610.9984399518,
-            "decrypt_time": 289790.00126128085,
-            "total_time": 510400.99970123265,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 1.268699999997125,
+            "decrypt_time": 1.1314000000002267,
+            "total_time": 2.4000999999973516,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "466": {
+        "66": {
             "transaction_id": 65,
-            "encrypt_time": 3133267.0005213004,
-            "decrypt_time": 5631910.0003747735,
-            "total_time": 8765177.000896074,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.9432000000231255,
+            "decrypt_time": 0.9861999999998261,
+            "total_time": 1.9294000000229516,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "467": {
+        "67": {
             "transaction_id": 66,
-            "encrypt_time": 262376.0010465048,
-            "decrypt_time": 281417.0002238825,
-            "total_time": 543793.0012703873,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 9.06779999999685,
+            "decrypt_time": 13.249200000000627,
+            "total_time": 22.316999999997478,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "468": {
+        "68": {
             "transaction_id": 67,
-            "encrypt_time": 357052.9988792259,
-            "decrypt_time": 319859.99885364436,
-            "total_time": 676912.9977328703,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 9.340899999983776,
+            "decrypt_time": 19.084899999999294,
+            "total_time": 28.42579999998307,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "469": {
+        "69": {
             "transaction_id": 68,
-            "encrypt_time": 1391957.9996581888,
-            "decrypt_time": 2196640.0017845444,
-            "total_time": 3588598.001442733,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 1.755400000007512,
+            "decrypt_time": 2.504300000001791,
+            "total_time": 4.259700000009303,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "470": {
+        "70": {
             "transaction_id": 69,
-            "encrypt_time": 373066.9996002689,
-            "decrypt_time": 468578.00043653697,
-            "total_time": 841645.0000368059,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 0.9239999999977044,
+            "decrypt_time": 0.8060999999983665,
+            "total_time": 1.730099999996071,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "471": {
+        "71": {
             "transaction_id": 70,
-            "encrypt_time": 270260.9999687411,
-            "decrypt_time": 327341.0002293531,
-            "total_time": 597602.0001980942,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.869800000013356,
+            "decrypt_time": 4.469199999999063,
+            "total_time": 7.339000000012419,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "472": {
+        "72": {
             "transaction_id": 71,
-            "encrypt_time": 2230127.0000752993,
-            "decrypt_time": 4503295.000176877,
-            "total_time": 6733422.000252176,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 0.9209000000112155,
+            "decrypt_time": 0.9279000000006477,
+            "total_time": 1.8488000000118632,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "473": {
+        "73": {
             "transaction_id": 72,
-            "encrypt_time": 379303.0009546783,
-            "decrypt_time": 752928.9978265297,
-            "total_time": 1132231.998781208,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 1.4972000000170738,
+            "decrypt_time": 1.756300000000266,
+            "total_time": 3.2535000000173397,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "474": {
+        "74": {
             "transaction_id": 73,
-            "encrypt_time": 718056.0005508596,
-            "decrypt_time": 1227037.9993424285,
-            "total_time": 1945093.9998932881,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 5.019900000007738,
+            "decrypt_time": 7.401299999997946,
+            "total_time": 12.421200000005683,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "475": {
+        "75": {
             "transaction_id": 74,
-            "encrypt_time": 282123.9995682845,
-            "decrypt_time": 309421.9973718282,
-            "total_time": 591545.9969401127,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 1.0316999999986365,
+            "decrypt_time": 1.4308000000013976,
+            "total_time": 2.462500000000034,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "476": {
+        "76": {
             "transaction_id": 75,
-            "encrypt_time": 3181621.999829076,
-            "decrypt_time": 5718583.9978046715,
-            "total_time": 8900205.997633748,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 5.821599999990212,
+            "decrypt_time": 1.7233999999959337,
+            "total_time": 7.544999999986146,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "477": {
+        "77": {
             "transaction_id": 76,
-            "encrypt_time": 208386.00175920874,
-            "decrypt_time": 322713.00005959347,
-            "total_time": 531099.0018188022,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 15.043600000012702,
+            "decrypt_time": 23.70559999999955,
+            "total_time": 38.74920000001225,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "478": {
+        "78": {
             "transaction_id": 77,
-            "encrypt_time": 409408.0013601342,
-            "decrypt_time": 362335.0021371152,
-            "total_time": 771743.0034972494,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 11.940700000025117,
+            "decrypt_time": 19.9566999999945,
+            "total_time": 31.897400000019616,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "479": {
+        "79": {
             "transaction_id": 78,
-            "encrypt_time": 1455188.9998983825,
-            "decrypt_time": 2288175.00101286,
-            "total_time": 3743364.0009112423,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 1.984600000014325,
+            "decrypt_time": 5.753500000004408,
+            "total_time": 7.738100000018733,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "480": {
+        "80": {
             "transaction_id": 79,
-            "encrypt_time": 224299.99989981297,
-            "decrypt_time": 380535.99928389303,
-            "total_time": 604835.999183706,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.2955000000024484,
+            "decrypt_time": 1.3768000000027314,
+            "total_time": 3.6723000000051798,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "481": {
+        "81": {
             "transaction_id": 80,
-            "encrypt_time": 245293.0002618814,
-            "decrypt_time": 491538.00136991777,
-            "total_time": 736831.0016317992,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 1.7804999999952997,
+            "decrypt_time": 4.21859999999441,
+            "total_time": 5.99909999998971,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "482": {
+        "82": {
             "transaction_id": 81,
-            "encrypt_time": 2638592.0009488473,
-            "decrypt_time": 4477376.998693217,
-            "total_time": 7115968.999642064,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.2001000000054773,
+            "decrypt_time": 0.9395999999952664,
+            "total_time": 2.139700000000744,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "483": {
+        "83": {
             "transaction_id": 82,
-            "encrypt_time": 377425.001715892,
-            "decrypt_time": 838856.9985982031,
-            "total_time": 1216282.000314095,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 0.9212999999874683,
+            "decrypt_time": 1.6926000000054842,
+            "total_time": 2.6138999999929524,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "484": {
+        "84": {
             "transaction_id": 83,
-            "encrypt_time": 683467.0002717758,
-            "decrypt_time": 1284236.0010836273,
-            "total_time": 1967703.001355403,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 5.291400000004387,
+            "decrypt_time": 13.376900000004355,
+            "total_time": 18.668300000008742,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "485": {
+        "85": {
             "transaction_id": 84,
-            "encrypt_time": 202798.00082789734,
-            "decrypt_time": 288215.99698858336,
-            "total_time": 491013.9978164807,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 2.1767000000068037,
+            "decrypt_time": 3.421400000000574,
+            "total_time": 5.598100000007378,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "486": {
+        "86": {
             "transaction_id": 85,
-            "encrypt_time": 3093225.0010664575,
-            "decrypt_time": 5501173.000084236,
-            "total_time": 8594398.001150694,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 1.0165999999856012,
+            "decrypt_time": 1.2238999999993894,
+            "total_time": 2.2404999999849906,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "487": {
+        "87": {
             "transaction_id": 86,
-            "encrypt_time": 220089.9998570094,
-            "decrypt_time": 293478.9990831632,
-            "total_time": 513568.9989401726,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 11.653999999992948,
+            "decrypt_time": 22.01270000000477,
+            "total_time": 33.66669999999772,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "488": {
+        "88": {
             "transaction_id": 87,
-            "encrypt_time": 472794.9999505654,
-            "decrypt_time": 384341.9981421903,
-            "total_time": 857136.9980927557,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 8.223799999996118,
+            "decrypt_time": 38.91040000000601,
+            "total_time": 47.134200000002124,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "489": {
+        "89": {
             "transaction_id": 88,
-            "encrypt_time": 1752039.9997010827,
-            "decrypt_time": 2255196.999612963,
-            "total_time": 4007236.9993140455,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 2.0508000000063475,
+            "decrypt_time": 3.3243000000027223,
+            "total_time": 5.37510000000907,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "490": {
+        "90": {
             "transaction_id": 89,
-            "encrypt_time": 296211.999739171,
-            "decrypt_time": 363860.99964147434,
-            "total_time": 660072.9993806453,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 0.965399999984129,
+            "decrypt_time": 0.7983999999936486,
+            "total_time": 1.7637999999777776,
+            "filepath": "conll_5kB.txt",
+            "msg_len": 5.0,
             "keysize": 256
         },
-        "491": {
+        "91": {
             "transaction_id": 90,
-            "encrypt_time": 359682.0006350754,
-            "decrypt_time": 391067.0020559337,
-            "total_time": 750749.0026910091,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
+            "encrypt_time": 2.3405999999965843,
+            "decrypt_time": 7.9165000000074315,
+            "total_time": 10.257100000004016,
+            "filepath": "conll_100kB.txt",
+            "msg_len": 100.0,
             "keysize": 256
         },
-        "492": {
+        "92": {
             "transaction_id": 91,
-            "encrypt_time": 2345921.9992219005,
-            "decrypt_time": 4573294.998408528,
-            "total_time": 6919216.9976304285,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
+            "encrypt_time": 1.8687000000170428,
+            "decrypt_time": 1.1935999999934666,
+            "total_time": 3.0623000000105094,
+            "filepath": "conll_10kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "493": {
+        "93": {
             "transaction_id": 92,
-            "encrypt_time": 400405.9992439579,
-            "decrypt_time": 756307.999836281,
-            "total_time": 1156713.9990802389,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
+            "encrypt_time": 0.6720000000086657,
+            "decrypt_time": 2.4484999999998536,
+            "total_time": 3.1205000000085192,
+            "filepath": "conll_1kB.txt",
+            "msg_len": 1.0,
             "keysize": 256
         },
-        "494": {
+        "94": {
             "transaction_id": 93,
-            "encrypt_time": 730528.001440689,
-            "decrypt_time": 1307984.9995847326,
-            "total_time": 2038513.0010254215,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
+            "encrypt_time": 11.094899999989138,
+            "decrypt_time": 7.4785000000048285,
+            "total_time": 18.573399999993967,
+            "filepath": "conll_200kB.txt",
+            "msg_len": 200.0,
             "keysize": 256
         },
-        "495": {
+        "95": {
             "transaction_id": 94,
-            "encrypt_time": 232813.99990082718,
-            "decrypt_time": 308850.9984081611,
-            "total_time": 541664.9983089883,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
+            "encrypt_time": 0.916300000000092,
+            "decrypt_time": 1.051900000007322,
+            "total_time": 1.968200000007414,
+            "filepath": "conll_20kB.txt",
+            "msg_len": 10.0,
             "keysize": 256
         },
-        "496": {
+        "96": {
             "transaction_id": 95,
-            "encrypt_time": 3313457.0003312547,
-            "decrypt_time": 5574500.999500742,
-            "total_time": 8887957.999831997,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
+            "encrypt_time": 0.7333000000073753,
+            "decrypt_time": 1.6172000000000963,
+            "total_time": 2.3505000000074716,
+            "filepath": "conll_2kB.txt",
+            "msg_len": 2.0,
             "keysize": 256
         },
-        "497": {
+        "97": {
             "transaction_id": 96,
-            "encrypt_time": 352559.0000208467,
-            "decrypt_time": 296758.00033146515,
-            "total_time": 649317.0003523119,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
+            "encrypt_time": 8.659399999999096,
+            "decrypt_time": 15.240000000000364,
+            "total_time": 23.89939999999946,
+            "filepath": "conll_400kB.txt",
+            "msg_len": 400.0,
             "keysize": 256
         },
-        "498": {
+        "98": {
             "transaction_id": 97,
-            "encrypt_time": 251469.99905700795,
-            "decrypt_time": 341639.9995330721,
-            "total_time": 593109.9985900801,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
+            "encrypt_time": 11.239499999987856,
+            "decrypt_time": 25.859399999999866,
+            "total_time": 37.09889999998772,
+            "filepath": "conll_500kB.txt",
+            "msg_len": 500.0,
             "keysize": 256
         },
-        "499": {
+        "99": {
             "transaction_id": 98,
-            "encrypt_time": 1373768.0001213448,
-            "decrypt_time": 2272214.9988112506,
-            "total_time": 3645982.9989325954,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
+            "encrypt_time": 2.315599999974438,
+            "decrypt_time": 2.4817999999999785,
+            "total_time": 4.797399999974417,
+            "filepath": "conll_50kB.txt",
+            "msg_len": 50.0,
             "keysize": 256
         },
-        "500": {
+        "100": {
             "transaction_id": 99,
-            "encrypt_time": 223244.00015349966,
-            "decrypt_time": 421191.9986119028,
-            "total_time": 644435.9987654025,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "501": {
-            "transaction_id": 100,
-            "encrypt_time": 2299099.9999992214,
-            "decrypt_time": 7303200.000000842,
-            "total_time": 9602300.000000063,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "502": {
-            "transaction_id": 101,
-            "encrypt_time": 599199.999999911,
-            "decrypt_time": 1511299.9999988829,
-            "total_time": 2110499.999998794,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "503": {
-            "transaction_id": 102,
-            "encrypt_time": 712599.9999999522,
-            "decrypt_time": 1225900.0000014452,
-            "total_time": 1938500.0000013974,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "504": {
-            "transaction_id": 103,
-            "encrypt_time": 6409799.999998355,
-            "decrypt_time": 12514499.999998208,
-            "total_time": 18924299.999996565,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "505": {
-            "transaction_id": 104,
-            "encrypt_time": 867299.9999994602,
-            "decrypt_time": 1634700.000000322,
-            "total_time": 2501999.999999782,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "506": {
-            "transaction_id": 105,
-            "encrypt_time": 1177800.0000006726,
-            "decrypt_time": 1749999.9999976978,
-            "total_time": 2927799.99999837,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "507": {
-            "transaction_id": 106,
-            "encrypt_time": 6124800.00000204,
-            "decrypt_time": 22255900.000001106,
-            "total_time": 28380700.000003144,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "508": {
-            "transaction_id": 107,
-            "encrypt_time": 8622899.999998879,
-            "decrypt_time": 17009000.000001606,
-            "total_time": 25631900.000000484,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "509": {
-            "transaction_id": 108,
-            "encrypt_time": 1280099.999998896,
-            "decrypt_time": 2777999.999999281,
-            "total_time": 4058099.999998177,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "510": {
-            "transaction_id": 109,
-            "encrypt_time": 1068399.999997638,
-            "decrypt_time": 732100.0000004574,
-            "total_time": 1800499.9999980954,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "511": {
-            "transaction_id": 110,
-            "encrypt_time": 2233200.0000062636,
-            "decrypt_time": 5836100.000003342,
-            "total_time": 8069300.000009606,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "512": {
-            "transaction_id": 111,
-            "encrypt_time": 1104200.0000003327,
-            "decrypt_time": 1382500.0000053933,
-            "total_time": 2486700.000005726,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "513": {
-            "transaction_id": 112,
-            "encrypt_time": 1048799.9999995169,
-            "decrypt_time": 1391099.9999993122,
-            "total_time": 2439899.9999988293,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "514": {
-            "transaction_id": 113,
-            "encrypt_time": 4078200.000002141,
-            "decrypt_time": 6446900.000000255,
-            "total_time": 10525100.000002395,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "515": {
-            "transaction_id": 114,
-            "encrypt_time": 785399.9999980488,
-            "decrypt_time": 1526200.0000006992,
-            "total_time": 2311599.999998748,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "516": {
-            "transaction_id": 115,
-            "encrypt_time": 810999.9999987849,
-            "decrypt_time": 1178899.9999993166,
-            "total_time": 1989899.9999981015,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "517": {
-            "transaction_id": 116,
-            "encrypt_time": 13582399.999997107,
-            "decrypt_time": 12825100.000000589,
-            "total_time": 26407499.999997698,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "518": {
-            "transaction_id": 117,
-            "encrypt_time": 9210100.000004217,
-            "decrypt_time": 27826699.99999854,
-            "total_time": 37036800.00000276,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "519": {
-            "transaction_id": 118,
-            "encrypt_time": 1304799.9999997728,
-            "decrypt_time": 4233000.00000637,
-            "total_time": 5537800.000006143,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "520": {
-            "transaction_id": 119,
-            "encrypt_time": 958299.9999935282,
-            "decrypt_time": 1314900.0000041155,
-            "total_time": 2273199.9999976438,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "521": {
-            "transaction_id": 120,
-            "encrypt_time": 2129899.999999907,
-            "decrypt_time": 3468699.999999103,
-            "total_time": 5598599.99999901,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "522": {
-            "transaction_id": 121,
-            "encrypt_time": 708199.9999982713,
-            "decrypt_time": 1615100.0000093062,
-            "total_time": 2323300.0000075777,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "523": {
-            "transaction_id": 122,
-            "encrypt_time": 892999.9999978122,
-            "decrypt_time": 1187299.999998004,
-            "total_time": 2080299.999995816,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "524": {
-            "transaction_id": 123,
-            "encrypt_time": 3352999.9999899473,
-            "decrypt_time": 11470400.00000743,
-            "total_time": 14823399.999997377,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "525": {
-            "transaction_id": 124,
-            "encrypt_time": 873699.9999996442,
-            "decrypt_time": 1699700.0000031902,
-            "total_time": 2573400.0000028345,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "526": {
-            "transaction_id": 125,
-            "encrypt_time": 832299.9999990088,
-            "decrypt_time": 885300.0000073053,
-            "total_time": 1717600.0000063141,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "527": {
-            "transaction_id": 126,
-            "encrypt_time": 5748900.00000039,
-            "decrypt_time": 22094699.999996692,
-            "total_time": 27843599.999997083,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "528": {
-            "transaction_id": 127,
-            "encrypt_time": 6254300.0000090385,
-            "decrypt_time": 28266600.000009134,
-            "total_time": 34520900.00001817,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "529": {
-            "transaction_id": 128,
-            "encrypt_time": 1716799.9999969653,
-            "decrypt_time": 2287199.9999978244,
-            "total_time": 4003999.9999947897,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "530": {
-            "transaction_id": 129,
-            "encrypt_time": 1061399.9999975476,
-            "decrypt_time": 1268400.0000007246,
-            "total_time": 2329799.9999982724,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "531": {
-            "transaction_id": 130,
-            "encrypt_time": 2127799.999996682,
-            "decrypt_time": 3.70510000000035,
-            "total_time": 2127803.705096682,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "532": {
-            "transaction_id": 131,
-            "encrypt_time": 1212999.9999928032,
-            "decrypt_time": 1.488300000000109,
-            "total_time": 1213001.4882928033,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "533": {
-            "transaction_id": 132,
-            "encrypt_time": 1224999.9999909278,
-            "decrypt_time": 1.0457999999999856,
-            "total_time": 1225001.0457909277,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "534": {
-            "transaction_id": 133,
-            "encrypt_time": 3627199.999996833,
-            "decrypt_time": 8.277099999999038,
-            "total_time": 3627208.277096833,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "535": {
-            "transaction_id": 134,
-            "encrypt_time": 787799.9999976737,
-            "decrypt_time": 1.31739999999958,
-            "total_time": 787801.3173976736,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "536": {
-            "transaction_id": 135,
-            "encrypt_time": 967800.0000121756,
-            "decrypt_time": 0.9667999999969368,
-            "total_time": 967800.9668121757,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "537": {
-            "transaction_id": 136,
-            "encrypt_time": 12203099.999993583,
-            "decrypt_time": 15.013499999998459,
-            "total_time": 12203115.013493583,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "538": {
-            "transaction_id": 137,
-            "encrypt_time": 8618699.999999534,
-            "decrypt_time": 21.030299999999613,
-            "total_time": 8618721.030299535,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "539": {
-            "transaction_id": 138,
-            "encrypt_time": 1851000.0000020454,
-            "decrypt_time": 2.1512999999977467,
-            "total_time": 1851002.1513020454,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "540": {
-            "transaction_id": 139,
-            "encrypt_time": 935100.0000066279,
-            "decrypt_time": 0.827499999999759,
-            "total_time": 935100.8275066279,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "541": {
-            "transaction_id": 140,
-            "encrypt_time": 2177399.999993668,
-            "decrypt_time": 9.901800000001515,
-            "total_time": 2177409.901793668,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "542": {
-            "transaction_id": 141,
-            "encrypt_time": 902499.9999951433,
-            "decrypt_time": 2.222400000000846,
-            "total_time": 902502.2223951432,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "543": {
-            "transaction_id": 142,
-            "encrypt_time": 1713399.999999865,
-            "decrypt_time": 0.8689999999944575,
-            "total_time": 1713400.868999865,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "544": {
-            "transaction_id": 143,
-            "encrypt_time": 4021199.9999968386,
-            "decrypt_time": 9.2184999999958,
-            "total_time": 4021209.2184968386,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "545": {
-            "transaction_id": 144,
-            "encrypt_time": 838799.9999968088,
-            "decrypt_time": 0.9477999999987219,
-            "total_time": 838800.9477968088,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "546": {
-            "transaction_id": 145,
-            "encrypt_time": 648799.9999933436,
-            "decrypt_time": 2.7860000000003993,
-            "total_time": 648802.7859933436,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "547": {
-            "transaction_id": 146,
-            "encrypt_time": 8807099.999998514,
-            "decrypt_time": 17.65789999999612,
-            "total_time": 8807117.657898514,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "548": {
-            "transaction_id": 147,
-            "encrypt_time": 10608200.000007173,
-            "decrypt_time": 18.605700000001946,
-            "total_time": 10608218.605707172,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "549": {
-            "transaction_id": 148,
-            "encrypt_time": 1868500.0000004948,
-            "decrypt_time": 3.4910000000039076,
-            "total_time": 1868503.4910004947,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "550": {
-            "transaction_id": 149,
-            "encrypt_time": 1185100.000014927,
-            "decrypt_time": 1.3851999999943132,
-            "total_time": 1185101.385214927,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "551": {
-            "transaction_id": 150,
-            "encrypt_time": 1990100.0000004387,
-            "decrypt_time": 4.720300000002453,
-            "total_time": 1990104.7203004386,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "552": {
-            "transaction_id": 151,
-            "encrypt_time": 880600.0000163295,
-            "decrypt_time": 0.9423999999995658,
-            "total_time": 880600.9424163294,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "553": {
-            "transaction_id": 152,
-            "encrypt_time": 726099.9999800788,
-            "decrypt_time": 1.4218000000028042,
-            "total_time": 726101.4217800788,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "554": {
-            "transaction_id": 153,
-            "encrypt_time": 5505900.000002839,
-            "decrypt_time": 11.698499999994283,
-            "total_time": 5505911.698502839,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "555": {
-            "transaction_id": 154,
-            "encrypt_time": 776900.0000052983,
-            "decrypt_time": 1.0901999999930467,
-            "total_time": 776901.0902052983,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "556": {
-            "transaction_id": 155,
-            "encrypt_time": 832799.9999835356,
-            "decrypt_time": 0.7840000000101099,
-            "total_time": 832800.7839835356,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "557": {
-            "transaction_id": 156,
-            "encrypt_time": 6338800.00000886,
-            "decrypt_time": 23.68669999999895,
-            "total_time": 6338823.68670886,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "558": {
-            "transaction_id": 157,
-            "encrypt_time": 10647400.00001052,
-            "decrypt_time": 19.663299999990613,
-            "total_time": 10647419.66331052,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "559": {
-            "transaction_id": 158,
-            "encrypt_time": 3246300.0000007013,
-            "decrypt_time": 6.121300000003771,
-            "total_time": 3246306.1213007015,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "560": {
-            "transaction_id": 159,
-            "encrypt_time": 2168899.9999867063,
-            "decrypt_time": 2.157900000000268,
-            "total_time": 2168902.1578867063,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "561": {
-            "transaction_id": 160,
-            "encrypt_time": 1819699.9999986475,
-            "decrypt_time": 3.9040000000056807,
-            "total_time": 1819703.9039986476,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "562": {
-            "transaction_id": 161,
-            "encrypt_time": 846599.9999884843,
-            "decrypt_time": 1.8776000000002568,
-            "total_time": 846601.8775884843,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "563": {
-            "transaction_id": 162,
-            "encrypt_time": 1777699.9999910004,
-            "decrypt_time": 1.8084999999956608,
-            "total_time": 1777701.8084910004,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "564": {
-            "transaction_id": 163,
-            "encrypt_time": 8154899.999993859,
-            "decrypt_time": 12.267100000002529,
-            "total_time": 8154912.267093859,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "565": {
-            "transaction_id": 164,
-            "encrypt_time": 2731199.9999994896,
-            "decrypt_time": 0.9557999999998401,
-            "total_time": 2731200.9557994897,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "566": {
-            "transaction_id": 165,
-            "encrypt_time": 884499.9999837455,
-            "decrypt_time": 1.089699999994309,
-            "total_time": 884501.0896837455,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "567": {
-            "transaction_id": 166,
-            "encrypt_time": 9047100.000003638,
-            "decrypt_time": 12.39259999999831,
-            "total_time": 9047112.392603638,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "568": {
-            "transaction_id": 167,
-            "encrypt_time": 9101399.9999916,
-            "decrypt_time": 20.498000000003458,
-            "total_time": 9101420.4979916,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "569": {
-            "transaction_id": 168,
-            "encrypt_time": 1501600.0000116492,
-            "decrypt_time": 3.9883999999972275,
-            "total_time": 1501603.9884116491,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "570": {
-            "transaction_id": 169,
-            "encrypt_time": 1876100.000004044,
-            "decrypt_time": 1.452100000008727,
-            "total_time": 1876101.4521040441,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "571": {
-            "transaction_id": 170,
-            "encrypt_time": 2207800.0000078646,
-            "decrypt_time": 3.8691999999969084,
-            "total_time": 2207803.8692078646,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "572": {
-            "transaction_id": 171,
-            "encrypt_time": 808199.9999944855,
-            "decrypt_time": 1.5841000000023087,
-            "total_time": 808201.5840944855,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "573": {
-            "transaction_id": 172,
-            "encrypt_time": 813800.0000030843,
-            "decrypt_time": 1.221200000003364,
-            "total_time": 813801.2212030843,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "574": {
-            "transaction_id": 173,
-            "encrypt_time": 5137899.999994033,
-            "decrypt_time": 12.393899999992186,
-            "total_time": 5137912.393894033,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "575": {
-            "transaction_id": 174,
-            "encrypt_time": 896399.9999878069,
-            "decrypt_time": 1.0490000000089594,
-            "total_time": 896401.0489878069,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "576": {
-            "transaction_id": 175,
-            "encrypt_time": 1379600.0000070308,
-            "decrypt_time": 1.2751000000008617,
-            "total_time": 1379601.2751070308,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "577": {
-            "transaction_id": 176,
-            "encrypt_time": 7205599.999991818,
-            "decrypt_time": 13.621999999998025,
-            "total_time": 7205613.621991819,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "578": {
-            "transaction_id": 177,
-            "encrypt_time": 10622899.999987112,
-            "decrypt_time": 25.720299999989038,
-            "total_time": 10622925.720287113,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "579": {
-            "transaction_id": 178,
-            "encrypt_time": 1515900.0000153356,
-            "decrypt_time": 1.7119999999977153,
-            "total_time": 1515901.7120153357,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "580": {
-            "transaction_id": 179,
-            "encrypt_time": 1226800.0000119628,
-            "decrypt_time": 1.4983000000086122,
-            "total_time": 1226801.498311963,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "581": {
-            "transaction_id": 180,
-            "encrypt_time": 1957600.00002565,
-            "decrypt_time": 2.9725999999925534,
-            "total_time": 1957602.97262565,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "582": {
-            "transaction_id": 181,
-            "encrypt_time": 1031699.9999986365,
-            "decrypt_time": 0.8772000000192293,
-            "total_time": 1031700.8771986365,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "583": {
-            "transaction_id": 182,
-            "encrypt_time": 808999.9999754127,
-            "decrypt_time": 1.2873999999953867,
-            "total_time": 809001.2873754128,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "584": {
-            "transaction_id": 183,
-            "encrypt_time": 4071499.9999806876,
-            "decrypt_time": 7.020799999992278,
-            "total_time": 4071507.0207806877,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "585": {
-            "transaction_id": 184,
-            "encrypt_time": 997900.0000157612,
-            "decrypt_time": 1.6135000000190303,
-            "total_time": 997901.6135157612,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "586": {
-            "transaction_id": 185,
-            "encrypt_time": 948300.0000045649,
-            "decrypt_time": 1.0992999999928088,
-            "total_time": 948301.0993045649,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "587": {
-            "transaction_id": 186,
-            "encrypt_time": 6590799.999997898,
-            "decrypt_time": 21.052299999979596,
-            "total_time": 6590821.052297898,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "588": {
-            "transaction_id": 187,
-            "encrypt_time": 9048799.999987978,
-            "decrypt_time": 28.632700000002842,
-            "total_time": 9048828.632687978,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "589": {
-            "transaction_id": 188,
-            "encrypt_time": 1894100.0000154418,
-            "decrypt_time": 3.555200000022296,
-            "total_time": 1894103.5552154419,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "590": {
-            "transaction_id": 189,
-            "encrypt_time": 1052299.9999977855,
-            "decrypt_time": 1.2721000000226468,
-            "total_time": 1052301.2720977855,
-            "filepath": "conll_5kB.txt",
-            "msg_len": 5.0,
-            "keysize": 256
-        },
-        "591": {
-            "transaction_id": 190,
-            "encrypt_time": 2157100.0000051297,
-            "decrypt_time": 4.307299999993575,
-            "total_time": 2157104.3073051297,
-            "filepath": "conll_100kB.txt",
-            "msg_len": 100.0,
-            "keysize": 256
-        },
-        "592": {
-            "transaction_id": 191,
-            "encrypt_time": 1017799.9999996246,
-            "decrypt_time": 1.9695999999953528,
-            "total_time": 1017801.9695996245,
-            "filepath": "conll_10kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "593": {
-            "transaction_id": 192,
-            "encrypt_time": 671999.999980244,
-            "decrypt_time": 0.7272000000000389,
-            "total_time": 672000.7271802439,
-            "filepath": "conll_1kB.txt",
-            "msg_len": 1.0,
-            "keysize": 256
-        },
-        "594": {
-            "transaction_id": 193,
-            "encrypt_time": 4524400.000008199,
-            "decrypt_time": 12.544999999988704,
-            "total_time": 4524412.545008199,
-            "filepath": "conll_200kB.txt",
-            "msg_len": 200.0,
-            "keysize": 256
-        },
-        "595": {
-            "transaction_id": 194,
-            "encrypt_time": 790499.999993699,
-            "decrypt_time": 1.7661999999916134,
-            "total_time": 790501.766193699,
-            "filepath": "conll_20kB.txt",
-            "msg_len": 10.0,
-            "keysize": 256
-        },
-        "596": {
-            "transaction_id": 195,
-            "encrypt_time": 799400.0000053347,
-            "decrypt_time": 1.2105999999789674,
-            "total_time": 799401.2106053347,
-            "filepath": "conll_2kB.txt",
-            "msg_len": 2.0,
-            "keysize": 256
-        },
-        "597": {
-            "transaction_id": 196,
-            "encrypt_time": 8837499.999970078,
-            "decrypt_time": 13.127800000006573,
-            "total_time": 8837513.12777008,
-            "filepath": "conll_400kB.txt",
-            "msg_len": 400.0,
-            "keysize": 256
-        },
-        "598": {
-            "transaction_id": 197,
-            "encrypt_time": 8356700.000035744,
-            "decrypt_time": 18.397899999996525,
-            "total_time": 8356718.397935744,
-            "filepath": "conll_500kB.txt",
-            "msg_len": 500.0,
-            "keysize": 256
-        },
-        "599": {
-            "transaction_id": 198,
-            "encrypt_time": 1976500.000012038,
-            "decrypt_time": 3.259400000018786,
-            "total_time": 1976503.2594120381,
-            "filepath": "conll_50kB.txt",
-            "msg_len": 50.0,
-            "keysize": 256
-        },
-        "600": {
-            "transaction_id": 199,
-            "encrypt_time": 1163100.00004205,
-            "decrypt_time": 1.223499999980504,
-            "total_time": 1163101.22354205,
+            "encrypt_time": 1.1547000000291519,
+            "decrypt_time": 0.7675000000002541,
+            "total_time": 1.922200000029406,
             "filepath": "conll_5kB.txt",
             "msg_len": 5.0,
             "keysize": 256

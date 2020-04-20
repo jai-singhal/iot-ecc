@@ -2,8 +2,8 @@ import nltk.corpus as corpus
 import nltk
 from nltk.corpus import conll2000, conll2002
 from tqdm import tqdm
-# nltk.download('conll2000')
-# nltk.download('conll2002')
+nltk.download('conll2000')
+nltk.download('conll2002')
 
 # data = ""
 # for sent in tqdm(conll2000.sents()):

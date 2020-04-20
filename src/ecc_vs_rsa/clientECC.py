@@ -8,6 +8,14 @@ import sys, os
 from timeit import default_timer as timer
 from tqdm import tqdm
 
+def clearDB():
+    with open("../../db/serverdbECC.json", "w") as fout:
+        fout.write("")
+    # with open("../../db/serverdbRSA.json", "w") as fout:
+    #     fout.write("")
+
+clearDB()
+
 DATAPATH = "../../data/"
 CONFIGPATH = "../../config/config.json"
 
@@ -19,7 +27,7 @@ class ClientECC():
 
     def fillClientData(self):
         self.clientData["device_id"] = str(uuid.uuid4())
-        self.clientData["curve_name"] = ecc.get_curve_name(6) # random curve
+        self.clientData["curve_name"] = ecc.get_curve_name(3) # random curve
         self.clientData["latitude"] = random.uniform(-180,180)
         self.clientData["longitude"] = random.uniform(-90, 90)
 

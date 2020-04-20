@@ -9,6 +9,15 @@ import os
 from timeit import default_timer as timer
 from tqdm import tqdm
 
+
+def clearDB():
+    # with open("../../db/serverdbECC.json", "w") as fout:
+    #     fout.write("")
+    with open("../../db/serverdbRSA.json", "w") as fout:
+        fout.write("")
+
+clearDB()
+
 with open("../../config/config.json", "r") as f:
     config = json.loads(f.read())
 

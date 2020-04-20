@@ -48,8 +48,6 @@ def create_sha256_hash(msg:str):
     return h.hexdigest()
 
 
-
-
 def encrypt_AES_GCM(msg, setKey):
     aesCipher = AES.new(setKey, AES.MODE_GCM)
     ciphertext, authTag = aesCipher.encrypt_and_digest(msg)
@@ -63,9 +61,7 @@ def decrypt_AES_GCM(ciphertext, nonce, authTag, setKey):
 def ecc_point_to_256_bit_key(point, keysize=32, iters=10000):
     sha = hashlib.sha256(str(point.x).encode("utf-8"))
     sha.update(str(point.y).encode("utf-8"))
-    salt = b'7G\xf6\xc3n\x01\xf7\xf3\xb46\xce\xfd.\x7f\xdfX'
-    kdfKey = PBKDF2(sha.digest(), salt, keysize, iters, hmac_hash_module=SHA256)
-    return kdfKey
+    return sha.digest()
     
 # def encrypt_(msg, setKey):
 #     ciphertext, nonce, authTag = encrypt_AES_GCM(msg, setKey)
