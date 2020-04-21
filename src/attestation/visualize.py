@@ -1,6 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
+from functools import reduce
+  
+def average(lst): 
+    return reduce(lambda a, b: a + b, lst) / len(lst)
 
 def getData(logName):
     verifier = list()
@@ -23,6 +27,12 @@ verifer0_5, prover0_5, total0_5 = getData("../../logs/verifer-0.5KB.log")
 verifer1, prover1, total1 = getData("../../logs/verifer-1KB.log")
 verifer32, prover32, total32 = getData("../../logs/verifer-32KB.log")
 verifer100, prover100, total100 = getData("../../logs/verifer-100KB.log")
+
+print(average(verifer0_5), average(prover0_5))
+print(average(verifer1), average(prover1))
+print(average(verifer32), average(prover32))
+print(average(verifer100), average(prover100))
+
 
 total_dp = 120
 seek = 200
