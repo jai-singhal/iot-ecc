@@ -36,7 +36,7 @@ class Verifier():
 
     def fillverifierData(self, CURR_IOT_DEVICE_BASEURL):
         self.verifierData["device_id"] = str(uuid.uuid4())
-        self.verifierData["curve_name"] = ecc.get_curve_name(6) # random curve
+        self.verifierData["curve_name"] = ecc.get_curve_name(9) # "secp256r1"
         self.CURR_IOT_DEVICE_BASEURL = CURR_IOT_DEVICE_BASEURL
 
 
