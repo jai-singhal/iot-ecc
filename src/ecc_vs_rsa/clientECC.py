@@ -16,7 +16,7 @@ def clearDB():
 
 clearDB()
 
-DATAPATH = "../../data/"
+#DATAPATH = "../../data/"
 CONFIGPATH = "../../config/config.json"
 
 class ClientECC():
@@ -129,6 +129,7 @@ def iter(CURR_CLIENT_BASEURL):
 
 if __name__ == "__main__":
 
+    global DATAPATH
     with open(CONFIGPATH, "r") as f:
         config = json.loads(f.read())
 
@@ -140,8 +141,10 @@ if __name__ == "__main__":
     BASEURL_SERVER= config[pd]["server"]["BASEURL_SERVER"]
     BASEURL_CLIENT1 = config[pd]["client"]["BASEURL_CLIENT1"]
     BASEURL_CLIENT2 = config[pd]["client"]["BASEURL_CLIENT2"]
+    DATAPATH = config[pd]["client"]["MSG_FOLDER_CLIENT1"]
+    ITERATIONS = config[pd]["client"]["ECC_ITERATIONS_PER_FILE_CLIENT1"]
 
-    for i in range(10):
+    for i in range(ITERATIONS):
         print("-"*10 + "ITERATION: " + str(i+1) + "-"*10)
         iter(BASEURL_CLIENT1)
 
