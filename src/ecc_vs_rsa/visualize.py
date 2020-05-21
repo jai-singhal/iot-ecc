@@ -90,15 +90,15 @@ def visualize_rsa():
 
     meandf = df.groupby(["msg_length"]).mean()
     meandf.sort_values("msg_length")
-    meandf["key_gen_time"] = meandf["key_gen_time"]/10**6
-    meandf["encrypt_msg"] = meandf["encrypt_msg"]/10**6
-    meandf["decrypt_msg"] = meandf["decrypt_msg"]/10**6
-    meandf["total_time"] = meandf["total_time"]/10**6
+    meandf["key_gen_time"] = meandf["key_gen_time"]
+    meandf["encrypt_msg"] = meandf["encrypt_msg"]
+    meandf["decrypt_msg"] = meandf["decrypt_msg"]
+    meandf["total_time"] = meandf["total_time"]
 
     ax = meandf.plot(rot=0,  use_index=True, kind='bar', title='Time vs message size')
     plt.xlabel("Message Length (in KB)")
     plt.ylabel("Time required (in ms)")
-    plt.legend(['keygen time','Encryption time', 'Decryption time', 'Total time(ms)'])
+    plt.legend(['keygen time', 'Decryption time', 'Encryption time', 'Total time(ms)'])
     # ax.show()
     plt.show()
 

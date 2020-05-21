@@ -142,14 +142,15 @@ class ClientRSA():
         complete_msg_encrypted=[]
         max_bytes_msg=self.clientData["key_size"]//8-11
 
-        start=timer()*(10**3)
         for msg_ind in tqdm(range(0,len(msg),max_bytes_msg),desc="encrypting msg ["+str(self.clientData["transaction_id"])+"]"):
+            start=timer()*(10**3)
             mod_msg=msg[msg_ind:msg_ind+max_bytes_msg]
             bytemsg=rsa.encrypt(mod_msg.encode('utf-8'),self.clientData["server_public"])
             rtnmsg=binascii.hexlify(bytemsg)
             encryptedMsgObj=rtnmsg.decode('utf-8')
             complete_msg_encrypted.append(encryptedMsgObj)
-        end=timer()*(10**3)
+            end=timer()*(10**3)
+            total_time+=end-start
         complete_msg_encrypted=''.join(complete_msg_encrypted)
         print("done encrypting sending msg to server")
         
@@ -161,7 +162,6 @@ class ClientRSA():
             data = data,
             params = prm
         )
-        total_time=end-start
         if response.status_code == 200:
             data = {
                 "transaction_id": self.clientData["transaction_id"],
