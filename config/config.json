@@ -6,7 +6,7 @@
             "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io",
             "BLOCK_SIZE": 64, 
             "WORD_SIZE": 32,
-            "MEMORY_FILEPATH": "../../memory/firmware_v2.hex"
+            "MEMORY_FILEPATH": "../../memory/firmware_v3.hex"
         },
         "client":{
             "BASEURL_CLIENT1": "http://localhost:8080",
@@ -19,7 +19,7 @@
             "ECC_ITERATIONS_PER_FILE_CLIENT2":1,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
             "RSA_ITERATIONS_PER_FILE_CLIENT2":10,
-            "MEMORY_FILEPATH": "../../memory/firmware_v2.hex"
+            "MEMORY_FILEPATH": "../../memory/firmware_v3.hex"
             
         }
     },

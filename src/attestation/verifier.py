@@ -145,7 +145,9 @@ class Verifier():
 
     def generateSiBSiW(self):
         self.SiB = random.randint(0, self.NUM_OF_BLOCKS-1)
-        self.SiW = random.randint(0, self.BLOCK_SIZE-1)
+        self.SiW = random.randint(0, self.BLOCK_SIZE*1024//self.WORD_SIZE-1)
+        #self.SiB=0
+        print((self.SiB, self.SiW, self.NUM_OF_BLOCKS, self.BLOCK_SIZE))
         return (self.SiB, self.SiW)
     
     def generateSigma(self):
@@ -200,7 +202,7 @@ def main():
     print("Key exchange Done!!")
     iteration=1
     print("Memory blocks sending starts!!")
-    while iteration < 120:
+    while iteration < 1120:
         print("Memory Block #{} sent for verification".format(iteration))
         (sib,siw)=verifier.generateSiBSiW()
         stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))
