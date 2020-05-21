@@ -50,10 +50,12 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
 
         with open(filepath, "r") as fin:
             fcontent = fin.read()
-            NUM_OF_BLOCKS = math.ceil(len(fcontent)/BLOCK_SIZE)
+            fcontent=fcontent.replace("\n","")
+            fcontent=fcontent.replace(" ","")
+            NUM_OF_BLOCKS = math.ceil(len(fcontent)/(BLOCK_SIZE*1024))
             memoryBlocks = [
-                fcontent[i:i+BLOCK_SIZE] 
-                for i in range(0, len(fcontent), BLOCK_SIZE)
+                fcontent[i:i+BLOCK_SIZE*1024] 
+                for i in range(0, len(fcontent), BLOCK_SIZE*1024)
             ]
             return memoryBlocks
     try:
@@ -62,6 +64,9 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
         proverParams["memoryBlocks"] = readMemory(MEMORY_FILEPATH)
         return {"status": True, "message": "Client registred successfully"}
     except Exception as e:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
         return {"status": False, "error": str(e)}
 
 
@@ -106,7 +111,9 @@ def ecc_clientRequest(
             "status": True
         }
     except Exception as e:
-        print(e)
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
         return {"status": False, "error": str(e)}
 
 
@@ -150,7 +157,9 @@ def ecc_recieveMessage(
     try:
         decryptedMsg = decryption()
     except Exception as e:
-        print(e)
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
         return {"status": False, "error": "Decryption problem"}
 
     tmp = decryptedMsg.split(",")
@@ -161,13 +170,17 @@ def ecc_recieveMessage(
     try:
         sigma = sigmaGeneration()
     except Exception as e:
-        print(e)
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
         return {"status": False, "error": "Sigma generation problem"}
     
     try:
         cryptogram = encryption(sigma)
     except Exception as e:
-        print(e)
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
         return {"status": False, "error": "Encryption problem"}
     
     attest_timer_end=timer()

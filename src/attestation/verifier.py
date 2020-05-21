@@ -160,10 +160,12 @@ class Verifier():
         
         with open(filepath, "r") as fin:
             fcontent = fin.read()
-            self.NUM_OF_BLOCKS = math.ceil(len(fcontent)/self.BLOCK_SIZE)
+            fcontent=fcontent.replace("\n", "")
+            fcontent=fcontent.replace(" ", "")
+            self.NUM_OF_BLOCKS = math.ceil(len(fcontent)/(self.BLOCK_SIZE*1024))
             self.memoryBlocks = [
-                fcontent[i:i+self.BLOCK_SIZE] 
-                for i in range(0, len(fcontent), self.BLOCK_SIZE)
+                fcontent[i:i+self.BLOCK_SIZE*1024] 
+                for i in range(0, len(fcontent), self.BLOCK_SIZE*1024)
             ]
 
 def main():
@@ -198,7 +200,7 @@ def main():
     print("Key exchange Done!!")
     iteration=1
     print("Memory blocks sending starts!!")
-    while(True):
+    while iteration < 120:
         print("Memory Block #{} sent for verification".format(iteration))
         (sib,siw)=verifier.generateSiBSiW()
         stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))

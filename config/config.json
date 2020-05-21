@@ -1,12 +1,12 @@
 {
-    "production": false,
+    "production": true,
     "local": {
         "server":{
             "BASEURL_SERVER": "http://localhost:8080",
             "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io",
-            "BLOCK_SIZE": 200,
+            "BLOCK_SIZE": 64, 
             "WORD_SIZE": 32,
-            "MEMORY_FILEPATH": "../../memory/memoryFile_prover.txt"
+            "MEMORY_FILEPATH": "../../memory/firmware_v2.hex"
         },
         "client":{
             "BASEURL_CLIENT1": "http://localhost:8080",
@@ -19,16 +19,17 @@
             "ECC_ITERATIONS_PER_FILE_CLIENT2":1,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":10,
             "RSA_ITERATIONS_PER_FILE_CLIENT2":10,
-            "MEMORY_FILEPATH": "../../memory/memoryFile_verifier.txt"
+            "MEMORY_FILEPATH": "../../memory/firmware_v2.hex"
+            
         }
     },
     "development":{
         "server":{
             "BASEURL_SERVER": "http://192.168.0.15:8080",
             "BASEURL_SERVER_NGROK": "http://023b8bc8.ngrok.io",
-            "BLOCK_SIZE": 32768,
+            "BLOCK_SIZE": 64,
             "WORD_SIZE": 32,
-            "MEMORY_FILEPATH": "../../memory/memoryFile_prover.txt"
+            "MEMORY_FILEPATH": "../../memory/firmware_v2.hex"
         },
         "client":{
             "BASEURL_CLIENT1": "http://192.168.0.14:8001",
@@ -41,7 +42,7 @@
             "ECC_ITERATIONS_PER_FILE_CLIENT2":1,
             "RSA_ITERATIONS_PER_FILE_CLIENT1":1,
             "RSA_ITERATIONS_PER_FILE_CLIENT2":1,
-            "MEMORY_FILEPATH": "../../memory/memoryFile_verifier.txt"
+            "MEMORY_FILEPATH": "../../memory/firmware_v2.hex"
         }
     }
 }

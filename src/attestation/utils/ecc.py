@@ -48,11 +48,21 @@ def create_sha256_hash(msg:str):
     return h.hexdigest()
 
 
+'''
+The ciphertext is the encrypted message.
+The nonce is the randomly generated initial vector (IV) for the GCM construction.
+The authTag is the message authentication code (MAC) calculated during the encryption.
+'''
 def encrypt_AES_GCM(msg, setKey):
     aesCipher = AES.new(setKey, AES.MODE_GCM)
     ciphertext, authTag = aesCipher.encrypt_and_digest(msg)
     return (ciphertext, aesCipher.nonce, authTag)
 
+'''
+The ciphertext is the encrypted message.
+The nonce is the randomly generated initial vector (IV) for the GCM construction.
+The authTag is the message authentication code (MAC) calculated during the encryption.
+'''
 def decrypt_AES_GCM(ciphertext, nonce, authTag, setKey):
     aesCipher = AES.new(setKey, AES.MODE_GCM, nonce)
     plaintext = aesCipher.decrypt_and_verify(ciphertext, authTag)
