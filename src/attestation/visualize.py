@@ -30,15 +30,14 @@ def getData(logName):
 
 
 mac_gen64, sig_gen64, verifer64, prover64, total64 = getData("../../logs/review_mod_logs/verifier_64KB.log")
-
 mac_gen128, sig_gen128, verifer128, prover128, total128 = getData("../../logs/review_mod_logs/verifier_128KB.log")
 mac_gen256, sig_gen256, verifer256, prover256, total256 = getData("../../logs/review_mod_logs/verifier_256KB.log")
 mac_gen512, sig_gen512, verifer512, prover512, total512 = getData("../../logs/review_mod_logs/verifier_512KB.log")
 mac_gen1, sig_gen1, verifer1, prover1, total1 = getData("../../logs/review_mod_logs/verifier_1MB.log")
 mac_gen2, sig_gen2, verifer2, prover2, total2 = getData("../../logs/review_mod_logs/verifier_2MB.log")
-
 mac_gen4, sig_gen4, verifer4, prover4, total4 = getData("../../logs/review_mod_logs/verifier_4MB.log")
 
+print(average(mac_gen64), average(sig_gen64), average(verifer64), average(prover64), average(total64))
 print(average(mac_gen128), average(sig_gen128), average(verifer128), average(prover128), average(total128))
 print(average(mac_gen256), average(sig_gen256), average(verifer256), average(prover256), average(total256))
 print(average(mac_gen512), average(sig_gen512), average(verifer512), average(prover512), average(total512))
