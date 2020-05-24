@@ -57,20 +57,10 @@ The authTag is the message authentication code (MAC) calculated during the encry
 def encrypt_AES_GCM(msg, setKey):
     aesCipher = AES.new(setKey, AES.MODE_GCM)
     ciphertext  = aesCipher.encrypt(msg)
-<<<<<<< HEAD
-
-    tick = timer()
-    authTag = aesCipher.digest()
-    tock = timer()
-
-    return (ciphertext, aesCipher.nonce, authTag)
-
-=======
     tick = timer()
     authTag = aesCipher.digest()
     tock = timer()
     return (ciphertext, aesCipher.nonce, authTag, (tock-tick))
->>>>>>> a808777b69962e4098d85a81e8add8770fac4399
 '''
 The ciphertext is the encrypted message.
 The nonce is the randomly generated initial vector (IV) for the GCM construction.
