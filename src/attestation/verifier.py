@@ -207,7 +207,7 @@ def main():
     print("Key exchange Done!!")
     iteration=1
     print("Memory blocks sending starts!!")
-    while iteration < 1120:
+    while iteration <= 100:
         print("Memory Block #{} sent for verification".format(iteration))
         (sib,siw)=verifier.generateSiBSiW()
         stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))
@@ -222,5 +222,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

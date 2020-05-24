@@ -9,5 +9,5 @@ with open("firmware_v4.hex", "w") as fout:
         res = ''.join(random.choices(string.ascii_uppercase[:6] +
                                     string.digits, k = N)) 
 
-    fout.write(res)
-    fout.write("\n")
+        fout.write(res)
+        fout.write("\n")
