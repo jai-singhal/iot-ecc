@@ -93,10 +93,11 @@ class Verifier():
 
     def sendVerificationMessage(self, msg:str):
         tick = timer()
-        ct, nonce, tag = ecc.encrypt_AES_GCM(
+        ct, nonce, tag, tagTime = ecc.encrypt_AES_GCM(
             msg.encode("utf-8"), 
             self.secretKey
         )
+        logging.info("Time taken in generation of authTag(MAC Generation) is: {} ms".format(tagTime*(10**3)))
         ct = binascii.hexlify(ct).decode("utf-8")
         tag = binascii.hexlify(tag).decode("utf-8")
         nonce = binascii.hexlify(nonce).decode("utf-8")
@@ -152,7 +153,10 @@ class Verifier():
     
     def generateSigma(self):
         boi=self.memoryBlocks[self.SiB]
+        tick = timer()
         sigma=ecc.create_sha256_hash(str(boi))
+        tock = timer()
+        logging.info("Sigma generation (SHA-256) {} ms".format(float(tock - tick)*(10**3)))
         return str(sigma)
 
     def readMemory(self, filepath):
@@ -164,9 +168,10 @@ class Verifier():
             fcontent = fin.read()
             fcontent=fcontent.replace("\n", "")
             fcontent=fcontent.replace(" ", "")
+            flen = len(fcontent)
             self.NUM_OF_BLOCKS = math.ceil(len(fcontent)/(self.BLOCK_SIZE*1024))
             self.memoryBlocks = [
-                fcontent[i:i+self.BLOCK_SIZE*1024] 
+                fcontent[i:min(i+self.BLOCK_SIZE*1024, flen)] 
                 for i in range(0, len(fcontent), self.BLOCK_SIZE*1024)
             ]
 
@@ -202,7 +207,7 @@ def main():
     print("Key exchange Done!!")
     iteration=1
     print("Memory blocks sending starts!!")
-    while iteration < 1120:
+    while iteration <= 100:
         print("Memory Block #{} sent for verification".format(iteration))
         (sib,siw)=verifier.generateSiBSiW()
         stat=verifier.sendVerificationMessage(str(sib)+","+str(siw))
@@ -217,5 +222,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

@@ -1,0 +1,501 @@
+24-May-20 02:52:33 - Key exchange time: 329.65182600037224 ms.
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04891299977316521 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.7712880002800375 ms
+24-May-20 02:52:33 - Verifier time taken is: 1.6895549997570924 ms
+24-May-20 02:52:33 - Prover time taken is: 5.13551699987147 ms
+24-May-20 02:52:33 - Total time taken is: 6.8250719996285625 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04762800017488189 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6652529997809324 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.8292370002891403 ms
+24-May-20 02:52:33 - Prover time taken is: 4.6898550008336315 ms
+24-May-20 02:52:33 - Total time taken is: 5.519092001122772 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04842199996346608 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.4196980004708166 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7170769995354931 ms
+24-May-20 02:52:33 - Prover time taken is: 4.292231999897922 ms
+24-May-20 02:52:33 - Total time taken is: 5.009308999433415 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04499700025917264 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 4.05428399972152 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5121540007166914 ms
+24-May-20 02:52:33 - Prover time taken is: 4.8442340003020945 ms
+24-May-20 02:52:33 - Total time taken is: 5.356388001018786 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.054201000239118 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6391120002008392 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5951010007265722 ms
+24-May-20 02:52:33 - Prover time taken is: 4.294821000257798 ms
+24-May-20 02:52:33 - Total time taken is: 4.88992200098437 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04485400040721288 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.545221000422316 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.559581000743492 ms
+24-May-20 02:52:33 - Prover time taken is: 4.346101000010094 ms
+24-May-20 02:52:33 - Total time taken is: 4.905682000753586 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.07702299990341999 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.563053999641852 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5597839999609278 ms
+24-May-20 02:52:33 - Prover time taken is: 4.57675300003757 ms
+24-May-20 02:52:33 - Total time taken is: 5.136536999998498 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04525700023805257 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.4019450004052487 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5580320002991357 ms
+24-May-20 02:52:33 - Prover time taken is: 4.31400500019663 ms
+24-May-20 02:52:33 - Total time taken is: 4.872037000495766 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04795200038643088 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.5777769999185693 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.6186050004544086 ms
+24-May-20 02:52:33 - Prover time taken is: 6.714938000186521 ms
+24-May-20 02:52:33 - Total time taken is: 7.33354300064093 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.045122999836166855 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6085179999645334 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5928320006205468 ms
+24-May-20 02:52:33 - Prover time taken is: 5.026902000281552 ms
+24-May-20 02:52:33 - Total time taken is: 5.619734000902099 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04405799973028479 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.821799999968789 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7576140005767229 ms
+24-May-20 02:52:33 - Prover time taken is: 4.624238999895169 ms
+24-May-20 02:52:33 - Total time taken is: 5.381853000471892 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04438199994183378 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.421293999963382 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5628749995594262 ms
+24-May-20 02:52:33 - Prover time taken is: 4.14876299964817 ms
+24-May-20 02:52:33 - Total time taken is: 4.711637999207596 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.044225000237929635 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.5118030000376166 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5610959997284226 ms
+24-May-20 02:52:33 - Prover time taken is: 5.078993999632075 ms
+24-May-20 02:52:33 - Total time taken is: 5.640089999360498 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04593999983626418 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6501280001175473 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7260700003826059 ms
+24-May-20 02:52:33 - Prover time taken is: 4.912489000162168 ms
+24-May-20 02:52:33 - Total time taken is: 5.638559000544774 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04874299975199392 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.3313860003545415 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.542034000318381 ms
+24-May-20 02:52:33 - Prover time taken is: 4.171716000200831 ms
+24-May-20 02:52:33 - Total time taken is: 4.713750000519212 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04547600019577658 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6060069996892707 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7918350002000807 ms
+24-May-20 02:52:33 - Prover time taken is: 4.05890499951056 ms
+24-May-20 02:52:33 - Total time taken is: 4.85073999971064 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04496200017456431 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.4990229996765265 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5925330005993601 ms
+24-May-20 02:52:33 - Prover time taken is: 4.108602999622235 ms
+24-May-20 02:52:33 - Total time taken is: 4.701136000221595 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04721500044979621 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.2789690003482974 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.597276000007696 ms
+24-May-20 02:52:33 - Prover time taken is: 5.114677999699779 ms
+24-May-20 02:52:33 - Total time taken is: 5.711953999707475 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04330700085120043 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 4.767901000377606 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.6026000000929344 ms
+24-May-20 02:52:33 - Prover time taken is: 5.63609499931772 ms
+24-May-20 02:52:33 - Total time taken is: 6.238694999410654 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.05572300051426282 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.322679000120843 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.660591999803728 ms
+24-May-20 02:52:33 - Prover time taken is: 4.085246999238734 ms
+24-May-20 02:52:33 - Total time taken is: 4.745838999042462 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04271099987818161 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.976661000706372 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.8397769997827709 ms
+24-May-20 02:52:33 - Prover time taken is: 4.667144999984885 ms
+24-May-20 02:52:33 - Total time taken is: 5.5069219997676555 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04696199994214112 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.7146659997233655 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5602349992841482 ms
+24-May-20 02:52:33 - Prover time taken is: 4.273055999874487 ms
+24-May-20 02:52:33 - Total time taken is: 4.833290999158635 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.06912199933140073 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.7169170000197482 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.734781000574003 ms
+24-May-20 02:52:33 - Prover time taken is: 4.623460999937379 ms
+24-May-20 02:52:33 - Total time taken is: 5.358242000511382 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.044407999666873366 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.726195999661286 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5884810007046326 ms
+24-May-20 02:52:33 - Prover time taken is: 4.411950000758225 ms
+24-May-20 02:52:33 - Total time taken is: 5.000431001462857 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04456199985725107 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.338516999974672 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.6475609998233267 ms
+24-May-20 02:52:33 - Prover time taken is: 4.550098999970942 ms
+24-May-20 02:52:33 - Total time taken is: 5.1976599997942685 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04492999960348243 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6224020004738122 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.631279999652179 ms
+24-May-20 02:52:33 - Prover time taken is: 4.0047969996521715 ms
+24-May-20 02:52:33 - Total time taken is: 4.6360769993043505 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.047882999751891475 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6918229998263996 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5264069995973841 ms
+24-May-20 02:52:33 - Prover time taken is: 4.627478999282175 ms
+24-May-20 02:52:33 - Total time taken is: 5.153885998879559 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.0448220007456257 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 4.593630999806919 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7440859999405802 ms
+24-May-20 02:52:33 - Prover time taken is: 4.500338000070769 ms
+24-May-20 02:52:33 - Total time taken is: 5.24442400001135 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.05264100036583841 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 5.31957200018951 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7203060004030704 ms
+24-May-20 02:52:33 - Prover time taken is: 4.220668000016303 ms
+24-May-20 02:52:33 - Total time taken is: 4.940974000419374 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.07981600083439844 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 4.533068000455387 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5363090003811521 ms
+24-May-20 02:52:33 - Prover time taken is: 4.275364000022819 ms
+24-May-20 02:52:33 - Total time taken is: 4.811673000403971 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04432800051290542 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.345357000398508 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.623211000856827 ms
+24-May-20 02:52:33 - Prover time taken is: 5.277631000353722 ms
+24-May-20 02:52:33 - Total time taken is: 5.900842001210549 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.044662000618700404 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.4854010000344715 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.6055969997760258 ms
+24-May-20 02:52:33 - Prover time taken is: 4.746737999994366 ms
+24-May-20 02:52:33 - Total time taken is: 5.352334999770392 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.044438999793783296 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.366939000443381 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5594039994321065 ms
+24-May-20 02:52:33 - Prover time taken is: 4.634211000848154 ms
+24-May-20 02:52:33 - Total time taken is: 5.193615000280261 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04422599977260688 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.5512189997461974 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7596949999424396 ms
+24-May-20 02:52:33 - Prover time taken is: 4.7989929998948355 ms
+24-May-20 02:52:33 - Total time taken is: 5.558687999837275 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.049838000450108666 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.757272999791894 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.8555509994039312 ms
+24-May-20 02:52:33 - Prover time taken is: 5.300562000229547 ms
+24-May-20 02:52:33 - Total time taken is: 6.1561129996334785 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04440300017449772 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.5969509999631555 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.6680699998469208 ms
+24-May-20 02:52:33 - Prover time taken is: 4.545583000435727 ms
+24-May-20 02:52:33 - Total time taken is: 5.2136530002826476 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04455499947653152 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.43253899973206 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.661074000163353 ms
+24-May-20 02:52:33 - Prover time taken is: 4.171460999714327 ms
+24-May-20 02:52:33 - Total time taken is: 4.83253499987768 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.048958000661514234 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.346174000398605 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5408749993875972 ms
+24-May-20 02:52:33 - Prover time taken is: 4.520810000030906 ms
+24-May-20 02:52:33 - Total time taken is: 5.061684999418503 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04347499998402782 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.8626739997198456 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5545349995372817 ms
+24-May-20 02:52:33 - Prover time taken is: 4.220303999318276 ms
+24-May-20 02:52:33 - Total time taken is: 4.774838998855557 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.050550999731058255 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.598334999878716 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7183249999798136 ms
+24-May-20 02:52:33 - Prover time taken is: 8.22835400049371 ms
+24-May-20 02:52:33 - Total time taken is: 8.946679000473523 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04438999985723058 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.473178999229276 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7225139997899532 ms
+24-May-20 02:52:33 - Prover time taken is: 4.48140600019542 ms
+24-May-20 02:52:33 - Total time taken is: 5.203919999985374 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.0433450004493352 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.605507999964175 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.8181820003301254 ms
+24-May-20 02:52:33 - Prover time taken is: 4.090483999789285 ms
+24-May-20 02:52:33 - Total time taken is: 4.9086660001194105 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.0540529999852879 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.4558039997136802 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.5334309998943354 ms
+24-May-20 02:52:33 - Prover time taken is: 4.421860000547895 ms
+24-May-20 02:52:33 - Total time taken is: 4.95529100044223 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.07837700013624271 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6220859992681653 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.7281010002770927 ms
+24-May-20 02:52:33 - Prover time taken is: 4.311014999984764 ms
+24-May-20 02:52:33 - Total time taken is: 5.039116000261856 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.06074499924579868 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.6701219996757573 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.8376470004805014 ms
+24-May-20 02:52:33 - Prover time taken is: 5.152241000359936 ms
+24-May-20 02:52:33 - Total time taken is: 5.989888000840438 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.050444999942556024 ms
+24-May-20 02:52:33 - Sigma generation (SHA-256) 3.3212660000572214 ms
+24-May-20 02:52:33 - Verifier time taken is: 0.6487880000349833 ms
+24-May-20 02:52:33 - Prover time taken is: 4.473703000257956 ms
+24-May-20 02:52:33 - Total time taken is: 5.122491000292939 ms
+24-May-20 02:52:33 - Time taken in generation of authTag(MAC Generation) is: 0.04672600061894627 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.7084159994265065 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7845179998184904 ms
+24-May-20 02:52:34 - Prover time taken is: 4.500691999965056 ms
+24-May-20 02:52:34 - Total time taken is: 5.285209999783547 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.044749999688065145 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.69968399991194 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.575121000110812 ms
+24-May-20 02:52:34 - Prover time taken is: 5.034327999965171 ms
+24-May-20 02:52:34 - Total time taken is: 5.609449000075983 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04494299992074957 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.454162000001816 ms
+24-May-20 02:52:34 - Verifier time taken is: 1.0723790001065936 ms
+24-May-20 02:52:34 - Prover time taken is: 4.996451000806701 ms
+24-May-20 02:52:34 - Total time taken is: 6.0688300009132945 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.044662000618700404 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.511640999931842 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5394270001488621 ms
+24-May-20 02:52:34 - Prover time taken is: 4.12930799939204 ms
+24-May-20 02:52:34 - Total time taken is: 4.668734999540902 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04524199994193623 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.6603440003091237 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7167189996835077 ms
+24-May-20 02:52:34 - Prover time taken is: 4.209467000691802 ms
+24-May-20 02:52:34 - Total time taken is: 4.92618600037531 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04403300044941716 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.7244080003802083 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6548330002260627 ms
+24-May-20 02:52:34 - Prover time taken is: 4.244259999722999 ms
+24-May-20 02:52:34 - Total time taken is: 4.899092999949062 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.054631000239169225 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 5.0145220002377755 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.863373999891337 ms
+24-May-20 02:52:34 - Prover time taken is: 4.177703000095789 ms
+24-May-20 02:52:34 - Total time taken is: 5.041076999987126 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04597799943439895 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.7845790002393187 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.9210099997289944 ms
+24-May-20 02:52:34 - Prover time taken is: 5.056852000052459 ms
+24-May-20 02:52:34 - Total time taken is: 5.977861999781453 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04461899970920058 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.6210940006640158 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.8969820000856998 ms
+24-May-20 02:52:34 - Prover time taken is: 4.284716000256594 ms
+24-May-20 02:52:34 - Total time taken is: 5.181698000342294 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04542299939203076 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.493219999654684 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7318690004467499 ms
+24-May-20 02:52:34 - Prover time taken is: 4.808470999705605 ms
+24-May-20 02:52:34 - Total time taken is: 5.540340000152355 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04816699947696179 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.319313000247348 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7371580004473799 ms
+24-May-20 02:52:34 - Prover time taken is: 4.554750000352215 ms
+24-May-20 02:52:34 - Total time taken is: 5.2919080007995944 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04612900011125021 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.6305719995652908 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5959289992460981 ms
+24-May-20 02:52:34 - Prover time taken is: 4.747155999211827 ms
+24-May-20 02:52:34 - Total time taken is: 5.343084998457925 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.083123999502277 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.403427000397642 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.8480440001221723 ms
+24-May-20 02:52:34 - Prover time taken is: 4.374957000436552 ms
+24-May-20 02:52:34 - Total time taken is: 5.223001000558725 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.0475329998153029 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 6.0453989999587066 ms
+24-May-20 02:52:34 - Verifier time taken is: 1.0403349997432088 ms
+24-May-20 02:52:34 - Prover time taken is: 4.641092000383651 ms
+24-May-20 02:52:34 - Total time taken is: 5.68142700012686 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.047326000640168786 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 0.2843020001819241 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5975539997962187 ms
+24-May-20 02:52:34 - Prover time taken is: 1.5821739998500561 ms
+24-May-20 02:52:34 - Total time taken is: 2.179727999646275 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.06789300005038967 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.113951999897836 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7340480005950667 ms
+24-May-20 02:52:34 - Prover time taken is: 7.5791720000779605 ms
+24-May-20 02:52:34 - Total time taken is: 8.313220000673027 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04525500025920337 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.6737130003530183 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5463459992824937 ms
+24-May-20 02:52:34 - Prover time taken is: 6.727350999426562 ms
+24-May-20 02:52:34 - Total time taken is: 7.273696998709056 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.08334199992532376 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.4397310000713333 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6961909994060989 ms
+24-May-20 02:52:34 - Prover time taken is: 8.87581900042278 ms
+24-May-20 02:52:34 - Total time taken is: 9.572009999828879 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.044938999963051174 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.549292999196041 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6826090002505225 ms
+24-May-20 02:52:34 - Prover time taken is: 4.47143600013078 ms
+24-May-20 02:52:34 - Total time taken is: 5.154045000381302 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04456699934962671 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.326547999677132 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6800999999541091 ms
+24-May-20 02:52:34 - Prover time taken is: 6.47046100039006 ms
+24-May-20 02:52:34 - Total time taken is: 7.150561000344169 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.07223200009320863 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.472641000371368 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.716651000402635 ms
+24-May-20 02:52:34 - Prover time taken is: 5.026816000281542 ms
+24-May-20 02:52:34 - Total time taken is: 5.743467000684177 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04696399992099032 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.894860000400513 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.8409100000790204 ms
+24-May-20 02:52:34 - Prover time taken is: 5.981566000627936 ms
+24-May-20 02:52:34 - Total time taken is: 6.822476000706956 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.0449760000265087 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.101098999854003 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7081439998728456 ms
+24-May-20 02:52:34 - Prover time taken is: 4.353205999905185 ms
+24-May-20 02:52:34 - Total time taken is: 5.061349999778031 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.07808600003045285 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.4607320003487985 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5341270007193089 ms
+24-May-20 02:52:34 - Prover time taken is: 4.956264000611554 ms
+24-May-20 02:52:34 - Total time taken is: 5.490391001330863 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04351400002633454 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.6355989996081917 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6460750000769622 ms
+24-May-20 02:52:34 - Prover time taken is: 4.6508300001733005 ms
+24-May-20 02:52:34 - Total time taken is: 5.296905000250263 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04539700057648588 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.688155999952869 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7941849999042461 ms
+24-May-20 02:52:34 - Prover time taken is: 4.1228569998565945 ms
+24-May-20 02:52:34 - Total time taken is: 4.9170419997608406 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04713399994216161 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.195947999505734 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.657348999993701 ms
+24-May-20 02:52:34 - Prover time taken is: 4.3154889999641455 ms
+24-May-20 02:52:34 - Total time taken is: 4.9728379999578465 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.044749999688065145 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.419814999688242 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5814200003442238 ms
+24-May-20 02:52:34 - Prover time taken is: 5.3021180001451285 ms
+24-May-20 02:52:34 - Total time taken is: 5.883538000489352 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.044612999772652984 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.4218009996038745 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.874621000548359 ms
+24-May-20 02:52:34 - Prover time taken is: 4.819605999728083 ms
+24-May-20 02:52:34 - Total time taken is: 5.694227000276442 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04432800051290542 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.8731479999114526 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5948610005361843 ms
+24-May-20 02:52:34 - Prover time taken is: 5.314485000781133 ms
+24-May-20 02:52:34 - Total time taken is: 5.909346001317317 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.06664199918304803 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 6.0810919994764845 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.879742000506667 ms
+24-May-20 02:52:34 - Prover time taken is: 4.442151000148442 ms
+24-May-20 02:52:34 - Total time taken is: 5.321893000655109 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.09069699990504887 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 5.512578999514517 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7717419994150987 ms
+24-May-20 02:52:34 - Prover time taken is: 6.103118999817525 ms
+24-May-20 02:52:34 - Total time taken is: 6.874860999232624 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.07184500009316253 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.588038000089 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5824640002174419 ms
+24-May-20 02:52:34 - Prover time taken is: 4.367919999822334 ms
+24-May-20 02:52:34 - Total time taken is: 4.950384000039776 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04383299983601319 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.7362590001066565 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.8850770000208286 ms
+24-May-20 02:52:34 - Prover time taken is: 6.803565999689454 ms
+24-May-20 02:52:34 - Total time taken is: 7.688642999710282 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.044209000407136045 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.4272180000698427 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.596314999711467 ms
+24-May-20 02:52:34 - Prover time taken is: 5.714936000003945 ms
+24-May-20 02:52:34 - Total time taken is: 6.311250999715412 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04544500006886665 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.2820739997987403 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6822870000178227 ms
+24-May-20 02:52:34 - Prover time taken is: 4.327177999584819 ms
+24-May-20 02:52:34 - Total time taken is: 5.009464999602642 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04370199985714862 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.9451439997719717 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6667439993179869 ms
+24-May-20 02:52:34 - Prover time taken is: 4.118038000342494 ms
+24-May-20 02:52:34 - Total time taken is: 4.784781999660481 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04694299968832638 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.4556729997348157 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5477140002767555 ms
+24-May-20 02:52:34 - Prover time taken is: 4.8505939994356595 ms
+24-May-20 02:52:34 - Total time taken is: 5.398307999712415 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04674599949794356 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 5.384308000429883 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.8744930000830209 ms
+24-May-20 02:52:34 - Prover time taken is: 5.350810999516398 ms
+24-May-20 02:52:34 - Total time taken is: 6.225303999599419 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.08224099929066142 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.449920000093698 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.7367039997916436 ms
+24-May-20 02:52:34 - Prover time taken is: 4.331345999162295 ms
+24-May-20 02:52:34 - Total time taken is: 5.0680499989539385 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.06794599994464079 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.5406980005063815 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.9060510001290822 ms
+24-May-20 02:52:34 - Prover time taken is: 4.279496999515686 ms
+24-May-20 02:52:34 - Total time taken is: 5.185547999644768 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04641199939214857 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.1014299995367764 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.9818959997573984 ms
+24-May-20 02:52:34 - Prover time taken is: 4.130160999920918 ms
+24-May-20 02:52:34 - Total time taken is: 5.112056999678316 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04747200000565499 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.530281000166724 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.5444149992399616 ms
+24-May-20 02:52:34 - Prover time taken is: 4.692634000093676 ms
+24-May-20 02:52:34 - Total time taken is: 5.237048999333638 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.045511000280384906 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 3.4524759994383203 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.592992000747472 ms
+24-May-20 02:52:34 - Prover time taken is: 5.6264970007759985 ms
+24-May-20 02:52:34 - Total time taken is: 6.2194890015234705 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.0454420005553402 ms
+24-May-20 02:52:34 - Sigma generation (SHA-256) 4.1075660001297365 ms
+24-May-20 02:52:34 - Verifier time taken is: 0.6520119995911955 ms
+24-May-20 02:52:34 - Prover time taken is: 5.005150999750185 ms
+24-May-20 02:52:34 - Total time taken is: 5.657162999341381 ms
+24-May-20 02:52:34 - Time taken in generation of authTag(MAC Generation) is: 0.04595700011122972 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.750316000150633 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.6023850000929087 ms
+24-May-20 02:52:35 - Prover time taken is: 4.799787000592914 ms
+24-May-20 02:52:35 - Total time taken is: 5.402172000685823 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.0459869997939677 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.702266999425774 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.5565410001509008 ms
+24-May-20 02:52:35 - Prover time taken is: 4.8510770002394565 ms
+24-May-20 02:52:35 - Total time taken is: 5.407618000390357 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.043289999666740187 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.6830389999522595 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.6463850004365668 ms
+24-May-20 02:52:35 - Prover time taken is: 5.227648000072804 ms
+24-May-20 02:52:35 - Total time taken is: 5.874033000509371 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.08239199996751267 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.555163000783068 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.720151999303198 ms
+24-May-20 02:52:35 - Prover time taken is: 4.30218400015292 ms
+24-May-20 02:52:35 - Total time taken is: 5.022335999456118 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.0486230001115473 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.636973000539001 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.7137559996408527 ms
+24-May-20 02:52:35 - Prover time taken is: 4.2092789999514935 ms
+24-May-20 02:52:35 - Total time taken is: 4.923034999592346 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.04529599937086459 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.870978999657382 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.8676490006109816 ms
+24-May-20 02:52:35 - Prover time taken is: 5.2533609996316954 ms
+24-May-20 02:52:35 - Total time taken is: 6.121010000242677 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.04565800009004306 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.5429589997875155 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.6213409997144481 ms
+24-May-20 02:52:35 - Prover time taken is: 4.191676000118605 ms
+24-May-20 02:52:35 - Total time taken is: 4.813016999833053 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.07363700024143327 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 4.1926530002456275 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.6500310000774334 ms
+24-May-20 02:52:35 - Prover time taken is: 6.952867999643786 ms
+24-May-20 02:52:35 - Total time taken is: 7.602898999721219 ms
+24-May-20 02:52:35 - Time taken in generation of authTag(MAC Generation) is: 0.04549099958239822 ms
+24-May-20 02:52:35 - Sigma generation (SHA-256) 3.493792999506695 ms
+24-May-20 02:52:35 - Verifier time taken is: 0.5516249993888778 ms
+24-May-20 02:52:35 - Prover time taken is: 7.038494999505929 ms
+24-May-20 02:52:35 - Total time taken is: 7.5901199988948065 ms

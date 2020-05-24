@@ -39,6 +39,10 @@ proverParams = {
     "curve": None
 }
 
+@app.get('/')
+def index():
+    return "Hello"
+
 @app.post('/ecc/attestation/client/register/')
 def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...)):
     global proverParams
@@ -47,19 +51,20 @@ def ecc_getClientGlobalParams(device_id:str=Form(...), curve_name:str=Form(...))
         if not os.path.exists(filepath):
             print("No file found")
             return {"status": False, "message": "Memory file not found!!"}
-
         with open(filepath, "r") as fin:
             fcontent = fin.read()
-            fcontent=fcontent.replace("\n","")
-            fcontent=fcontent.replace(" ","")
+            fcontent=fcontent.replace("\n", "")
+            fcontent=fcontent.replace(" ", "")
+            flen = len(fcontent)
             NUM_OF_BLOCKS = math.ceil(len(fcontent)/(BLOCK_SIZE*1024))
             memoryBlocks = [
-                fcontent[i:i+BLOCK_SIZE*1024] 
+                fcontent[i:min(i+BLOCK_SIZE*1024, flen)] 
                 for i in range(0, len(fcontent), BLOCK_SIZE*1024)
             ]
             return memoryBlocks
+
+
     try:
-        proverParams["curve"] = ecc.getCurve(curve_name)
         proverParams["device_id"] = device_id
         proverParams["memoryBlocks"] = readMemory(MEMORY_FILEPATH)
         return {"status": True, "message": "Client registred successfully"}

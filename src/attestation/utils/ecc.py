@@ -6,6 +6,7 @@ from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Hash import SHA256
 from Crypto.Random import get_random_bytes
 from Crypto.Hash import HMAC, SHA256
+from timeit import default_timer as timer
 
 from .graph import *
 from .curve_registry import *
@@ -55,9 +56,11 @@ The authTag is the message authentication code (MAC) calculated during the encry
 '''
 def encrypt_AES_GCM(msg, setKey):
     aesCipher = AES.new(setKey, AES.MODE_GCM)
-    ciphertext, authTag = aesCipher.encrypt_and_digest(msg)
-    return (ciphertext, aesCipher.nonce, authTag)
-
+    ciphertext  = aesCipher.encrypt(msg)
+    tick = timer()
+    authTag = aesCipher.digest()
+    tock = timer()
+    return (ciphertext, aesCipher.nonce, authTag, (tock-tick))
 '''
 The ciphertext is the encrypted message.
 The nonce is the randomly generated initial vector (IV) for the GCM construction.
