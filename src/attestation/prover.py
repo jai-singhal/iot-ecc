@@ -136,7 +136,7 @@ def ecc_recieveMessage(
         return decryptedMsg
 
     def encryption(sigma):
-        ct, nonce, tag = ecc.encrypt_AES_GCM(
+        ct, nonce, tag, _ = ecc.encrypt_AES_GCM(
             sigma.encode('utf-8'), 
             proverParams["secretKey"]
         )
