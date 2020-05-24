@@ -37,21 +37,21 @@ mac_gen1, sig_gen1, verifer1, prover1, total1 = getData("../../logs/review_mod_l
 mac_gen2, sig_gen2, verifer2, prover2, total2 = getData("../../logs/review_mod_logs/verifier_2MB.log")
 mac_gen4, sig_gen4, verifer4, prover4, total4 = getData("../../logs/review_mod_logs/verifier_4MB.log")
 
-verifier64=[sum(x) for x in zip(verifier64, sig_gen64)]
-verifier128=[sum(x) for x in zip(verifier128, sig_gen128)]
-verifier256=[sum(x) for x in zip(verifier256, sig_gen256)]
-verifier512=[sum(x) for x in zip(verifier512, sig_gen512)]
-verifier1=[sum(x) for x in zip(verifier1, sig_gen1)]
-verifier2=[sum(x) for x in zip(verifier2, sig_gen2)]
-verifier4=[sum(x) for x in zip(verifier4, sig_gen4)]
+verifer64=[sum(x) for x in zip(verifer64, sig_gen64)]
+verifer128=[sum(x) for x in zip(verifer128, sig_gen128)]
+verifer256=[sum(x) for x in zip(verifer256, sig_gen256)]
+verifer512=[sum(x) for x in zip(verifer512, sig_gen512)]
+verifer1=[sum(x) for x in zip(verifer1, sig_gen1)]
+verifer2=[sum(x) for x in zip(verifer2, sig_gen2)]
+verifer4=[sum(x) for x in zip(verifer4, sig_gen4)]
 
-total64=[sum(x) for x in zip(verifier64, total64)]
+total64=[sum(x) for x in zip(total64, sig_gen64)]
 total128=[sum(x) for x in zip(total128, sig_gen128)]
 total256=[sum(x) for x in zip(total256, sig_gen256)]
 total512=[sum(x) for x in zip(total512, sig_gen512)]
 total1=[sum(x) for x in zip(total1, sig_gen1)]
-prover2=[sum(x) for x in zip(prover2, sig_gen2)]
-prover4=[sum(x) for x in zip(prover4, sig_gen4)]
+total2=[sum(x) for x in zip(total2, sig_gen2)]
+total4=[sum(x) for x in zip(total4, sig_gen4)]
 
 print(average(mac_gen64), average(sig_gen64), average(verifer64), average(prover64), average(total64))
 print(average(mac_gen128), average(sig_gen128), average(verifer128), average(prover128), average(total128))
