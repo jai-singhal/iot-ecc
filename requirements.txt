@@ -9,7 +9,7 @@ joblib==0.14.1
 kiwisolver==1.2.0
 matplotlib==3.2.1
 nltk==3.5
-numpy==1.18.3
+numpy==1.22.0
 pandas==1.0.3
 pyasn1==0.4.8
 pycryptodome==3.9.7
